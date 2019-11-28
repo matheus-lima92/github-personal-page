@@ -8,6 +8,7 @@ export const SideMenuStyled = styled.div`
   @media (min-width: ${definitions.DESKTOP_MIN_WIDTH}px) {
     border-right: 1px solid ${colors.borders};
     height: 100vh;
+    min-height: 700px;
     width: 350px;
   }
   @media (max-width: ${definitions.DESKTOP_MIN_WIDTH - 1}px) {
