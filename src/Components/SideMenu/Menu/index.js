@@ -1,17 +1,7 @@
 import React from 'react';
 
-import { MenuStyled, MenuItemStyled } from './styles';
-
-const MenuItem = ({ icon, option }) => (
-  <MenuItemStyled>
-    <div className="icon-container">
-      <i className={`fa fa-${icon}`} />
-    </div>
-    <div className="option-container">
-      {option}
-    </div>
-  </MenuItemStyled>
-);
+import { MenuStyled } from './styles';
+import MenuItem from '../MenuItem';
 
 const Menu = () => (
   <MenuStyled>
