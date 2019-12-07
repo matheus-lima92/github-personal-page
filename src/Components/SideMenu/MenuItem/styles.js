@@ -30,14 +30,4 @@ export const MenuItemStyled = styled.div`
       margin-left: 8px;
     }
   }
-  @media (max-width: ${definitions.DESKTOP_MIN_WIDTH -1}px) {
-    border: 1px solid ${colors.borders};
-    height: 50px;
-    font-size: 30px;
-    width: 20%;
-    background-color: black;
-    .option-container {
-      display: none;
-    }
-  }
 `;

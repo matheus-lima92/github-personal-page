@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { MenuItemStyled } from './styles';
 import { animateIcon } from 'common/animations';
+import { MenuItemStyled } from './styles';
 
 class MenuItem extends React.Component {
 
@@ -12,14 +12,11 @@ class MenuItem extends React.Component {
   }
 
   render() {
-    const { icon, option } = this.props;
+    const { icon } = this.props;
     return (
       <MenuItemStyled onMouseEnter={() => animateIcon(this.icon)}>
         <div className="icon-container" ref={(elem) => { this.icon = elem; }}>
           <i className={`fa fa-${icon}`} />
-        </div>
-        <div className="option-container">
-          {option}
         </div>
       </MenuItemStyled>
     );
@@ -28,7 +25,6 @@ class MenuItem extends React.Component {
 
 MenuItem.propType = {
   icon: PropTypes.string.isRequired,
-  option: PropTypes.string.isRequired,
 };
 
 export default MenuItem;
