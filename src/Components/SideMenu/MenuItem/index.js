@@ -14,7 +14,9 @@ class MenuItem extends React.Component {
   render() {
     const { icon, option } = this.props;
     return (
-      <MenuItemStyled onMouseEnter={() => animateIcon(this.icon)}>
+      <MenuItemStyled
+        onMouseEnter={() => animateIcon(this.icon)}
+      >
         <div className="icon-container" ref={(elem) => { this.icon = elem; }}>
           <i className={`fa fa-${icon}`} />
         </div>

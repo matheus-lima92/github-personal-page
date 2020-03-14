@@ -9,6 +9,7 @@ export const MenuItemStyled = styled.div`
   align-items: center;
   justify-content: center;
   color: ${colors.sideMenuText};
+  position: relative;
   @media (min-width: ${definitions.DESKTOP_MIN_WIDTH}px) {
     font-size: 18px;
     width: 170px;
