@@ -5,10 +5,10 @@ import definitions from 'common/definitions';
 
 const slideInFromLeft = keyframes`
   0% {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   100% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
 `;
 
@@ -20,6 +20,7 @@ export const SideMenuStyled = styled.div`
     height: 100vh;
     min-height: 700px;
     width: 350px;
+    position: fixed;
   }
   @media (max-width: ${definitions.DESKTOP_MIN_WIDTH - 1}px) {
     display: none;

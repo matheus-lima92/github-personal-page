@@ -1,18 +1,18 @@
 import React from 'react';
 
-import SideMenu from './Components/SideMenu';
 import HeaderMobile from './Components/HeaderMobile';
+import SideMenu from './Components/SideMenu';
+import MainContainer from './Components/MainContainer';
 import BottomMenu from './Components/BottomMenu';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <HeaderMobile />
-      <SideMenu />
-      <BottomMenu />
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <HeaderMobile />
+    <SideMenu />
+    <MainContainer />
+    <BottomMenu />
+  </div>
+);
 
 export default App;
