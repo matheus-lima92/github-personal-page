@@ -1,4 +1,4 @@
-import gsap, { TweenMax } from 'gsap';
+import gsap from 'gsap';
 
 export const animateIcon = (element) => {
   const tl = gsap.timeline();
@@ -8,9 +8,8 @@ export const animateIcon = (element) => {
   tl.resume();
 };
 
-export const slideInFromLeft = (element1, element2) => {
+export const slideInFromLeft = (element) => {
   const tl = gsap.timeline();
-  tl.fromTo(element1, 5, { left: '-100%'}, { left: '0' });
-  tl.fromTo('.teste2', 5, { left: '-100%'}, { left: '0' });
+  tl.fromTo(element, 5, { left: '-100%'}, { left: '0' });
   tl.resume();
 }
