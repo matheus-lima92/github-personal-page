@@ -4,9 +4,9 @@ import Paragraph from 'Components/common/Paragraph';
 import Title from 'Components/common/Title';
 import { ContentSection } from 'common/style';
 
-const About = () => (
+const Skills = () => (
     <ContentSection>
-		<Title title="Sobre" />
+		<Title title="Habilidades" />
         <Paragraph firstParagraph={true}>
             Olá, meu nome é Matheus Gomes, sou brasileiro nascido no estado de São Paulo, e trabalho como engenheiro de software.
         </Paragraph>
@@ -25,4 +25,4 @@ const About = () => (
     </ContentSection>
 );
 
-export default About;
+export default Skills;
