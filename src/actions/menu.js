@@ -1,0 +1,1 @@
+export const changeScreen = (screen) => ({ type: 'CHANGE_SCREEN', payload: screen });

@@ -13,7 +13,7 @@ const PictureAndName = () => (
       <div className="profile-name">
         Matheus Gomes
       </div>
-      <div className="profile-title">
+      <div className="profile-title" style={{ position: 'relative', top: '-7px' }}>
         Software Engineer
       </div>
     </ProfileInfo>

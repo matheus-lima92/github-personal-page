@@ -3,7 +3,6 @@ import gsap from 'gsap';
 
 import { MenuStyled } from './styles';
 import MenuItem from '../MenuItem';
-import { animateIcon, slideInFromLeft } from 'common/animations';
 
 class Menu extends React.Component {
 
@@ -18,7 +17,6 @@ class Menu extends React.Component {
 
   componentDidMount() {
     const tl = gsap.timeline();
-    // CustomWiggle.create('teste', { wiggles: 3 });
     tl.set(this.userItem, { left: '-200%' });
     tl.set(this.briefCaseItem, { left: '-200%' });
     tl.set(this.graduationCapItem, { left: '-200%' });
@@ -28,7 +26,6 @@ class Menu extends React.Component {
     tl.fromTo(this.briefCaseItem, 0.4, { left: '-100%'}, { left: '0' });
     tl.fromTo(this.graduationCapItem, 0.4, { left: '-100%'}, { left: '0' });
     tl.fromTo(this.folderOpenItem, 0.4, { left: '-100%'}, { left: '0' });
-    // tl.to(this.phoneItem, 2.5, { left: '0', ease: Elastic.easeOut.config(0.40, 0.48) });
     tl.resume();
   }
 
@@ -36,19 +33,19 @@ class Menu extends React.Component {
     return (
       <MenuStyled>
         <div style={{ position: 'relative' }} ref={(elem) => { this.userItem = elem; }}>
-          <MenuItem icon="user" option="Sobre" />
+          <MenuItem icon="user" option="Sobre" screenId="about" />
         </div>
         <div style={{ position: 'relative' }} ref={(elem) => { this.briefCaseItem = elem; }}>
-          <MenuItem icon="briefcase" option="Experiência" />
+          <MenuItem icon="briefcase" option="Experiência" screenId="experience" />
         </div>
         <div style={{ position: 'relative' }} ref={(elem) => { this.graduationCapItem = elem; }}>
-          <MenuItem icon="graduation-cap" option="Habilidades" />
+          <MenuItem icon="graduation-cap" option="Habilidades" screenId="skills" />
         </div>
         <div style={{ position: 'relative' }} ref={(elem) => { this.folderOpenItem = elem; }}>
-          <MenuItem icon="folder-open" option="Projetos" />
+          <MenuItem icon="folder-open" option="Projetos" screenId="projects" />
         </div>
         <div style={{ position: 'relative' }} ref={(elem) => { this.phoneItem = elem; }}>
-          <MenuItem icon="phone" option="Contato" />
+          <MenuItem icon="phone" option="Contato" screenId="contact" />
         </div>
       </MenuStyled>
     )

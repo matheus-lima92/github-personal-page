@@ -18,9 +18,9 @@ const About = () => (
         <Paragraph lastParagraph={true}>
             Meu primeiro trabalho remunerado relacionado à programação foi um projeto de iniciação científica que iniciei em 2012, ainda
             cursando a faculdade, e de lá pra cá já fiz estágio, freelas, trabalhei em empresas dentro e fora do Brasil, e hoje atuo como
-            engenheiro de software na <a href="https://www.bairesdev.com/" target="_blank" rel="noopener noreferrer">BairesDev</a>, que hoje se encontra
+            engenheiro de software na <a href="https://www.bairesdev.com/" target="_blank" rel="noopener noreferrer">BairesDev</a>, empresa que hoje se encontra
             entre as <a href="https://finance.yahoo.com/news/bairesdev-recognized-silicon-valley-top-150000742.html" target="_blank" rel="noopener noreferrer">top 10 companhias</a> de
-            mais rápido crescimento do Vale do Silicio.
+            mais rápido crescimento do Vale do Silicio, Estados Unidos.
         </Paragraph>
     </AboutStyled>
 );

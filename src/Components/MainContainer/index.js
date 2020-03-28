@@ -1,12 +1,22 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
-import About from '../About';
+import About from 'Components/About';
 import { MainContainerStyled } from './style';
 
-const MainContainer = () => (
-  <MainContainerStyled>
-    <About />
+const MainContainer = ({ screen }) => (
+  	<MainContainerStyled>
+    	{screen === 'about' && <About />}
 	</MainContainerStyled>
 );
 
-export default MainContainer;
+MainContainer.propTypes = {
+	screen: PropTypes.string
+};
+
+const mapStateToProps = state => ({
+  screen: state.mainContainer,
+});
+
+export default connect(mapStateToProps, null)(MainContainer);
