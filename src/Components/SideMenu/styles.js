@@ -13,7 +13,7 @@ const slideInFromLeft = keyframes`
 `;
 
 export const SideMenuStyled = styled.div`
-  background-color: #23252b;
+  background-color: ${colors.sideMenu};
   @media (min-width: ${definitions.DESKTOP_MIN_WIDTH}px) {
     animation: 1s ${slideInFromLeft} ease-out;
     border-right: 1px solid ${colors.borders};
