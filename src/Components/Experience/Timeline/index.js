@@ -4,15 +4,6 @@ import TimelineEvent from './TimelineEvent';
 import { TimelineStyled, YearMark } from './style';
 
 class Timeline extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            horizontalLineAnimated: false,
-            topVerticalLineAnimated: false,
-            bottomVerticalLineAnimated: false,
-        };
-    }
-
 
     render() {
         return (
