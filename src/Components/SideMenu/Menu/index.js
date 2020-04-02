@@ -26,6 +26,7 @@ class Menu extends React.Component {
     tl.fromTo(this.briefCaseItem, 0.4, { left: '-100%'}, { left: '0' });
     tl.fromTo(this.graduationCapItem, 0.4, { left: '-100%'}, { left: '0' });
     tl.fromTo(this.folderOpenItem, 0.4, { left: '-100%'}, { left: '0' });
+    tl.fromTo(this.phoneItem, 0.4, { left: '-100%'}, { left: '0' });
     tl.resume();
   }
 
