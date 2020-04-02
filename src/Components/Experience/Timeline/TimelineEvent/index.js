@@ -21,6 +21,9 @@ class TimelineEvent extends React.Component {
     }
 
     setGsapTimeline() {
+        // const { distanceToTop, distanceToBottom } = this.props;
+        const distanceToTop = 20;
+        const distanceToBottom = 30;
         this.tl = gsap.timeline({ paused: true });
         this.tl.set(this.horizontalLine, {
             position: 'absolute',
@@ -30,8 +33,24 @@ class TimelineEvent extends React.Component {
             zIndex: '2',
             left: '100px'
         });
-        const finalWidth = (this.parentElement.clientWidth/2 - 97)
-        this.tl.fromTo(this.horizontalLine, 1, { width: '0px' }, { width: `${finalWidth}px` });
+        this.tl.set(this.topVerticalLine, {
+            position: 'absolute',
+            backgroundColor: 'blue',
+            width: '3px',
+            top: '50px',
+            left: '50%',
+        });
+        this.tl.set(this.bottomVerticalLine, {
+            position: 'absolute',
+            backgroundColor: 'red',
+            width: '3px',
+            top: '50px',
+            left: '50%',
+        });
+        const finalWidth = (this.parentElement.clientWidth/2 - 97);
+        this.tl.fromTo(this.horizontalLine, 1, { width: '0px' }, { width: `${finalWidth}px` }, 0);
+        this.tl.fromTo(this.topVerticalLine, 1, { height: '0px' }, { height: `${distanceToTop}px` }, 1);
+        this.tl.fromTo(this.bottomVerticalLine, 1, { height: '0px' }, { height: `${distanceToBottom}px` }, 1);
     }
 
 

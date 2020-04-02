@@ -54,23 +54,7 @@ export const TimelineEventStyled = styled.div`
         left: 50%;
     }
     .top-vertical-line-animated {
-        position: absolute;
-        transform: ${props => props.animationType === 'topToBottom' ? '' : 'rotatex(180deg)'};
-        transform-origin: ${props => props.animationType === 'topToBottom' ? '' : 'top'};
-        animation: 1s ${animateVerticalLine};
-        background-color: white;
-        width: 3px;
-        height: ${props => props.distanceToTop}px;
-        top: ${props => props.animationType === 'topToBottom' ? '0px' : '50px'};
-        left: 50%;
-    }
-    .bottom-vertical-line-animated {
-        position: absolute;
-        animation: 1s ${animateVerticalLine};
-        background-color: white;
-        width: 3px;
-        height: ${props => props.distanceToBottom}px;
-        top: 50px;
-        left: 50%;
+        transform: rotatex(180deg);
+        transform-origin: top;
     }
 `
