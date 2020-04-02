@@ -10,7 +10,6 @@ class Timeline extends React.Component {
             horizontalLineAnimated: false,
             topVerticalLineAnimated: false,
             bottomVerticalLineAnimated: false,
-            animationType: 'fromOrigin'
         };
     }
 
@@ -21,8 +20,8 @@ class Timeline extends React.Component {
                 <YearMark>
                     <span>2020</span>
                 </YearMark>
-                <TimelineEvent distanceToTop={50} distanceToBottom={150} />
-                <TimelineEvent />
+                <TimelineEvent distanceToTop={50} distanceToBottom={153} orientation="left" />
+                <TimelineEvent distanceToTop={150} distanceToBottom={50} orientation="right" />
                 <YearMark>
                     <span>2019</span>
                 </YearMark>

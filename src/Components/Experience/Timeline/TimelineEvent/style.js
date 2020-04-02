@@ -1,14 +1,5 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import colors from 'common/colors';
-
-const animateVerticalLine = keyframes`
-  	0% {
-    	height: 0px;
-  	}
-  	100% {
-    	height: 100%;
-  	}
-`;
 
 export const TimelineEventStyled = styled.div`
     position: relative;
@@ -37,6 +28,14 @@ export const TimelineEventStyled = styled.div`
         top: 50px;
         left: 100px;
     }
+    .left-horizontal-line-animated {
+        position: absolute;
+        background-color: white;
+        height: 3px;
+        top: 50px;
+        z-index: 2;
+        left: 100px;
+    }
     .right-horizontal-line {
         position: absolute;
         background-color: ${colors.borders};
@@ -44,6 +43,14 @@ export const TimelineEventStyled = styled.div`
         width: calc(50% - 100px);
         top: 50px;
         left: 50%;
+    }
+    .right-horizontal-line-animated {
+        position: absolute;
+        background-color: white;
+        height: 3px;
+        top: 50px;
+        z-index: 2;
+        right: 100px;
     }
     .vertical-line {
         position: absolute;
@@ -56,5 +63,19 @@ export const TimelineEventStyled = styled.div`
     .top-vertical-line-animated {
         transform: rotatex(180deg);
         transform-origin: top;
+        position: absolute;
+        background-color: white;
+        width: 3px;
+        top: 50px;
+        left: 50%;
+        z-index: 2;
+    }
+    .bottom-vertical-line-animated {
+        position: absolute;
+        background-color: white;
+        width: 3px;
+        top: 50px;
+        left: 50%;
+        z-index: 2;
     }
 `

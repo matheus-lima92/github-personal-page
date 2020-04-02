@@ -21,36 +21,12 @@ class TimelineEvent extends React.Component {
     }
 
     setGsapTimeline() {
-        // const { distanceToTop, distanceToBottom } = this.props;
-        const distanceToTop = 20;
-        const distanceToBottom = 30;
+        const { distanceToTop, distanceToBottom } = this.props;
         this.tl = gsap.timeline({ paused: true });
-        this.tl.set(this.horizontalLine, {
-            position: 'absolute',
-            backgroundColor: 'white',
-            height: '3px',
-            top: '50px',
-            zIndex: '2',
-            left: '100px'
-        });
-        this.tl.set(this.topVerticalLine, {
-            position: 'absolute',
-            backgroundColor: 'blue',
-            width: '3px',
-            top: '50px',
-            left: '50%',
-        });
-        this.tl.set(this.bottomVerticalLine, {
-            position: 'absolute',
-            backgroundColor: 'red',
-            width: '3px',
-            top: '50px',
-            left: '50%',
-        });
-        const finalWidth = (this.parentElement.clientWidth/2 - 97);
-        this.tl.fromTo(this.horizontalLine, 1, { width: '0px' }, { width: `${finalWidth}px` }, 0);
-        this.tl.fromTo(this.topVerticalLine, 1, { height: '0px' }, { height: `${distanceToTop}px` }, 1);
-        this.tl.fromTo(this.bottomVerticalLine, 1, { height: '0px' }, { height: `${distanceToBottom}px` }, 1);
+        const finalWidth = (this.parentElement.clientWidth/2 - 100);
+        this.tl.fromTo(this.horizontalLine, 0.5, { width: '0px' }, { width: `${finalWidth}px` }, 0);
+        this.tl.fromTo(this.topVerticalLine, 0.3, { height: '0px' }, { height: `${distanceToTop}px` }, 0.5);
+        this.tl.fromTo(this.bottomVerticalLine, 0.3, { height: '0px' }, { height: `${distanceToBottom}px` }, 0.5);
     }
 
 
@@ -60,16 +36,12 @@ class TimelineEvent extends React.Component {
 
     render() {
 
-        const { distanceToTop, distanceToBottom } = this.props;
+        const { orientation } = this.props;
 
         return (
-            <TimelineEventStyled
-                distanceToBottom={distanceToBottom}
-                distanceToTop={distanceToTop}
-                ref={(elem) => { this.parentElement = elem; }}
-            >
+            <TimelineEventStyled ref={(elem) => { this.parentElement = elem; }}>
                 <div
-                    className="left-event"
+                    className={`${orientation}-event`}
                     onMouseEnter={() => {
                         this.tl.play();
                     }}
@@ -79,8 +51,8 @@ class TimelineEvent extends React.Component {
                 >
                 </div>
                 <div className="vertical-line" />
-                <div className="left-horizontal-line" />
-                <div ref={(elem) => { this.horizontalLine = elem; }} className="left-horizontal-line-animated" />
+                <div className={`${orientation}-horizontal-line`} />
+                <div ref={(elem) => { this.horizontalLine = elem; }} className={`${orientation}-horizontal-line-animated`} />
                 <div ref={(elem) => { this.topVerticalLine = elem; }} className="top-vertical-line-animated" />
                 <div ref={(elem) => { this.bottomVerticalLine = elem; }} className="bottom-vertical-line-animated" />
             </TimelineEventStyled>
@@ -90,7 +62,8 @@ class TimelineEvent extends React.Component {
 
 TimelineEvent.propType = {
     distanceToTop: PropTypes.number.isRequired,
-    distanceToBottom: PropTypes.number.isRequired
+    distanceToBottom: PropTypes.number.isRequired,
+    orientation: PropTypes.string.isRequired,
 };
 
 
