@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 import colors from 'common/colors';
+import definitions from 'common/definitions';
 
 
 export const TimelineStyled = styled.div`
-    width: 80%;
+    width: 70%;
+    max-width: ${definitions.MAIN_SECTION_MAX_WIDTH}px;
     margin: auto;
     margin-top: 30px;
 `;

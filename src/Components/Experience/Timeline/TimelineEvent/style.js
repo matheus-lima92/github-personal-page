@@ -1,32 +1,33 @@
 import styled from 'styled-components';
 import colors from 'common/colors';
+import definitions from 'common/definitions';
 
 export const TimelineEventStyled = styled.div`
     position: relative;
-    .left-event {
-        border: 1px solid yellow;
-        border-radius: 100%;
-        width: 100px;
-        height: 100px;
+    .timeline-event {
+        width: ${definitions.TIMELINE_EVENT_WIDTH}px;
+        height: 200px;
         position: relative;
         cursor: pointer;
+        transition: 0.3s;
+        background-color: white;
+        z-index: 3;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px 0 black;
+    }
+    .timeline-event:hover {
+        box-shadow: 0 8px 16px 0 black;
     }
     .right-event {
-        border: 1px solid yellow;
-        border-radius: 100%;
-        width: 100px;
-        height: 100px;
-        position: relative;
-        left: calc(100% - 100px);
-        cursor: pointer;
+        left: calc(100% - ${definitions.TIMELINE_EVENT_WIDTH}px);
     }
     .left-horizontal-line {
         position: absolute;
         background-color: ${colors.borders};
         height: 3px;
-        width: calc(50% - 100px);
+        width: calc(50% - ${definitions.TIMELINE_EVENT_WIDTH}px);
         top: 50px;
-        left: 100px;
+        left: ${definitions.TIMELINE_EVENT_WIDTH}px;
     }
     .left-horizontal-line-animated {
         position: absolute;
@@ -34,13 +35,13 @@ export const TimelineEventStyled = styled.div`
         height: 3px;
         top: 50px;
         z-index: 2;
-        left: 100px;
+        left: ${definitions.TIMELINE_EVENT_WIDTH}px;
     }
     .right-horizontal-line {
         position: absolute;
         background-color: ${colors.borders};
         height: 3px;
-        width: calc(50% - 100px);
+        width: calc(50% - ${definitions.TIMELINE_EVENT_WIDTH}px);
         top: 50px;
         left: 50%;
     }
@@ -50,12 +51,12 @@ export const TimelineEventStyled = styled.div`
         height: 3px;
         top: 50px;
         z-index: 2;
-        right: 100px;
+        right: ${definitions.TIMELINE_EVENT_WIDTH}px;
     }
     .vertical-line {
         position: absolute;
         background-color: ${colors.borders};
-        height: 102px;
+        height: 202px;
         width: 3px;
         top: 0px;
         left: 50%;

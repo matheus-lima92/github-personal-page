@@ -11,8 +11,8 @@ class Timeline extends React.Component {
                 <YearMark>
                     <span>2020</span>
                 </YearMark>
-                <TimelineEvent distanceToTop={50} distanceToBottom={153} orientation="left" />
-                <TimelineEvent distanceToTop={150} distanceToBottom={50} orientation="right" />
+                <TimelineEvent distanceToTop={50} distanceToBottom={351} orientation="left" />
+                <TimelineEvent distanceToTop={250} distanceToBottom={150} orientation="right" />
                 <YearMark>
                     <span>2019</span>
                 </YearMark>
