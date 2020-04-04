@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import colors from 'common/colors';
 import definitions from 'common/definitions';
+import bairesdevLogo from 'imgs/logo_bairesdev.png';
 
 export const TimelineEventStyled = styled.div`
     position: relative;
@@ -14,6 +15,36 @@ export const TimelineEventStyled = styled.div`
         z-index: 3;
         border-radius: 15px;
         box-shadow: 0 4px 8px 0 black;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        .company-logo {
+            border: 1px solid ${colors.tinyBorders};
+            width: 90px;
+            height: 90px;
+            border-radius: 10px;
+            background: url(${bairesdevLogo}) no-repeat center;
+            background-size: cover;
+        }
+        .working-period {
+            border: 1px solid ${colors.tinyBorders};
+            width: 170px;
+            height: 60px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+            .job-position {
+                font-size: 14px;
+            }
+            .job-period {
+                font-size: 12px;
+                position: relative;
+                top: -4px;
+            }
+        }
     }
     .timeline-event:hover {
         box-shadow: 0 8px 16px 0 black;
@@ -31,7 +62,7 @@ export const TimelineEventStyled = styled.div`
     }
     .left-horizontal-line-animated {
         position: absolute;
-        background-color: white;
+        background-color: ${colors.animatedLines};
         height: 3px;
         top: 50px;
         z-index: 2;
@@ -47,7 +78,7 @@ export const TimelineEventStyled = styled.div`
     }
     .right-horizontal-line-animated {
         position: absolute;
-        background-color: white;
+        background-color: ${colors.animatedLines};
         height: 3px;
         top: 50px;
         z-index: 2;
@@ -65,7 +96,7 @@ export const TimelineEventStyled = styled.div`
         transform: rotatex(180deg);
         transform-origin: top;
         position: absolute;
-        background-color: white;
+        background-color: ${colors.animatedLines};
         width: 3px;
         top: 50px;
         left: 50%;
@@ -73,7 +104,7 @@ export const TimelineEventStyled = styled.div`
     }
     .bottom-vertical-line-animated {
         position: absolute;
-        background-color: white;
+        background-color: ${colors.animatedLines};
         width: 3px;
         top: 50px;
         left: 50%;

@@ -50,6 +50,19 @@ class TimelineEvent extends React.Component {
                         this.tl.reverse();
                     }}
                 >
+                    <div className="company-logo">
+
+                    </div>
+                    <div className="working-period">
+                        <div className="job-position">
+                            <span>
+                                <b>Engenheiro de Software</b>
+                            </span>
+                        </div>
+                        <div className="job-period">
+                            <span>Julho 2019 - Presente</span>
+                        </div>
+                    </div>
                 </div>
                 <div className="vertical-line" />
                 <div className={`${orientation}-horizontal-line`} />
