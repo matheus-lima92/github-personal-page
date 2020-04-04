@@ -24,7 +24,7 @@ class TimelineEvent extends React.Component {
     setGsapTimeline() {
         const { distanceToTop, distanceToBottom } = this.props;
         this.tl = gsap.timeline({ paused: true });
-        const finalWidth = (this.parentElement.clientWidth/2 - (definitions.TIMELINE_EVENT_WIDTH + 1));
+        const finalWidth = ((this.parentElement ? this.parentElement.clientWidth/2 : 600) - (definitions.TIMELINE_EVENT_WIDTH + 1));
         this.tl.fromTo(this.horizontalLine, 0.5, { width: '0px' }, { width: `${finalWidth}px` }, 0);
         this.tl.fromTo(this.topVerticalLine, 0.3, { height: '0px' }, { height: `${distanceToTop}px` }, 0.5);
         this.tl.fromTo(this.bottomVerticalLine, 0.3, { height: '0px' }, { height: `${distanceToBottom}px` }, 0.5);
