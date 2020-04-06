@@ -2,6 +2,22 @@ import styled from 'styled-components';
 import colors from 'common/colors';
 import definitions from 'common/definitions';
 import bairesdevLogo from 'imgs/logo_bairesdev.png';
+import gettyLogo from 'imgs/logo_getty.png';
+import hypnoboxLogo from 'imgs/logo_hypnobox.png';
+import aktienowLogo from 'imgs/logo_aktienow.png';
+import cnpemLogo from 'imgs/logo_cnpem.jpg';
+import wiseLogo from 'imgs/logo_wisewood.png';
+import cnpqLogo from 'imgs/logo_cnpq.png';
+
+const companyLogo = (company) => {
+    if (company === 'bairesdev') return bairesdevLogo;
+    if (company === 'getty') return gettyLogo;
+    if (company === 'hypnobox') return hypnoboxLogo;
+    if (company === 'aktienow') return aktienowLogo;
+    if (company === 'cnpem') return cnpemLogo;
+    if (company === 'wise') return wiseLogo;
+    if (company === 'cnpq') return cnpqLogo;
+};
 
 export const TimelineEventStyled = styled.div`
     position: relative;
@@ -24,7 +40,7 @@ export const TimelineEventStyled = styled.div`
             width: 90px;
             height: 90px;
             border-radius: 10px;
-            background: url(${bairesdevLogo}) no-repeat center;
+            background: ${props => `url(${companyLogo(props.company)}) no-repeat center`};
             background-size: cover;
         }
         .working-period {

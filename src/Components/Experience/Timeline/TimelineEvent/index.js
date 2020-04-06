@@ -17,7 +17,7 @@ class TimelineEvent extends React.Component {
     }
 
     componentDidMount() {  
-        this.setGsapTimeline();      
+        this.setGsapTimeline();
         window.addEventListener('resize', this.updateDimensions);
     }
 
@@ -37,10 +37,13 @@ class TimelineEvent extends React.Component {
 
     render() {
 
-        const { orientation } = this.props;
+        const { orientation, company, jobStartDate, jobEndDate, jobTitle } = this.props;
 
         return (
-            <TimelineEventStyled ref={(elem) => { this.parentElement = elem; }}>
+            <TimelineEventStyled
+                ref={(elem) => { this.parentElement = elem; }}
+                company={company}
+            >
                 <div
                     className={`timeline-event ${orientation}-event`}
                     onMouseEnter={() => {
@@ -50,17 +53,15 @@ class TimelineEvent extends React.Component {
                         this.tl.reverse();
                     }}
                 >
-                    <div className="company-logo">
-
-                    </div>
+                    <div className="company-logo" />
                     <div className="working-period">
                         <div className="job-position">
                             <span>
-                                <b>Engenheiro de Software</b>
+                                <b>{jobTitle}</b>
                             </span>
                         </div>
                         <div className="job-period">
-                            <span>Julho 2019 - Presente</span>
+                            <span>{`${jobStartDate} - ${jobEndDate}`}</span>
                         </div>
                     </div>
                 </div>
@@ -78,6 +79,10 @@ TimelineEvent.propType = {
     distanceToTop: PropTypes.number.isRequired,
     distanceToBottom: PropTypes.number.isRequired,
     orientation: PropTypes.string.isRequired,
+    company: PropTypes.string.isRequired,
+    jobStartDate: PropTypes.string.isRequired,
+    jobEndDate: PropTypes.string.isRequired,
+    jobTitle: PropTypes.string.isRequired,
 };
 
 

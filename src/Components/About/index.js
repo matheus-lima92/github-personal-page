@@ -3,9 +3,26 @@ import React from 'react';
 import Paragraph from 'Components/common/Paragraph';
 import Title from 'Components/common/Title';
 import { ContentSection } from 'common/style';
-
+import { Modal } from 'semantic-ui-react'
 const About = () => (
     <ContentSection>
+        <Modal open={false} style={{ height: `${300}px`, margin: 'auto', maxWidth: '500px' }}>
+    <Modal.Header>
+      teste
+    </Modal.Header>
+    <Modal.Content>
+    </Modal.Content>
+    {/* <Modal.Actions>
+      <Button basic size="small" onClick={onNo}>Não</Button>
+      <Button
+        positive
+        size="small"
+        onClick={onYes}
+      >
+        Sim
+      </Button>
+    </Modal.Actions> */}
+    </Modal>
 		<Title title="Sobre" />
         <Paragraph firstParagraph={true}>
             Olá, meu nome é Matheus Gomes, sou brasileiro nascido no estado de São Paulo, e trabalho como engenheiro de software.
