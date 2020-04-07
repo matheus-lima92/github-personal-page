@@ -15,10 +15,9 @@ class Timeline extends React.Component {
                     distanceToTop={50}
                     distanceToBottom={151}
                     orientation="left"
-                    company="bairesdev"
-                    jobStartDate="Julho 2019"
+                    company="BairesDev"
+                    jobStartDate="Jul 2019"
                     jobEndDate="Presente"
-                    jobTitle="Engenheiro de Software"
                 />
                 <YearMark>
                     <span>2019</span>
@@ -27,19 +26,17 @@ class Timeline extends React.Component {
                     distanceToTop={50}
                     distanceToBottom={351}
                     orientation="right"
-                    company="getty"
-                    jobStartDate="Novembro 2018"
-                    jobEndDate="Julho 2019"
-                    jobTitle="Engenheiro de Software"
+                    company="Getty IO"
+                    jobStartDate="Nov 2018"
+                    jobEndDate="Jul 2019"
                 />
                 <TimelineEvent
                     distanceToTop={251}
                     distanceToBottom={151}
                     orientation="left"
-                    company="hypnobox"
-                    jobStartDate="Agosto 2018"
-                    jobEndDate="Maio 2019"
-                    jobTitle="Engenheiro de Software"
+                    company="Hypnobox"
+                    jobStartDate="Ago 2018"
+                    jobEndDate="Mai 2019"
                 />
                 <YearMark>
                     <span>2018</span>
@@ -48,10 +45,9 @@ class Timeline extends React.Component {
                     distanceToTop={50}
                     distanceToBottom={151}
                     orientation="right"
-                    company="aktienow"
-                    jobStartDate="Dezembro 2016"
-                    jobEndDate="Agosto 2018"
-                    jobTitle="Engenheiro de Software"
+                    company="Aktie now"
+                    jobStartDate="Dez 2016"
+                    jobEndDate="Ago 2018"
                 />
                 <YearMark>
                     <span>2016</span>
@@ -60,10 +56,9 @@ class Timeline extends React.Component {
                     distanceToTop={50}
                     distanceToBottom={151}
                     orientation="left"
-                    company="cnpem"
-                    jobStartDate="Março 2015"
-                    jobEndDate="Setembro 2016"
-                    jobTitle="Estagiário de Software"
+                    company="CNPEM"
+                    jobStartDate="Mar 2015"
+                    jobEndDate="Set 2016"
                 />
                 <YearMark>
                     <span>2015</span>
@@ -72,10 +67,9 @@ class Timeline extends React.Component {
                     distanceToTop={50}
                     distanceToBottom={151}
                     orientation="right"
-                    company="wise"
-                    jobStartDate="Agosto 2014"
-                    jobEndDate="Fevereiro 2015"
-                    jobTitle="Programa de Estágio"
+                    company="Wise"
+                    jobStartDate="Ago 2014"
+                    jobEndDate="Fev 2015"
                 />
                 <YearMark>
                     <span>2014</span>
@@ -84,10 +78,9 @@ class Timeline extends React.Component {
                     distanceToTop={50}
                     distanceToBottom={151}
                     orientation="left"
-                    company="cnpq"
-                    jobStartDate="Julho 2012"
-                    jobEndDate="Agosto 2013"
-                    jobTitle="Programa de Estágio"
+                    company="CNPQ"
+                    jobStartDate="Jul 2012"
+                    jobEndDate="Ago 2013"
                 />
                 <YearMark>
                     <span>2012</span>

@@ -37,7 +37,7 @@ class TimelineEvent extends React.Component {
 
     render() {
 
-        const { orientation, company, jobStartDate, jobEndDate, jobTitle } = this.props;
+        const { orientation, company, jobStartDate, jobEndDate } = this.props;
 
         return (
             <TimelineEventStyled
@@ -57,7 +57,7 @@ class TimelineEvent extends React.Component {
                     <div className="working-period">
                         <div className="job-position">
                             <span>
-                                <b>{jobTitle}</b>
+                                <b>{company}</b>
                             </span>
                         </div>
                         <div className="job-period">
@@ -82,7 +82,6 @@ TimelineEvent.propType = {
     company: PropTypes.string.isRequired,
     jobStartDate: PropTypes.string.isRequired,
     jobEndDate: PropTypes.string.isRequired,
-    jobTitle: PropTypes.string.isRequired,
 };
 
 
