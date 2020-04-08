@@ -18,6 +18,7 @@ class Timeline extends React.Component {
                     company="BairesDev"
                     jobStartDate="Jul 2019"
                     jobEndDate="Presente"
+                    isFirstEvent={true}
                 />
                 <YearMark>
                     <span>2019</span>

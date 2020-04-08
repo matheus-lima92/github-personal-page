@@ -13,8 +13,8 @@ export const TimelineStyled = styled.div`
 export const YearMark = styled.div`
     border: 2px solid ${colors.borders};
     border-radius: 100%;
-    width: 100px;
-    height: 100px;
+    width: ${definitions.YEAR_MARK_SIZE}px;
+    height: ${definitions.YEAR_MARK_SIZE}px;
     margin: auto;
     display: flex;
     align-items: center;

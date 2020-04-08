@@ -126,4 +126,15 @@ export const TimelineEventStyled = styled.div`
         left: 50%;
         z-index: 2;
     }
+    .bottom-circle-animated {
+        position: absolute;
+        margin: auto;
+        left: calc(50% - ${definitions.YEAR_MARK_SIZE / 2}px);
+    }
+    .top-circle-animated {
+        position: absolute;
+        margin: auto;
+        left: calc(50% - ${definitions.YEAR_MARK_SIZE / 2}px);
+        top: -100px;
+    }
 `
