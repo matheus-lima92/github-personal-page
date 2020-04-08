@@ -78,7 +78,7 @@ export const TimelineEventStyled = styled.div`
     }
     .left-horizontal-line-animated {
         position: absolute;
-        background-color: ${colors.animatedLines};
+        background-image: linear-gradient(-90deg, ${colors.animatedLineColor1}, ${colors.animatedLineColor2});
         height: 3px;
         top: 50px;
         z-index: 2;
@@ -94,7 +94,7 @@ export const TimelineEventStyled = styled.div`
     }
     .right-horizontal-line-animated {
         position: absolute;
-        background-color: ${colors.animatedLines};
+        background-image: linear-gradient(-90deg, ${colors.animatedLineColor2}, ${colors.animatedLineColor1});
         height: 3px;
         top: 50px;
         z-index: 2;
@@ -112,7 +112,7 @@ export const TimelineEventStyled = styled.div`
         transform: rotatex(180deg);
         transform-origin: top;
         position: absolute;
-        background-color: ${colors.animatedLines};
+        background-image: linear-gradient(0deg, ${colors.animatedLineColor2}, ${colors.animatedLineColor1});
         width: 3px;
         top: 50px;
         left: 50%;
@@ -120,7 +120,7 @@ export const TimelineEventStyled = styled.div`
     }
     .bottom-vertical-line-animated {
         position: absolute;
-        background-color: ${colors.animatedLines};
+        background-image: linear-gradient(0deg, ${colors.animatedLineColor2}, ${colors.animatedLineColor1});
         width: 3px;
         top: 50px;
         left: 50%;

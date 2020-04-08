@@ -4,7 +4,8 @@ const colors = {
   sideMenu: '#23252b',
   sideMenuText: '#bfbfbf',
   paragraphText: '#e6e6e6',
-  animatedLines: '#ffff66'
+  animatedLineColor1: '#b3ffcc',
+  animatedLineColor2: '#009933',
 };
 
 export default colors;
