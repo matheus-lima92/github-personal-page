@@ -6,6 +6,13 @@ import { TimelineEventStyled } from './style';
 import definitions from 'common/definitions';
 import colors from 'common/colors';
 
+const defineFinalWidth = (parentElement) => {
+    if (!parentElement || !parentElement.clientWidth) return 600;
+    const sizeToSubtract = window.innerWidth >= definitions.TIMELINE_DESKTOP_BEHAVIOR ? definitions.TIMELINE_EVENT_WIDTH : definitions.TIMELINE_EVENT_SIZE_MOBILE;
+    return (parentElement.clientWidth / 2) - sizeToSubtract;
+
+};
+
 class TimelineEvent extends React.Component {
     constructor(props) {
         super(props);
@@ -25,9 +32,10 @@ class TimelineEvent extends React.Component {
     }
 
     setGsapTimeline() {
-        const { distanceToTop, distanceToBottom, isFirstEvent } = this.props;
+        console.log(window.innerWidth);
+        const { distanceToTop, distanceToBottom } = this.props;
         this.tl = gsap.timeline({ paused: true });
-        const finalWidth = ((this.parentElement ? this.parentElement.clientWidth/2 : 600) - (definitions.TIMELINE_EVENT_WIDTH));
+        const finalWidth = defineFinalWidth(this.parentElement);
         this.tl.fromTo(this.horizontalLine, 0.5, { width: '0px' }, { width: `${finalWidth}px` }, 0);
         this.tl.fromTo(this.topVerticalLine, 0.3, { height: '0px' }, { height: `${distanceToTop}px` }, 0.5);
         this.tl.fromTo(this.bottomVerticalLine, 0.3, { height: '0px' }, { height: `${distanceToBottom}px` }, 0.5);
@@ -61,8 +69,6 @@ class TimelineEvent extends React.Component {
                 <div
                     className={`timeline-event ${orientation}-event`}
                     onMouseEnter={() => {
-                        console.log(distanceToTop);
-                        console.log(distanceToBottom);
                         this.tl.play();
                     }}
                     onMouseLeave={() => {

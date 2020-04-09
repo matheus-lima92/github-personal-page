@@ -1,5 +1,6 @@
 import React from 'react';
 
+import definitions from 'common/definitions';
 import TimelineEvent from './TimelineEvent';
 import { TimelineStyled, YearMark } from './style';
 
@@ -13,7 +14,7 @@ class Timeline extends React.Component {
                 </YearMark>
                 <TimelineEvent
                     distanceToTop={50}
-                    distanceToBottom={151}
+                    distanceToBottom={window.innerWidth >= definitions.TIMELINE_DESKTOP_BEHAVIOR ? 151 : 40}
                     orientation="left"
                     company="BairesDev"
                     jobStartDate="Jul 2019"

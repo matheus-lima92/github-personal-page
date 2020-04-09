@@ -22,19 +22,35 @@ const companyLogo = (company) => {
 export const TimelineEventStyled = styled.div`
     position: relative;
     .timeline-event {
-        width: ${definitions.TIMELINE_EVENT_WIDTH}px;
-        height: 200px;
-        position: relative;
-        cursor: pointer;
-        transition: 0.3s;
-        background-color: white;
-        z-index: 3;
-        border-radius: 15px;
-        box-shadow: 0 4px 8px 0 black;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column;
+        @media (min-width: ${definitions.TIMELINE_DESKTOP_BEHAVIOR}px) {
+            width: ${definitions.TIMELINE_EVENT_WIDTH}px;
+            height: 200px;
+            position: relative;
+            cursor: pointer;
+            transition: 0.3s;
+            background-color: white;
+            z-index: 3;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px 0 black;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+        @media (max-width: ${definitions.TIMELINE_DESKTOP_BEHAVIOR - 1}px) {
+            width: ${definitions.TIMELINE_EVENT_SIZE_MOBILE}px;
+            height: ${definitions.TIMELINE_EVENT_SIZE_MOBILE}px;
+            position: relative;
+            cursor: pointer;
+            transition: 0.3s;
+            background-color: white;
+            z-index: 3;
+            border-radius: 100%;
+            box-shadow: 0 4px 8px 0 black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         .company-logo {
             border: 1px solid ${colors.tinyBorders};
             width: 90px;
@@ -60,6 +76,9 @@ export const TimelineEventStyled = styled.div`
                 position: relative;
                 top: -4px;
             }
+            @media (max-width: ${definitions.TIMELINE_DESKTOP_BEHAVIOR - 1}px) {
+                display: none;
+            }
         }
     }
     .timeline-event:hover {
@@ -67,6 +86,9 @@ export const TimelineEventStyled = styled.div`
     }
     .right-event {
         left: calc(100% - ${definitions.TIMELINE_EVENT_WIDTH}px);
+        @media (max-width: ${definitions.TIMELINE_DESKTOP_BEHAVIOR - 1}px) {
+            left: calc(100% - ${definitions.TIMELINE_EVENT_SIZE_MOBILE}px);
+        }
     }
     .left-horizontal-line {
         position: absolute;
@@ -75,6 +97,10 @@ export const TimelineEventStyled = styled.div`
         width: calc(50% - ${definitions.TIMELINE_EVENT_WIDTH}px);
         top: 50px;
         left: ${definitions.TIMELINE_EVENT_WIDTH}px;
+        @media (max-width: ${definitions.TIMELINE_DESKTOP_BEHAVIOR - 1}px) {
+            width: calc(50% - ${definitions.TIMELINE_EVENT_SIZE_MOBILE}px);
+            left: ${definitions.TIMELINE_EVENT_SIZE_MOBILE}px;
+        }
     }
     .left-horizontal-line-animated {
         position: absolute;
@@ -82,7 +108,12 @@ export const TimelineEventStyled = styled.div`
         height: 3px;
         top: 50px;
         z-index: 2;
+        width: calc(50% - ${definitions.TIMELINE_EVENT_WIDTH}px);
         left: ${definitions.TIMELINE_EVENT_WIDTH}px;
+        @media (max-width: ${definitions.TIMELINE_DESKTOP_BEHAVIOR - 1}px) {
+            width: calc(50% - ${definitions.TIMELINE_EVENT_SIZE_MOBILE}px);
+            left: ${definitions.TIMELINE_EVENT_SIZE_MOBILE}px;
+        }
     }
     .right-horizontal-line {
         position: absolute;
@@ -91,6 +122,10 @@ export const TimelineEventStyled = styled.div`
         width: calc(50% - ${definitions.TIMELINE_EVENT_WIDTH}px);
         top: 50px;
         left: 50%;
+        @media (max-width: ${definitions.TIMELINE_DESKTOP_BEHAVIOR - 1}px) {
+            width: calc(50% - ${definitions.TIMELINE_EVENT_SIZE_MOBILE}px);
+            left: 50%;
+        }
     }
     .right-horizontal-line-animated {
         position: absolute;
@@ -107,6 +142,9 @@ export const TimelineEventStyled = styled.div`
         width: 3px;
         top: 0px;
         left: 50%;
+        @media (max-width: ${definitions.TIMELINE_DESKTOP_BEHAVIOR - 1}px) {
+            height: 90px;
+        }
     }
     .top-vertical-line-animated {
         transform: rotatex(180deg);
@@ -123,6 +161,7 @@ export const TimelineEventStyled = styled.div`
         background-image: linear-gradient(0deg, ${colors.animatedLineColor2}, ${colors.animatedLineColor1});
         width: 3px;
         top: 50px;
+        height: 40px;
         left: 50%;
         z-index: 2;
     }
