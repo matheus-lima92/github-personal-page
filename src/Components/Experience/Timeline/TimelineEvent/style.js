@@ -130,11 +130,14 @@ export const TimelineEventStyled = styled.div`
         position: absolute;
         margin: auto;
         left: calc(50% - ${definitions.YEAR_MARK_SIZE / 2}px);
+        top: ${props => props.distanceToBottom + 50}px;
+        z-index: 2;
     }
     .top-circle-animated {
         position: absolute;
         margin: auto;
         left: calc(50% - ${definitions.YEAR_MARK_SIZE / 2}px);
-        top: -100px;
+        top: -${props => props.distanceToTop + 50}px;
+        z-index: 2;
     }
 `

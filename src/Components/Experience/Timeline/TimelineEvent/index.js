@@ -31,10 +31,8 @@ class TimelineEvent extends React.Component {
         this.tl.fromTo(this.horizontalLine, 0.5, { width: '0px' }, { width: `${finalWidth}px` }, 0);
         this.tl.fromTo(this.topVerticalLine, 0.3, { height: '0px' }, { height: `${distanceToTop}px` }, 0.5);
         this.tl.fromTo(this.bottomVerticalLine, 0.3, { height: '0px' }, { height: `${distanceToBottom}px` }, 0.5);
-        if (isFirstEvent) {
-            this.tl.fromTo(this.topCircle, 0.5, { strokeDashoffset: '400' }, { strokeDashoffset: '0' }, 0.8);
-            this.tl.fromTo(this.bottomCircle, 0.5, { strokeDashoffset: '400' }, { strokeDashoffset: '0' }, 0.8);
-        }
+        this.tl.fromTo(this.topCircle, 0.5, { strokeDashoffset: '400' }, { strokeDashoffset: '0' }, 0.8);
+        this.tl.fromTo(this.bottomCircle, 0.5, { strokeDashoffset: '400' }, { strokeDashoffset: '0' }, 0.8);
     }
 
 
@@ -44,16 +42,27 @@ class TimelineEvent extends React.Component {
 
     render() {
 
-        const { orientation, company, jobStartDate, jobEndDate, isFirstEvent } = this.props;
+        const {
+            orientation,
+            company,
+            jobStartDate,
+            jobEndDate,
+            distanceToBottom,
+            distanceToTop
+        } = this.props;
 
         return (
             <TimelineEventStyled
                 ref={(elem) => { this.parentElement = elem; }}
                 company={company}
+                distanceToTop={distanceToTop}
+                distanceToBottom={distanceToBottom}
             >
                 <div
                     className={`timeline-event ${orientation}-event`}
                     onMouseEnter={() => {
+                        console.log(distanceToTop);
+                        console.log(distanceToBottom);
                         this.tl.play();
                     }}
                     onMouseLeave={() => {
@@ -77,40 +86,36 @@ class TimelineEvent extends React.Component {
                 <div ref={(elem) => { this.horizontalLine = elem; }} className={`${orientation}-horizontal-line-animated`} />
                 <div ref={(elem) => { this.topVerticalLine = elem; }} className="top-vertical-line-animated" />
                 <div ref={(elem) => { this.bottomVerticalLine = elem; }} className="bottom-vertical-line-animated" />
-                {isFirstEvent &&
-                    <div className="bottom-circle-animated">
-                        <svg>
-                            <circle
-                                ref={(elem) => { this.bottomCircle = elem; }}
-                                cx="50"
-                                cy="50"
-                                r="49"
-                                fill="none"
-                                stroke={colors.animatedLineColor2}
-                                strokeWidth="3"
-                                strokeDasharray="400"
-                                transform="rotate(-90 50 50)"
-                            />
-                        </svg>
-                    </div>
-                }
-                {isFirstEvent &&
-                    <div className="top-circle-animated">
-                        <svg>
-                            <circle
-                                ref={(elem) => { this.topCircle = elem; }}
-                                cx="50"
-                                cy="50"
-                                r="49"
-                                fill="none"
-                                stroke={colors.animatedLineColor2}
-                                strokeWidth="3"
-                                strokeDasharray="400"
-                                transform="rotate(-270 50 50)"
-                            />
-                        </svg>
-                    </div>
-                }
+                <div className="bottom-circle-animated">
+                    <svg>
+                        <circle
+                            ref={(elem) => { this.bottomCircle = elem; }}
+                            cx="50"
+                            cy="50"
+                            r="49"
+                            fill="none"
+                            stroke={colors.animatedLineColor2}
+                            strokeWidth="3"
+                            strokeDasharray="400"
+                            transform="rotate(-90 50 50)"
+                        />
+                    </svg>
+                </div>
+                <div className="top-circle-animated">
+                    <svg>
+                        <circle
+                            ref={(elem) => { this.topCircle = elem; }}
+                            cx="50"
+                            cy="50"
+                            r="49"
+                            fill="none"
+                            stroke={colors.animatedLineColor2}
+                            strokeWidth="3"
+                            strokeDasharray="400"
+                            transform="rotate(-270 50 50)"
+                        />
+                    </svg>
+                </div>
             </TimelineEventStyled>
         )
     }
@@ -123,12 +128,6 @@ TimelineEvent.propType = {
     company: PropTypes.string.isRequired,
     jobStartDate: PropTypes.string.isRequired,
     jobEndDate: PropTypes.string.isRequired,
-    isFirstEvent: PropTypes.bool
 };
-
-TimelineEvent.defaultProps = {
-    isFirstEvent: false
-}
-
 
 export default TimelineEvent;

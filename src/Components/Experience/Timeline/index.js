@@ -30,6 +30,7 @@ class Timeline extends React.Component {
                     company="Getty IO"
                     jobStartDate="Nov 2018"
                     jobEndDate="Jul 2019"
+                    isFirstEvent={true}
                 />
                 <TimelineEvent
                     distanceToTop={251}
@@ -38,6 +39,7 @@ class Timeline extends React.Component {
                     company="Hypnobox"
                     jobStartDate="Ago 2018"
                     jobEndDate="Mai 2019"
+                    isFirstEvent={true}
                 />
                 <YearMark>
                     <span>2018</span>
