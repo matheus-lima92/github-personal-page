@@ -8,10 +8,14 @@ import colors from 'common/colors';
 
 const defineFinalWidth = (parentElement) => {
     if (!parentElement || !parentElement.clientWidth) return 600;
-    const sizeToSubtract = window.innerWidth >= definitions.TIMELINE_DESKTOP_BEHAVIOR ? definitions.TIMELINE_EVENT_WIDTH : definitions.TIMELINE_EVENT_SIZE_MOBILE;
+    const sizeToSubtract = window.innerWidth >= definitions.TIMELINE_DESKTOP_BEHAVIOR
+        ? definitions.TIMELINE_EVENT_WIDTH
+        : definitions.TIMELINE_EVENT_SIZE_MOBILE;
     return (parentElement.clientWidth / 2) - sizeToSubtract;
-
 };
+
+const defineExhibitionMode = () =>
+    window.innerWidth >= definitions.TIMELINE_DESKTOP_BEHAVIOR ? 'desktop' : 'mobile';
 
 class TimelineEvent extends React.Component {
     constructor(props) {
@@ -22,18 +26,48 @@ class TimelineEvent extends React.Component {
         this.bottomVerticalLine = React.createRef();
         this.topCircle = React.createRef();
         this.bottomCircle = React.createRef();
-        this.updateDimensions = this.updateDimensions.bind(this);
         this.setGsapTimeline = this.setGsapTimeline.bind(this);
+        this.windowResized = this.windowResized.bind(this);
+        this.toggleExhibition = this.toggleExhibition.bind(this);
+        this.state = { exhibitionMode: defineExhibitionMode() };
     }
 
-    componentDidMount() {  
+    componentDidMount() {
         this.setGsapTimeline();
-        window.addEventListener('resize', this.updateDimensions);
+        window.addEventListener('resize', this.windowResized);
+    }
+
+    windowResized() {
+        this.setGsapTimeline();
+        this.toggleExhibition();
+    }
+
+    toggleExhibition() {
+        const { exhibitionMode } = this.state;
+        if (exhibitionMode === 'desktop' && window.innerWidth >= definitions.TIMELINE_DESKTOP_BEHAVIOR) {
+            return;
+        }
+        if (exhibitionMode === 'mobile' && window.innerWidth < definitions.TIMELINE_DESKTOP_BEHAVIOR) {
+            return;
+        }
+        if (exhibitionMode === 'desktop') {
+            this.setState({ exhibitionMode: 'mobile' });
+            return;
+        }
+        this.setState({ exhibitionMode: 'desktop' });
+        return;
     }
 
     setGsapTimeline() {
-        console.log(window.innerWidth);
-        const { distanceToTop, distanceToBottom } = this.props;
+        const {
+            distanceToTopDesktop,
+            distanceToTopMobile,
+            distanceToBottomDesktop,
+            distanceToBottomMobile
+        } = this.props;
+        const { exhibitionMode } = this.state;
+        const distanceToTop = exhibitionMode === 'desktop' ? distanceToTopDesktop : distanceToTopMobile;
+        const distanceToBottom = exhibitionMode === 'desktop' ? distanceToBottomDesktop : distanceToBottomMobile;
         this.tl = gsap.timeline({ paused: true });
         const finalWidth = defineFinalWidth(this.parentElement);
         this.tl.fromTo(this.horizontalLine, 0.5, { width: '0px' }, { width: `${finalWidth}px` }, 0);
@@ -43,11 +77,6 @@ class TimelineEvent extends React.Component {
         this.tl.fromTo(this.bottomCircle, 0.5, { strokeDashoffset: '400' }, { strokeDashoffset: '0' }, 0.8);
     }
 
-
-    updateDimensions() {
-        this.setGsapTimeline();
-    }
-
     render() {
 
         const {
@@ -55,9 +84,14 @@ class TimelineEvent extends React.Component {
             company,
             jobStartDate,
             jobEndDate,
-            distanceToBottom,
-            distanceToTop
+            distanceToBottomDesktop,
+            distanceToBottomMobile,
+            distanceToTopDesktop,
+            distanceToTopMobile
         } = this.props;
+        const { exhibitionMode } = this.state;
+        const distanceToTop = exhibitionMode === 'desktop' ? distanceToTopDesktop : distanceToTopMobile;
+        const distanceToBottom = exhibitionMode === 'desktop' ? distanceToBottomDesktop : distanceToBottomMobile;
 
         return (
             <TimelineEventStyled
@@ -128,8 +162,10 @@ class TimelineEvent extends React.Component {
 }
 
 TimelineEvent.propType = {
-    distanceToTop: PropTypes.number.isRequired,
-    distanceToBottom: PropTypes.number.isRequired,
+    distanceToTopDesktop: PropTypes.number.isRequired,
+    distanceToTopMobile: PropTypes.number.isRequired,
+    distanceToBottomDesktop: PropTypes.number.isRequired,
+    distanceToBottomMobile: PropTypes.number.isRequired,
     orientation: PropTypes.string.isRequired,
     company: PropTypes.string.isRequired,
     jobStartDate: PropTypes.string.isRequired,

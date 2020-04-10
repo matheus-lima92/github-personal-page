@@ -13,8 +13,10 @@ class Timeline extends React.Component {
                     <span>2020</span>
                 </YearMark>
                 <TimelineEvent
-                    distanceToTop={50}
-                    distanceToBottom={window.innerWidth >= definitions.TIMELINE_DESKTOP_BEHAVIOR ? 151 : 40}
+                    distanceToTopDesktop={50}
+                    distanceToBottomDesktop={151}
+                    distanceToTopMobile={50}
+                    distanceToBottomMobile={40}
                     orientation="left"
                     company="BairesDev"
                     jobStartDate="Jul 2019"
@@ -25,8 +27,10 @@ class Timeline extends React.Component {
                     <span>2019</span>
                 </YearMark>
                 <TimelineEvent
-                    distanceToTop={50}
-                    distanceToBottom={351}
+                    distanceToTopDesktop={50}
+                    distanceToBottomDesktop={351}
+                    distanceToTopMobile={50}
+                    distanceToBottomMobile={130}
                     orientation="right"
                     company="Getty IO"
                     jobStartDate="Nov 2018"
@@ -34,8 +38,10 @@ class Timeline extends React.Component {
                     isFirstEvent={true}
                 />
                 <TimelineEvent
-                    distanceToTop={251}
-                    distanceToBottom={151}
+                    distanceToTopDesktop={251}
+                    distanceToBottomDesktop={151}
+                    distanceToTopMobile={140}
+                    distanceToBottomMobile={40}
                     orientation="left"
                     company="Hypnobox"
                     jobStartDate="Ago 2018"
@@ -46,8 +52,10 @@ class Timeline extends React.Component {
                     <span>2018</span>
                 </YearMark>
                 <TimelineEvent
-                    distanceToTop={50}
-                    distanceToBottom={151}
+                    distanceToTopDesktop={50}
+                    distanceToBottomDesktop={151}
+                    distanceToTopMobile={50}
+                    distanceToBottomMobile={40}
                     orientation="right"
                     company="Aktie now"
                     jobStartDate="Dez 2016"
@@ -57,8 +65,10 @@ class Timeline extends React.Component {
                     <span>2016</span>
                 </YearMark>
                 <TimelineEvent
-                    distanceToTop={50}
-                    distanceToBottom={151}
+                    distanceToTopDesktop={50}
+                    distanceToBottomDesktop={151}
+                    distanceToTopMobile={50}
+                    distanceToBottomMobile={40}
                     orientation="left"
                     company="CNPEM"
                     jobStartDate="Mar 2015"
@@ -68,8 +78,10 @@ class Timeline extends React.Component {
                     <span>2015</span>
                 </YearMark>
                 <TimelineEvent
-                    distanceToTop={50}
-                    distanceToBottom={151}
+                    distanceToTopDesktop={50}
+                    distanceToBottomDesktop={151}
+                    distanceToTopMobile={50}
+                    distanceToBottomMobile={40}
                     orientation="right"
                     company="Wise"
                     jobStartDate="Ago 2014"
@@ -79,8 +91,10 @@ class Timeline extends React.Component {
                     <span>2014</span>
                 </YearMark>
                 <TimelineEvent
-                    distanceToTop={50}
-                    distanceToBottom={151}
+                    distanceToTopDesktop={50}
+                    distanceToBottomDesktop={151}
+                    distanceToTopMobile={50}
+                    distanceToBottomMobile={40}
                     orientation="left"
                     company="CNPQ"
                     jobStartDate="Jul 2012"

@@ -134,6 +134,9 @@ export const TimelineEventStyled = styled.div`
         top: 50px;
         z-index: 2;
         right: ${definitions.TIMELINE_EVENT_WIDTH}px;
+        @media (max-width: ${definitions.TIMELINE_DESKTOP_BEHAVIOR - 1}px) {
+            right: ${definitions.TIMELINE_EVENT_SIZE_MOBILE}px;
+        }
     }
     .vertical-line {
         position: absolute;
