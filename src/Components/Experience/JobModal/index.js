@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Modal } from 'semantic-ui-react';
+import { Modal, Button } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -14,34 +14,18 @@ const JobModal = ({ jobModal, hideJobModal }) => (
         closeIcon
         onClose={() => hideJobModal()}
     >
-        <Modal.Content>
+        <Modal.Content scrolling>
             <CompanyLogo company={jobModal} />
             <CompanyInformation>
-                lorem ipsum dolor
-                <br />
-                lorem ipsum dolor
-                <br />
-                lorem ipsum dolor
-                <br />
-                lorem ipsum dolor
-                <br />
-                lorem ipsum dolor
-                <br />
-                lorem ipsum dolor
-                <br />
-                lorem ipsum dolor
+                <div>
+                    <b>Empresa: </b>
+                    <span>{jobModal}</span>
+                </div>
             </CompanyInformation> 
         </Modal.Content>
-        {/* <Modal.Actions>
-        <Button basic size="small" onClick={onNo}>Não</Button>
-        <Button
-            positive
-            size="small"
-            onClick={onYes}
-        >
-            Sim
-        </Button>
-        </Modal.Actions> */}
+        <Modal.Actions>
+        <Button basic size="small" onClick={() => hideJobModal()}>Ok</Button>
+        </Modal.Actions>
     </Modal>
 );
 
