@@ -1,6 +1,5 @@
 import React from 'react';
 
-import definitions from 'common/definitions';
 import TimelineEvent from './TimelineEvent';
 import { TimelineStyled, YearMark } from './style';
 

@@ -4,6 +4,7 @@ import colors from 'common/colors';
 import definitions from 'common/definitions';
 
 export const MenuStyled = styled.div`
+	z-index: 10;
     @media (min-width: ${definitions.DESKTOP_MIN_WIDTH}px) {
         display: none;
     }

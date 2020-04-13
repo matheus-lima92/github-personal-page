@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import gsap from 'gsap';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import { TimelineEventStyled } from './style';
 import definitions from 'common/definitions';
 import colors from 'common/colors';
+import { showJobModal } from 'actions/jobModal';
 
 const defineFinalWidth = (parentElement) => {
     if (!parentElement || !parentElement.clientWidth) return 600;
@@ -38,8 +41,9 @@ class TimelineEvent extends React.Component {
     }
 
     windowResized() {
-        this.setGsapTimeline();
+        console.log('windowResized');
         this.toggleExhibition();
+        this.setGsapTimeline();
     }
 
     toggleExhibition() {
@@ -51,10 +55,10 @@ class TimelineEvent extends React.Component {
             return;
         }
         if (exhibitionMode === 'desktop') {
-            this.setState({ exhibitionMode: 'mobile' });
+            this.setState(() => ({ exhibitionMode: 'mobile' }));
             return;
         }
-        this.setState({ exhibitionMode: 'desktop' });
+        this.setState(() => ({ exhibitionMode: 'desktop' }));
         return;
     }
 
@@ -63,13 +67,16 @@ class TimelineEvent extends React.Component {
             distanceToTopDesktop,
             distanceToTopMobile,
             distanceToBottomDesktop,
-            distanceToBottomMobile
+            distanceToBottomMobile,
+            orientation
         } = this.props;
         const { exhibitionMode } = this.state;
         const distanceToTop = exhibitionMode === 'desktop' ? distanceToTopDesktop : distanceToTopMobile;
         const distanceToBottom = exhibitionMode === 'desktop' ? distanceToBottomDesktop : distanceToBottomMobile;
         this.tl = gsap.timeline({ paused: true });
-        const finalWidth = defineFinalWidth(this.parentElement);
+        const finalWidth = orientation === 'left'
+            ? defineFinalWidth(this.parentElement)
+            : defineFinalWidth(this.parentElement) - 1;
         this.tl.fromTo(this.horizontalLine, 0.5, { width: '0px' }, { width: `${finalWidth}px` }, 0);
         this.tl.fromTo(this.topVerticalLine, 0.3, { height: '0px' }, { height: `${distanceToTop}px` }, 0.5);
         this.tl.fromTo(this.bottomVerticalLine, 0.3, { height: '0px' }, { height: `${distanceToBottom}px` }, 0.5);
@@ -87,7 +94,8 @@ class TimelineEvent extends React.Component {
             distanceToBottomDesktop,
             distanceToBottomMobile,
             distanceToTopDesktop,
-            distanceToTopMobile
+            distanceToTopMobile,
+            showJobModal,
         } = this.props;
         const { exhibitionMode } = this.state;
         const distanceToTop = exhibitionMode === 'desktop' ? distanceToTopDesktop : distanceToTopMobile;
@@ -108,6 +116,7 @@ class TimelineEvent extends React.Component {
                     onMouseLeave={() => {
                         this.tl.reverse();
                     }}
+                    onClick={() => showJobModal('company')}
                 >
                     <div className="company-logo" />
                     <div className="working-period">
@@ -170,6 +179,11 @@ TimelineEvent.propType = {
     company: PropTypes.string.isRequired,
     jobStartDate: PropTypes.string.isRequired,
     jobEndDate: PropTypes.string.isRequired,
+    showJobModal: PropTypes.func.isRequired
 };
 
-export default TimelineEvent;
+const mapDispatchToProps = dispatch => bindActionCreators({
+	showJobModal,
+}, dispatch);
+
+export default connect(null, mapDispatchToProps)(TimelineEvent);
