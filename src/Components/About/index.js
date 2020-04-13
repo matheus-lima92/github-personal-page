@@ -4,19 +4,14 @@ import { useTranslation } from 'react-i18next';
 import Paragraph from 'Components/common/Paragraph';
 import Title from 'Components/common/Title';
 import { ContentSection } from 'common/style';
-import i18n from 'i18n';
 
 const About = () => {
     const { t } = useTranslation();
-    setTimeout(() => {
-        i18n.changeLanguage('pt');
-    }, 2000);
     return (
         <ContentSection>
             <Title title="Sobre" />
         <Paragraph firstParagraph={true}>
-            Olá, meu nome é Matheus Gomes, sou brasileiro nascido no estado de São Paulo, e trabalho como engenheiro de software.
-            {t('Welcome to React')}
+            Olá, meu nome é Matheus Gomes, sou brasileiro nascido no estado de São Paulo, e trabalho como engenheiro de software. {t('Welcome to React')}
         </Paragraph>
         <Paragraph>
             Sou formado em engenharia de controle e automação pela Universidade Estadual de Campinas (UNICAMP). Ao longo do curso de engenharia

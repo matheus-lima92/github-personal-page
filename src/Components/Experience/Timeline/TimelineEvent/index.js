@@ -40,6 +40,10 @@ class TimelineEvent extends React.Component {
         window.addEventListener('resize', this.windowResized);
     }
 
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.windowResized);
+    }
+
     windowResized() {
         this.toggleExhibition();
         this.setGsapTimeline();
