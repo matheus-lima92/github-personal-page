@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import colors from 'common/colors';
+import definitions from 'common/definitions';
 import profilePic from 'imgs/profile.jpeg';
 
 export const PictureAndNameWrapper = styled.div`
@@ -34,5 +35,8 @@ export const ProfileInfo = styled.div`
     font-style: italic;
     text-align: left;
     margin-top: 5px;
+    @media (max-width: ${definitions.DESKTOP_MIN_WIDTH -1}px) {
+      margin-top: -10px;
+    }
   }
 `;
