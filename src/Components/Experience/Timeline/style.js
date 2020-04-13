@@ -7,7 +7,10 @@ export const TimelineStyled = styled.div`
     width: 70%;
     max-width: ${definitions.MAIN_SECTION_MAX_WIDTH}px;
     margin: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
     margin-top: 30px;
+    margin-bottom: 100px;
 `;
 
 export const YearMark = styled.div`

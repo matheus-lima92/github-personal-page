@@ -41,7 +41,6 @@ class TimelineEvent extends React.Component {
     }
 
     windowResized() {
-        console.log('windowResized');
         this.toggleExhibition();
         this.setGsapTimeline();
     }
@@ -116,7 +115,7 @@ class TimelineEvent extends React.Component {
                     onMouseLeave={() => {
                         this.tl.reverse();
                     }}
-                    onClick={() => showJobModal('company')}
+                    onClick={() => showJobModal(company)}
                 >
                     <div className="company-logo" />
                     <div className="working-period">

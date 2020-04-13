@@ -15,8 +15,8 @@ export const MenuItemStyled = styled.div`
     color: ${colors.sideMenuText};
     border: 1px solid ${colors.borders};
     height: 50px;
-    font-size: 30px;
-    width: 20%;
+    font-size: 20px;
+    width: 25%;
     background-color: black;
   }
 `;

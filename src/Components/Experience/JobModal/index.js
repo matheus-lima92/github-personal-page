@@ -5,18 +5,32 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { hideJobModal } from 'actions/jobModal';
+import { CompanyLogo, CompanyInformation } from './styles';
 
 const JobModal = ({ jobModal, hideJobModal }) => (
     <Modal
         open={!!jobModal}
-        style={{ height: '300px', margin: 'auto', maxWidth: '500px' }}
+        style={{ height: '300px', width: '90%', position: 'relative', top: '-20vh', margin: 'auto', maxWidth: '400px' }}
         closeIcon
         onClose={() => hideJobModal()}
     >
-        <Modal.Header>
-            teste
-        </Modal.Header>
         <Modal.Content>
+            <CompanyLogo company={jobModal} />
+            <CompanyInformation>
+                lorem ipsum dolor
+                <br />
+                lorem ipsum dolor
+                <br />
+                lorem ipsum dolor
+                <br />
+                lorem ipsum dolor
+                <br />
+                lorem ipsum dolor
+                <br />
+                lorem ipsum dolor
+                <br />
+                lorem ipsum dolor
+            </CompanyInformation> 
         </Modal.Content>
         {/* <Modal.Actions>
         <Button basic size="small" onClick={onNo}>Não</Button>

@@ -19,12 +19,10 @@ class Menu extends React.Component {
     const tl = gsap.timeline();
     tl.set(this.userItem, { left: '-200%' });
     tl.set(this.briefCaseItem, { left: '-200%' });
-    tl.set(this.graduationCapItem, { left: '-200%' });
     tl.set(this.folderOpenItem, { left: '-200%' });
     tl.set(this.phoneItem, { left: '-200%' });
     tl.fromTo(this.userItem, 0.4, { left: '-100%'}, { left: '0' });
     tl.fromTo(this.briefCaseItem, 0.4, { left: '-100%'}, { left: '0' });
-    tl.fromTo(this.graduationCapItem, 0.4, { left: '-100%'}, { left: '0' });
     tl.fromTo(this.folderOpenItem, 0.4, { left: '-100%'}, { left: '0' });
     tl.fromTo(this.phoneItem, 0.4, { left: '-100%'}, { left: '0' });
     tl.resume();
@@ -38,9 +36,6 @@ class Menu extends React.Component {
         </div>
         <div style={{ position: 'relative' }} ref={(elem) => { this.briefCaseItem = elem; }}>
           <MenuItem icon="briefcase" option="Experiência" screenId="experience" />
-        </div>
-        <div style={{ position: 'relative' }} ref={(elem) => { this.graduationCapItem = elem; }}>
-          <MenuItem icon="graduation-cap" option="Habilidades" screenId="skills" />
         </div>
         <div style={{ position: 'relative' }} ref={(elem) => { this.folderOpenItem = elem; }}>
           <MenuItem icon="folder-open" option="Projetos" screenId="projects" />

@@ -7,7 +7,6 @@ const Menu = () => (
   <MenuStyled>
     <MenuItem icon="user" />
     <MenuItem icon="briefcase" />
-    <MenuItem icon="graduation-cap" />
     <MenuItem icon="folder-open" />
     <MenuItem icon="phone" />
   </MenuStyled>
