@@ -1,5 +1,6 @@
 import React from 'react';
 import gsap from 'gsap';
+import { withTranslation } from 'react-i18next';
 
 import { MenuStyled } from './styles';
 import MenuItem from '../MenuItem';
@@ -29,23 +30,24 @@ class Menu extends React.Component {
   }
 
   render() {
+    const { t } = this.props;
     return (
       <MenuStyled>
         <div style={{ position: 'relative' }} ref={(elem) => { this.userItem = elem; }}>
-          <MenuItem icon="user" option="Sobre" screenId="about" />
+          <MenuItem icon="user" option={t('SIDE_MENU_ITEM1')} screenId="about" />
         </div>
         <div style={{ position: 'relative' }} ref={(elem) => { this.briefCaseItem = elem; }}>
-          <MenuItem icon="briefcase" option="Experiência" screenId="experience" />
+          <MenuItem icon="briefcase" option={t('SIDE_MENU_ITEM2')} screenId="experience" />
         </div>
         <div style={{ position: 'relative' }} ref={(elem) => { this.folderOpenItem = elem; }}>
-          <MenuItem icon="folder-open" option="Projetos" screenId="projects" />
+          <MenuItem icon="folder-open" option={t('SIDE_MENU_ITEM3')} screenId="projects" />
         </div>
         <div style={{ position: 'relative' }} ref={(elem) => { this.phoneItem = elem; }}>
-          <MenuItem icon="phone" option="Contato" screenId="contact" />
+          <MenuItem icon="phone" option={t('SIDE_MENU_ITEM4')} screenId="contact" />
         </div>
       </MenuStyled>
     )
   }
 }
 
-export default Menu;
+export default withTranslation()(Menu);
