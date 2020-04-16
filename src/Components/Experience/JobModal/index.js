@@ -25,11 +25,13 @@ class JobModal extends React.Component {
         console.log(jobModal);
         if (jobModal && !prevProps.jobModal) {
             gsap.to(this.modal, 0.3, { autoAlpha: 1 });
-            gsap.to(this.modalBox, 0.4, { scale: 1, delay: 0.3, ease: 'elastic.out(1, 0.7)' })
+            gsap.to(this.modalBox, 0.4, { scale: 1, delay: 0.3, ease: 'elastic.out(1, 0.7)' });
+            document.body.style.overflow = "hidden";
         }
         if (!jobModal && prevProps.jobModal) {
             gsap.to(this.modalBox, 0.4, { scale: 0, ease: 'elastic.in(1, 0.7)' });
             gsap.to(this.modal, 0.15, { autoAlpha: 0, delay: 0.4 });
+            document.body.style.overflow = "auto";
         }
     }
 
