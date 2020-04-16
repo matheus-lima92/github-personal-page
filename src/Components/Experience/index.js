@@ -2,14 +2,12 @@ import React from 'react';
 
 import Paragraph from 'Components/common/Paragraph';
 import Title from 'Components/common/Title';
-import JobModal from './JobModal';
 import Timeline from './Timeline/index';
 import { ContentSection } from 'common/style';
 
 
 const Experience = () => (
     <ContentSection>
-        <JobModal />
 		<Title title="Experiência" />
         <Paragraph firstParagraph={true}>
             Fiquei algum tempo pensando em uma forma, que não fosse um texto enorme e cansativo, para resumir meus anos

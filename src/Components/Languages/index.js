@@ -23,11 +23,11 @@ class Languages extends React.Component {
     toggleSelector() {
         const { selectorVisible } = this.state;
         if (!selectorVisible) {
-            gsap.fromTo(this.languagesSelector, 0.5, { scale: 0 }, { scale: 1, ease: "elastic.out(1, 0.7)" });
+            gsap.fromTo(this.languagesSelector, 0.5, { scale: 0 }, { scale: 1, ease: 'elastic.out(1, 0.7)' });
             this.setState(prevState => ({ ...prevState, selectorVisible: true }));
             return;
         }
-        gsap.fromTo(this.languagesSelector, 0.5, { scale: 1 }, { scale: 0, ease: "elastic.in(1, 0.7)" });
+        gsap.fromTo(this.languagesSelector, 0.5, { scale: 1 }, { scale: 0, ease: 'elastic.in(1, 0.7)' });
         this.setState(prevState => ({ ...prevState, selectorVisible: false }));
     }
 

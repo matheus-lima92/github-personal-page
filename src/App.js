@@ -1,5 +1,6 @@
 import React from 'react';
 
+import JobModal from './Components/Experience/JobModal';
 import HeaderMobile from './Components/HeaderMobile';
 import SideMenu from './Components/SideMenu';
 import MainContainer from './Components/MainContainer';
@@ -9,6 +10,7 @@ import './App.css';
 
 const App = () => (
   <div className="App">
+    <JobModal />
     <Languages />
     <HeaderMobile />
     <SideMenu />
