@@ -1,4 +1,5 @@
 import React from 'react';
+import { withTranslation } from 'react-i18next';
 
 import {
   PictureAndNameWrapper,
@@ -6,7 +7,7 @@ import {
   ProfileInfo
 } from './styles';
 
-const PictureAndName = () => (
+const PictureAndName = ({ t }) => (
   <PictureAndNameWrapper>
     <ProfilePic />
     <ProfileInfo>
@@ -14,10 +15,10 @@ const PictureAndName = () => (
         Matheus Gomes
       </div>
       <div className="profile-title">
-        Software Engineer
+        {t('PROFILE_TITLE')}
       </div>
     </ProfileInfo>
   </PictureAndNameWrapper>
 );
 
-export default PictureAndName;
+export default withTranslation()(PictureAndName);
