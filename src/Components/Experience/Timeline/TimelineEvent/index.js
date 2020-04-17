@@ -11,14 +11,14 @@ import { showJobModal } from 'actions/jobModal';
 
 const defineFinalWidth = (parentElement) => {
     if (!parentElement || !parentElement.clientWidth) return 600;
-    const sizeToSubtract = window.innerWidth >= definitions.TIMELINE_DESKTOP_BEHAVIOR
+    const sizeToSubtract = window.innerWidth >= definitions.SMALL_DEVICES_MIN_WIDTH
         ? definitions.TIMELINE_EVENT_WIDTH
         : definitions.TIMELINE_EVENT_SIZE_MOBILE;
     return (parentElement.clientWidth / 2) - sizeToSubtract;
 };
 
 const defineExhibitionMode = () =>
-    window.innerWidth >= definitions.TIMELINE_DESKTOP_BEHAVIOR ? 'desktop' : 'mobile';
+    window.innerWidth >= definitions.SMALL_DEVICES_MIN_WIDTH ? 'desktop' : 'mobile';
 
 class TimelineEvent extends React.Component {
     constructor(props) {
@@ -51,10 +51,10 @@ class TimelineEvent extends React.Component {
 
     toggleExhibition() {
         const { exhibitionMode } = this.state;
-        if (exhibitionMode === 'desktop' && window.innerWidth >= definitions.TIMELINE_DESKTOP_BEHAVIOR) {
+        if (exhibitionMode === 'desktop' && window.innerWidth >= definitions.SMALL_DEVICES_MIN_WIDTH) {
             return;
         }
-        if (exhibitionMode === 'mobile' && window.innerWidth < definitions.TIMELINE_DESKTOP_BEHAVIOR) {
+        if (exhibitionMode === 'mobile' && window.innerWidth < definitions.SMALL_DEVICES_MIN_WIDTH) {
             return;
         }
         if (exhibitionMode === 'desktop') {

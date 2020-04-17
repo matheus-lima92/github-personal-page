@@ -6,7 +6,7 @@ import companyLogo from 'common/companyLogo';
 export const TimelineEventStyled = styled.div`
     position: relative;
     .timeline-event {
-        @media (min-width: ${definitions.TIMELINE_DESKTOP_BEHAVIOR}px) {
+        @media (min-width: ${definitions.SMALL_DEVICES_MIN_WIDTH}px) {
             width: ${definitions.TIMELINE_EVENT_WIDTH}px;
             height: 200px;
             position: relative;
@@ -21,7 +21,7 @@ export const TimelineEventStyled = styled.div`
             justify-content: space-evenly;
             flex-direction: column;
         }
-        @media (max-width: ${definitions.TIMELINE_DESKTOP_BEHAVIOR - 1}px) {
+        @media (max-width: ${definitions.SMALL_DEVICES_MIN_WIDTH - 1}px) {
             width: ${definitions.TIMELINE_EVENT_SIZE_MOBILE}px;
             height: ${definitions.TIMELINE_EVENT_SIZE_MOBILE}px;
             position: relative;
@@ -60,7 +60,7 @@ export const TimelineEventStyled = styled.div`
                 position: relative;
                 top: -4px;
             }
-            @media (max-width: ${definitions.TIMELINE_DESKTOP_BEHAVIOR - 1}px) {
+            @media (max-width: ${definitions.SMALL_DEVICES_MIN_WIDTH - 1}px) {
                 display: none;
             }
         }
@@ -70,7 +70,7 @@ export const TimelineEventStyled = styled.div`
     }
     .right-event {
         left: calc(100% - ${definitions.TIMELINE_EVENT_WIDTH}px);
-        @media (max-width: ${definitions.TIMELINE_DESKTOP_BEHAVIOR - 1}px) {
+        @media (max-width: ${definitions.SMALL_DEVICES_MIN_WIDTH - 1}px) {
             left: calc(100% - ${definitions.TIMELINE_EVENT_SIZE_MOBILE}px);
         }
     }
@@ -81,7 +81,7 @@ export const TimelineEventStyled = styled.div`
         width: calc(50% - ${definitions.TIMELINE_EVENT_WIDTH}px);
         top: 50px;
         left: ${definitions.TIMELINE_EVENT_WIDTH}px;
-        @media (max-width: ${definitions.TIMELINE_DESKTOP_BEHAVIOR - 1}px) {
+        @media (max-width: ${definitions.SMALL_DEVICES_MIN_WIDTH - 1}px) {
             width: calc(50% - ${definitions.TIMELINE_EVENT_SIZE_MOBILE}px);
             left: ${definitions.TIMELINE_EVENT_SIZE_MOBILE}px;
         }
@@ -94,7 +94,7 @@ export const TimelineEventStyled = styled.div`
         z-index: 2;
         width: calc(50% - ${definitions.TIMELINE_EVENT_WIDTH}px);
         left: ${definitions.TIMELINE_EVENT_WIDTH}px;
-        @media (max-width: ${definitions.TIMELINE_DESKTOP_BEHAVIOR - 1}px) {
+        @media (max-width: ${definitions.SMALL_DEVICES_MIN_WIDTH - 1}px) {
             width: calc(50% - ${definitions.TIMELINE_EVENT_SIZE_MOBILE}px);
             left: ${definitions.TIMELINE_EVENT_SIZE_MOBILE}px;
         }
@@ -106,7 +106,7 @@ export const TimelineEventStyled = styled.div`
         width: calc(50% - ${definitions.TIMELINE_EVENT_WIDTH}px);
         top: 50px;
         left: 50%;
-        @media (max-width: ${definitions.TIMELINE_DESKTOP_BEHAVIOR - 1}px) {
+        @media (max-width: ${definitions.SMALL_DEVICES_MIN_WIDTH - 1}px) {
             width: calc(50% - ${definitions.TIMELINE_EVENT_SIZE_MOBILE}px);
             left: 50%;
         }
@@ -118,7 +118,7 @@ export const TimelineEventStyled = styled.div`
         top: 50px;
         z-index: 2;
         right: ${definitions.TIMELINE_EVENT_WIDTH}px;
-        @media (max-width: ${definitions.TIMELINE_DESKTOP_BEHAVIOR - 1}px) {
+        @media (max-width: ${definitions.SMALL_DEVICES_MIN_WIDTH - 1}px) {
             right: ${definitions.TIMELINE_EVENT_SIZE_MOBILE}px;
         }
     }
@@ -129,7 +129,7 @@ export const TimelineEventStyled = styled.div`
         width: 3px;
         top: 0px;
         left: 50%;
-        @media (max-width: ${definitions.TIMELINE_DESKTOP_BEHAVIOR - 1}px) {
+        @media (max-width: ${definitions.SMALL_DEVICES_MIN_WIDTH - 1}px) {
             height: 90px;
         }
     }

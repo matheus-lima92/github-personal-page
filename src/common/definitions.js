@@ -4,7 +4,7 @@ const definitions = {
   TIMELINE_EVENT_SIZE_MOBILE: 90,
   MAIN_SECTION_MAX_WIDTH: 900,
   YEAR_MARK_SIZE: 100,
-  TIMELINE_DESKTOP_BEHAVIOR: 750
+  SMALL_DEVICES_MIN_WIDTH: 750
 };
 
 export default definitions;
