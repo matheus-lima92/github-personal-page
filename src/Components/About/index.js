@@ -1,12 +1,10 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 
 import Paragraph from 'Components/common/Paragraph';
 import Title from 'Components/common/Title';
 import { ContentSection } from 'common/style';
 
 const About = () => {
-    const { t } = useTranslation();
     return (
         <ContentSection>
             <Title title="Sobre" />

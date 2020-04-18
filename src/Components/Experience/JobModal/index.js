@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { withTranslation } from 'react-i18next';
 import gsap from 'gsap';
 
 import { hideJobModal } from 'actions/jobModal';
@@ -12,6 +13,11 @@ import {
     CompanyLogo,
     CompanyInformation
 } from './styles';
+
+const getCompanyI18nKey = (prefix, company = '') => {
+    if (!company || !prefix) return 'TRANSLATION_NOT_FOUND';
+    return `${prefix}_${company.replace(/ +/g, '').toUpperCase()}`;
+}
 
 class JobModal extends React.Component {
 
@@ -46,51 +52,33 @@ class JobModal extends React.Component {
     }
 
     render() {
-        const { jobModal } = this.props;
+        const { jobModal: company, t } = this.props;
         return (
             <Modal ref={(elem) => { this.modal = elem; }}>
                 <ModalBox ref={(elem) => { this.modalBox = elem; }}>
                     <ModalHeader>
                         <div onClick={() => this.closeModal()}>&times;</div>
                     </ModalHeader>
-                    <CompanyLogo company={jobModal} />
+                    <CompanyLogo company={company} />
                     <CompanyInformation>
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
-                        lorem ipsum dolor sit amet
+                        <div>
+                            <b>{t('JOB_MODAL_SUBTITLE_COMPANY')}</b>
+                            <span>{t(getCompanyI18nKey('JOB_MODAL_COMPANY', company))}</span>
+                        </div>
+                        <div>
+                            <b>{t('JOB_MODAL_SUBTITLE_WEBSITE')}</b>
+                            <a href={t(getCompanyI18nKey('JOB_MODAL_WEBSITE_ANCHOR', company))} target='blank'>
+                                {t(getCompanyI18nKey('JOB_MODAL_WEBSITE', company))}
+                            </a>
+                        </div>
+                        <div>
+                            <b>{t('JOB_MODAL_SUBTITLE_DESCRIPTION')}</b>
+                            <span>{t(getCompanyI18nKey('JOB_MODAL_DESCRIPTION', company))}</span>
+                        </div>
+                        <div>
+                            <b>{t('JOB_MODAL_SUBTITLE_TECHS')}</b>
+                            <span>{t(getCompanyI18nKey('JOB_MODAL_TECHS', company))}</span>
+                        </div>
                     </CompanyInformation>
                 </ModalBox>
             </Modal>
@@ -112,4 +100,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 	hideJobModal,
 }, dispatch);
   
-export default connect(mapStateToProps, mapDispatchToProps)(JobModal);
+export default connect(mapStateToProps, mapDispatchToProps)(withTranslation()(JobModal));

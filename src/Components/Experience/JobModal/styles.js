@@ -63,11 +63,14 @@ export const CompanyLogo = styled.div`
 
 export const CompanyInformation = styled.div`
     border: 1px solid ${colors.tinyBorders};
-    border-radius: 5px;
-    width: 90%;
+    border-radius: 10px;
+    width: 80%;
     margin: auto;
     margin-top: 30px;
     margin-bottom: 40px;
     height: 40vh;
     overflow-y: auto;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
 `;
