@@ -9,10 +9,14 @@ import SideMenu from './Components/SideMenu';
 import MainContainer from './Components/MainContainer';
 import BottomMenu from './Components/BottomMenu';
 import Languages from './Components/Languages';
+import i18n from 'i18n';
 import './App.css';
 
 const renderJobModalDescription = (jobModal, t) => {
-	if (jobModal === 'BairesDev') return(
+	
+	const currentLanguage = i18n.language;
+
+	if (jobModal === 'BairesDev') return (
 		<Trans i18nKey="JOB_MODAL_DESCRIPTION_BAIRESDEV">
 			BairesDev is the fastest growing Nearshore Software Outsourcing company in Latin America.
 			The company is distinguished by its level of excellence, and is known by hiring only the top 1%
@@ -24,7 +28,7 @@ const renderJobModalDescription = (jobModal, t) => {
 			coverage both on frontend and backend.
 		</Trans>
 	);
-	if (jobModal === 'Getty IO') return(<Trans i18nKey="JOB_MODAL_DESCRIPTION_GETTYIO" />);
+	if (jobModal === 'Getty IO') return (<Trans i18nKey="JOB_MODAL_DESCRIPTION_GETTYIO" />);
 	if (jobModal === 'Hypnobox') return (
 		<Trans i18nKey="JOB_MODAL_DESCRIPTION_HYPNOBOX">
 			Hypnobox is a brasilian company in the business of real estate. On Hypnobox I worked as Frontend lead,
@@ -32,7 +36,21 @@ const renderJobModalDescription = (jobModal, t) => {
 			a Vue.js web application destined to increase sellings of real estate agents. Besides 99Leads, I also 
 			worked on minor React projects.
 		</Trans>
-	)
+	);
+	if (jobModal === 'Aktie now') {
+		const zendeskUrl = currentLanguage === 'en'
+			? 'https://www.zendesk.com'
+			: 'https://www.zendesk.com.br';
+		return (
+			<Trans i18nKey="JOB_MODAL_DESCRIPTION_AKTIENOW">
+				Aktie Now is a brasilian company that offers customer services solutions for other companies. 
+				They are <a href={zendeskUrl} target="_blank">Zendesk</a>'s major partner in Latin America.
+				At Aktie Now I've developed software for big companies like IBM, Telefônica and TOTVS,
+				that are AktieNow’s customers, and also worked on an inter chatbot project called
+				<a href="https://meudroz.com.br" target="_blank">Droz</a>.
+			</Trans>
+		)
+	}
 	return null;
 }
 

@@ -52,12 +52,17 @@ const pt = {
 		`,
 		JOB_MODAL_TECHS_HYPNOBOX: 'Node.JS, Javascript, MongoDB, Vue, Vuex, React.',
 
-		JOB_MODAL_COMPANY_AKTIENOW: 'BairesDev',
-		JOB_MODAL_WEBSITE_AKTIENOW: 'bairesdev.com',
-		JOB_MODAL_WEBSITE_ANCHOR_AKTIENOW: 'https://www.bairesdev.com',
-		JOB_MODAL_COMPANY_TIME_AKTIENOW: 'blabalba',
-		JOB_MODAL_DESCRIPTION_AKTIENOW: 'lorem ipsum dolor description',
-		JOB_MODAL_TECHS_AKTIENOW: 'lorem ipsum dolor techs',
+		JOB_MODAL_COMPANY_AKTIENOW: 'Aktie Now',
+		JOB_MODAL_WEBSITE_AKTIENOW: 'aktienow.com',
+		JOB_MODAL_WEBSITE_ANCHOR_AKTIENOW: 'https://www.aktienow.com',
+		JOB_MODAL_COMPANY_TIME_AKTIENOW: 'Dez 2016 - Ago 2018',
+		JOB_MODAL_DESCRIPTION_AKTIENOW: `
+		A Aktie Now é uma empresa brasileira que oferece soluções de atendimento ao cliente para outras empresas. 
+		Eles são os principais parceiros da <1>Zendesk</1> na América Latina. Eu atuei no desenvolvimento
+		de software para grandes empresas como IBM, Telefônica e TOTVS, que são clientes da Aktienow, e também
+		trabalhei em um projeto interno de chatbot chamado <3>Droz</3>.
+		`,
+		JOB_MODAL_TECHS_AKTIENOW: 'Node.JS, Javascript, Jquery, AngularJS, SQL, MongoDB, Zendesk API, Java.',
 
 		JOB_MODAL_COMPANY_CNPEM: 'BairesDev',
 		JOB_MODAL_WEBSITE_CNPEM: 'bairesdev.com',
