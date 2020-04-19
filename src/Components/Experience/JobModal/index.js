@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { withTranslation } from 'react-i18next';
+import { Trans, withTranslation } from 'react-i18next';
 import gsap from 'gsap';
 
+import i18n from 'i18n';
 import { hideJobModal } from 'actions/jobModal';
 import {
     Modal,
@@ -25,7 +26,8 @@ class JobModal extends React.Component {
         super(props);
         this.modal = React.createRef();
         this.modalBox = React.createRef();
-        this.closeModal = this.closeModal.bind(this); 
+        this.closeModal = this.closeModal.bind(this);
+        this.renderJobModalDescription = this.renderJobModalDescription.bind(this);
     }
 
     componentDidMount() {
@@ -51,8 +53,50 @@ class JobModal extends React.Component {
         }, 500);
     }
 
+    renderJobModalDescription(){
+        const { jobModal: company } = this.props;
+        const currentLanguage = i18n.language;
+    
+        if (company === 'BairesDev') return (
+            <Trans i18nKey="JOB_MODAL_DESCRIPTION_BAIRESDEV">
+                BairesDev is the fastest growing Nearshore Software Outsourcing company in Latin America.
+                The company is distinguished by its level of excellence, and is known by hiring only the top 1%
+                software engineers. In fact, the selection process was very criterious, several tests and interviews
+                were necessary before signing the contract. Currently I work with the engineering team of
+                <a href="https://prioritypaymentsystems.com/" target="_blank">Priority Payment Systems</a>, a north american
+                company in the business of payments, which is BairesDev's customer. It's worth mentioning one characteristic
+                of Priority Payment Systems: their projects are incredibly well structured, having more than 90% unit tests
+                coverage both on frontend and backend.
+            </Trans>
+        );
+        if (company === 'Getty IO') return (<Trans i18nKey="JOB_MODAL_DESCRIPTION_GETTYIO" />);
+        if (company === 'Hypnobox') return (
+            <Trans i18nKey="JOB_MODAL_DESCRIPTION_HYPNOBOX">
+                Hypnobox is a brasilian company in the business of real estate. On Hypnobox I worked as Frontend lead,
+                being responsible to refactor and develop new features for <a href="https://99leads.com" target="_blank">99Leads</a>: 
+                a Vue.js web application destined to increase sellings of real estate agents. Besides 99Leads, I also 
+                worked on minor React projects.
+            </Trans>
+        );
+        if (company === 'Aktie now') {
+            const zendeskUrl = currentLanguage === 'en'
+                ? 'https://www.zendesk.com'
+                : 'https://www.zendesk.com.br';
+            return (
+                <Trans i18nKey="JOB_MODAL_DESCRIPTION_AKTIENOW">
+                    Aktie Now is a brasilian company that offers customer services solutions for other companies. 
+                    They are <a href={zendeskUrl} target="_blank">Zendesk</a>'s major partner in Latin America.
+                    At Aktie Now I've developed software for big companies like IBM, Telefônica and TOTVS,
+                    that are AktieNow’s customers, and also worked on an inter chatbot project called
+                    <a href="https://meudroz.com.br" target="_blank">Droz</a>.
+                </Trans>
+            )
+        }
+        return null;
+    }
+
     render() {
-        const { jobModal: company, t, children } = this.props;
+        const { jobModal: company, t } = this.props;
         return (
             <Modal ref={(elem) => { this.modal = elem; }}>
                 <ModalBox ref={(elem) => { this.modalBox = elem; }}>
@@ -77,7 +121,7 @@ class JobModal extends React.Component {
                         </div>
                         <div>
                             <b>{t('JOB_MODAL_SUBTITLE_DESCRIPTION')}</b>
-                            { children }
+                            {this.renderJobModalDescription()}
                         </div>
                         <div>
                             <b>{t('JOB_MODAL_SUBTITLE_TECHS')}</b>
