@@ -14,16 +14,25 @@ import './App.css';
 const renderJobModalDescription = (jobModal, t) => {
 	if (jobModal === 'BairesDev') return(
 		<Trans i18nKey="JOB_MODAL_DESCRIPTION_BAIRESDEV">
-			Atualmente a BairesDev é a empresa de desenvolvimento de software que mais cresce na América Latina.
-			A empresa destaca-se pelo seu nível de excelência, sendo conhecida por contratar o top 1% para
-			os times de engenharia de software. De fato, o processo seletivo foi bastante rigoroso, foram vários
-			meses de testes e entrevistas até a efetivação do contrato. No momento eu trabalho em conjunto com
-			o time de engenharia da <a href="https://prioritypaymentsystems.com/" target="_blank">Priority Payment Systems</a>,
-			uma empresa americana do ramo de pagamentos, que é cliente da BairesDev. Vale citar um ponto sobre a
-			Priority Payment Systems: seus projetos são incrivelmente bem estruturados, havendo mais de 90% de
-			cobertura de testes unitários tanto no frontend como no backend.
+			BairesDev is the fastest growing Nearshore Software Outsourcing company in Latin America.
+			The company is distinguished by its level of excellence, and is known by hiring only the top 1%
+			software engineers. In fact, the selection process was very criterious, several tests and interviews
+			were necessary before signing the contract. Currently I work with the engineering team of
+			<a href="https://prioritypaymentsystems.com/" target="_blank">Priority Payment Systems</a>, a north american
+			company in the business of payments, which is BairesDev's customer. It's worth mentioning one characteristic
+			of Priority Payment Systems: their projects are incredibly well structured, having more than 90% unit tests
+			coverage both on frontend and backend.
 		</Trans>
 	);
+	if (jobModal === 'Getty IO') return(<Trans i18nKey="JOB_MODAL_DESCRIPTION_GETTYIO" />);
+	if (jobModal === 'Hypnobox') return (
+		<Trans i18nKey="JOB_MODAL_DESCRIPTION_HYPNOBOX">
+			Hypnobox is a brasilian company in the business of real estate. On Hypnobox I worked as Frontend lead,
+			being responsible to refactor and develop new features for <a href="https://99leads.com" target="_blank">99Leads</a>: 
+			a Vue.js web application destined to increase sellings of real estate agents. Besides 99Leads, I also 
+			worked on minor React projects.
+		</Trans>
+	)
 	return null;
 }
 

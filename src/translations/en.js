@@ -35,21 +35,29 @@ const en = {
 		BairesDev's customer. It's worth mentioning one characteristic of Priority Payment Systems: their
 		projects are incredibly well structured, having more than 90% unit tests coverage both on frontend and backend.
 		`,
-		JOB_MODAL_TECHS_BAIRESDEV: 'Node.JS, Javascript, SQL, ElasticSearch, React, Redux, Microservices, Swagger, Mocha, Jest, Chai, Sion.',
+		JOB_MODAL_TECHS_BAIRESDEV: 'Node.JS, Javascript, Lodash, SQL, ElasticSearch, React, Redux, Microservices, Swagger, Mocha, Jest, Chai, Sion.',
 
-		JOB_MODAL_COMPANY_GETTYIO: 'BairesDev',
-		JOB_MODAL_WEBSITE_GETTYIO: 'bairesdev.com',
-		JOB_MODAL_WEBSITE_ANCHOR_GETTYIO: 'https://www.bairesdev.com',
-		JOB_MODAL_COMPANY_TIME_GETTYIO: 'blabalba',
-		JOB_MODAL_DESCRIPTION_GETTYIO: 'lorem ipsum dolor description',
-		JOB_MODAL_TECHS_GETTYIO: 'lorem ipsum dolor techs',
+		JOB_MODAL_COMPANY_GETTYIO: 'GETTY/IO',
+		JOB_MODAL_WEBSITE_GETTYIO: 'getty.io',
+		JOB_MODAL_WEBSITE_ANCHOR_GETTYIO: 'https://getty.io',
+		JOB_MODAL_COMPANY_TIME_GETTYIO: 'Nov 2018 - Jul 2019',
+		JOB_MODAL_DESCRIPTION_GETTYIO: `
+		Getty is a global company that helps startups and enterprises from all around the world scale their development teams by providing
+		them the top remote developers from South America. During my work experience, I was responsible to lead React frontend squads in
+		international projects, which were managed with Agile methodology.
+		`,
+		JOB_MODAL_TECHS_GETTYIO: 'Node.JS, Javascript, SQL, DynamoDB, React, React Native, Redux, Microservices, AWS.',
 
-		JOB_MODAL_COMPANY_HYPNOBOX: 'BairesDev',
-		JOB_MODAL_WEBSITE_HYPNOBOX: 'bairesdev.com',
-		JOB_MODAL_WEBSITE_ANCHOR_HYPNOBOX: 'https://www.bairesdev.com',
-		JOB_MODAL_COMPANY_TIME_HYPNOBOX: 'blabalba',
-		JOB_MODAL_DESCRIPTION_HYPNOBOX: 'lorem ipsum dolor description',
-		JOB_MODAL_TECHS_HYPNOBOX: 'lorem ipsum dolor techs',
+		JOB_MODAL_COMPANY_HYPNOBOX: 'Hypnobox',
+		JOB_MODAL_WEBSITE_HYPNOBOX: 'hypnobox.com.br',
+		JOB_MODAL_WEBSITE_ANCHOR_HYPNOBOX: 'https://www.hypnobox.com.br',
+		JOB_MODAL_COMPANY_TIME_HYPNOBOX: 'Aug 2018 - May 2019',
+		JOB_MODAL_DESCRIPTION_HYPNOBOX: `
+		Hypnobox is a brasilian company in the business of real estate. On Hypnobox I worked as Frontend lead, being responsible to refactor
+		and develop new features for <1>99Leads</1>: a Vue.js web application destined to increase sellings of real estate agents. Besides
+		99Leads, I also worked on minor React projects.
+		`,
+		JOB_MODAL_TECHS_HYPNOBOX: 'Node.JS, Javascript, MongoDB, Vue, Vuex, React.',
 
 		JOB_MODAL_COMPANY_AKTIENOW: 'BairesDev',
 		JOB_MODAL_WEBSITE_AKTIENOW: 'bairesdev.com',
