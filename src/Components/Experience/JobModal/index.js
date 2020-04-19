@@ -52,7 +52,7 @@ class JobModal extends React.Component {
     }
 
     render() {
-        const { jobModal: company, t } = this.props;
+        const { jobModal: company, t, children } = this.props;
         return (
             <Modal ref={(elem) => { this.modal = elem; }}>
                 <ModalBox ref={(elem) => { this.modalBox = elem; }}>
@@ -72,8 +72,12 @@ class JobModal extends React.Component {
                             </a>
                         </div>
                         <div>
+                            <b>{t('JOB_MODAL_SUBTITLE_COMPANY_TIME')}</b>
+                            <span>{t(getCompanyI18nKey('JOB_MODAL_COMPANY_TIME', company))}</span>
+                        </div>
+                        <div>
                             <b>{t('JOB_MODAL_SUBTITLE_DESCRIPTION')}</b>
-                            <span>{t(getCompanyI18nKey('JOB_MODAL_DESCRIPTION', company))}</span>
+                            { children }
                         </div>
                         <div>
                             <b>{t('JOB_MODAL_SUBTITLE_TECHS')}</b>
