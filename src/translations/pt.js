@@ -64,12 +64,20 @@ const pt = {
 		`,
 		JOB_MODAL_TECHS_AKTIENOW: 'Node.JS, Javascript, Jquery, AngularJS, SQL, MongoDB, Zendesk API, Java.',
 
-		JOB_MODAL_COMPANY_CNPEM: 'BairesDev',
-		JOB_MODAL_WEBSITE_CNPEM: 'bairesdev.com',
-		JOB_MODAL_WEBSITE_ANCHOR_CNPEM: 'https://www.bairesdev.com',
-		JOB_MODAL_COMPANY_TIME_CNPEM: 'blabalba',
-		JOB_MODAL_DESCRIPTION_CNPEM: 'lorem ipsum dolor description',
-		JOB_MODAL_TECHS_CNPEM: 'lorem ipsum dolor techs',
+		JOB_MODAL_COMPANY_CNPEM: 'CNPEM',
+		JOB_MODAL_WEBSITE_CNPEM: 'cnpem.br',
+		JOB_MODAL_WEBSITE_ANCHOR_CNPEM: 'http://cnpem.br/',
+		JOB_MODAL_COMPANY_TIME_CNPEM: 'Mar 2015 - Set 2016',
+		JOB_MODAL_DESCRIPTION_CNPEM: `
+		CNPEM é o Centro Nacional de Pesquisa em Energia e Materiais. Como o nume sugere, é um centro de pesquisa
+		financiado pelo governo federal do Brasil. Tive a oportunidade de trabalhar no CNPEM antes de me graduar em
+		engenharia, através de um programa de estágio. A experiência foi bastante única, eles têm projetos incríveis
+		por lá, e recentemente inauguraram o <1>Sirius</1>, a nova fonte de luz síncrotron brasileira: um acelerador
+		de partículas que é a maior e mais complexa infraestrutura de pesquisa já construída no país. Durante o 
+		programa de estágio desenvolvi protótipos de sistemas embarcados que seriam utilizados nas linhas de luz do 
+		acelerador de partículas.
+		`,
+		JOB_MODAL_TECHS_CNPEM: 'Python, MATLAB',
 
 		JOB_MODAL_COMPANY_WISE: 'BairesDev',
 		JOB_MODAL_WEBSITE_WISE: 'bairesdev.com',
@@ -87,7 +95,6 @@ const pt = {
 		/*--- JOB COMPANY MODAL END ---*/
 
 		TRANSLATION_NOT_FOUND: '',
-		userMessagesUnread: "Hello <1>{{name}}</1>, you have {{count}} unread message. <5>Go to message</5>.",
 	}
 };
 

@@ -71,12 +71,20 @@ const en = {
 		`,
 		JOB_MODAL_TECHS_AKTIENOW: 'Node.JS, Javascript, Jquery, AngularJS, SQL, MongoDB, Zendesk API, Java.',
 
-		JOB_MODAL_COMPANY_CNPEM: 'BairesDev',
-		JOB_MODAL_WEBSITE_CNPEM: 'bairesdev.com',
-		JOB_MODAL_WEBSITE_ANCHOR_CNPEM: 'https://www.bairesdev.com',
-		JOB_MODAL_COMPANY_TIME_CNPEM: 'blabalba',
-		JOB_MODAL_DESCRIPTION_CNPEM: 'lorem ipsum dolor description',
-		JOB_MODAL_TECHS_CNPEM: 'lorem ipsum dolor techs',
+		JOB_MODAL_COMPANY_CNPEM: 'CNPEM',
+		JOB_MODAL_WEBSITE_CNPEM: 'cnpem.br',
+		JOB_MODAL_WEBSITE_ANCHOR_CNPEM: 'http://cnpem.br/',
+		JOB_MODAL_COMPANY_TIME_CNPEM: 'Mar 2015 - Sep 2016',
+		JOB_MODAL_DESCRIPTION_CNPEM: `
+		CNPEM are the initials for Brazilian Center for Research in Energy and Materials. As the name suggests,
+		it is a research center financed by the brazilian government. I had the opportunity to work on CNPEM before
+		finishing my engineering degree, through an internship program. The work experience has been very unique,
+		CNPEM has amazing projects and recently inaugurated <1>Sirius</1>, the new Brazilian synchrotron light source: 
+		a particle accelerator that is the largest and most complex research infrastructure ever built in Brazil.
+		During the internship program I have developed prototypes of embbeded systems that would be used in the 
+		particle accelerator.
+		`,
+		JOB_MODAL_TECHS_CNPEM: 'Python, MATLAB',
 
 		JOB_MODAL_COMPANY_WISE: 'BairesDev',
 		JOB_MODAL_WEBSITE_WISE: 'bairesdev.com',
@@ -94,7 +102,6 @@ const en = {
 		/*--- JOB COMPANY MODAL END ---*/
 
 		TRANSLATION_NOT_FOUND: '',
-		userMessagesUnread: "Hello <1>{{name}}</1>, you have {{count}} unread message. <5>Go to message</5>.",
 	}
 };
 

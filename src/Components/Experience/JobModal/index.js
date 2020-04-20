@@ -84,13 +84,29 @@ class JobModal extends React.Component {
                 : 'https://www.zendesk.com.br';
             return (
                 <Trans i18nKey="JOB_MODAL_DESCRIPTION_AKTIENOW">
-                    Aktie Now is a brasilian company that offers customer services solutions for other companies. 
+                    AktieNow is a brasilian company that offers customer services solutions for other companies. 
                     They are <a href={zendeskUrl} target="_blank">Zendesk</a>'s major partner in Latin America.
-                    At Aktie Now I've developed software for big companies like IBM, Telefônica and TOTVS,
+                    At AktieNow I've developed software for big companies like IBM, Telefônica and TOTVS,
                     that are AktieNow’s customers, and also worked on an inter chatbot project called
                     <a href="https://meudroz.com.br" target="_blank">Droz</a>.
                 </Trans>
-            )
+            );
+        }
+        if (company === 'CNPEM') {
+            const siriusUrl = currentLanguage === 'en'
+                ? 'https://www.lnls.cnpem.br/sirius-en/sirius-project/'
+                : 'https://www.lnls.cnpem.br/sirius/projeto-sirius/';
+            return (
+                <Trans i18nKey="JOB_MODAL_DESCRIPTION_CNPEM">
+                    CNPEM are the initials for Brazilian Center for Research in Energy and Materials. As the name suggests,
+                    it is a research center financed by the brazilian government. I had the opportunity to work on CNPEM before
+                    finishing my engineering degree, through an internship program. The work experience has been very unique,
+                    CNPEM has amazing projects and recently inaugurated <a href={siriusUrl} target="_blank">Sirius</a>,
+                    the new Brazilian synchrotron light source: a particle accelerator that is the largest and most complex research 
+                    infrastructure ever built in Brazil. During the internship program I have developed prototypes of embbeded systems 
+                    that would be used in the particle accelerator.
+                </Trans>
+            );
         }
         return null;
     }
