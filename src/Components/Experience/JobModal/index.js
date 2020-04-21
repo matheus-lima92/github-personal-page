@@ -14,6 +14,7 @@ import {
     CompanyLogo,
     CompanyInformation
 } from './styles';
+import cnpqPresentation from 'files/Painel.pptx';
 
 const getCompanyI18nKey = (prefix, company = '') => {
     if (!company || !prefix) return 'TRANSLATION_NOT_FOUND';
@@ -63,7 +64,7 @@ class JobModal extends React.Component {
                 The company is distinguished by its level of excellence, and is known by hiring only the top 1%
                 software engineers. In fact, the selection process was very criterious, several tests and interviews
                 were necessary before signing the contract. Currently I work with the engineering team of
-                <a href="https://prioritypaymentsystems.com/" target="_blank">Priority Payment Systems</a>, a north american
+                <a href="https://prioritypaymentsystems.com/" target="_blank" rel="noopener noreferrer">Priority Payment Systems</a>, a north american
                 company in the business of payments, which is BairesDev's customer. It's worth mentioning one characteristic
                 of Priority Payment Systems: their projects are incredibly well structured, having more than 90% unit tests
                 coverage both on frontend and backend.
@@ -73,7 +74,7 @@ class JobModal extends React.Component {
         if (company === 'Hypnobox') return (
             <Trans i18nKey="JOB_MODAL_DESCRIPTION_HYPNOBOX">
                 Hypnobox is a brasilian company in the business of real estate. On Hypnobox I worked as Frontend lead,
-                being responsible to refactor and develop new features for <a href="https://99leads.com" target="_blank">99Leads</a>: 
+                being responsible to refactor and develop new features for <a href="https://99leads.com" target="_blank" rel="noopener noreferrer">99Leads</a>: 
                 a Vue.js web application destined to increase sellings of real estate agents. Besides 99Leads, I also 
                 worked on minor React projects.
             </Trans>
@@ -85,10 +86,10 @@ class JobModal extends React.Component {
             return (
                 <Trans i18nKey="JOB_MODAL_DESCRIPTION_AKTIENOW">
                     AktieNow is a brasilian company that offers customer services solutions for other companies. 
-                    They are <a href={zendeskUrl} target="_blank">Zendesk</a>'s major partner in Latin America.
+                    They are <a href={zendeskUrl} target="_blank" rel="noopener noreferrer">Zendesk</a>'s major partner in Latin America.
                     At AktieNow I've developed software for big companies like IBM, Telefônica and TOTVS,
                     that are AktieNow’s customers, and also worked on an inter chatbot project called
-                    <a href="https://meudroz.com.br" target="_blank">Droz</a>.
+                    <a href="https://meudroz.com.br" target="_blank" rel="noopener noreferrer">Droz</a>.
                 </Trans>
             );
         }
@@ -101,10 +102,28 @@ class JobModal extends React.Component {
                     CNPEM are the initials for Brazilian Center for Research in Energy and Materials. As the name suggests,
                     it is a research center financed by the brazilian government. I had the opportunity to work on CNPEM before
                     finishing my engineering degree, through an internship program. The work experience has been very unique,
-                    CNPEM has amazing projects and recently inaugurated <a href={siriusUrl} target="_blank">Sirius</a>,
+                    CNPEM has amazing projects and recently inaugurated <a href={siriusUrl} target="_blank" rel="noopener noreferrer">Sirius</a>,
                     the new Brazilian synchrotron light source: a particle accelerator that is the largest and most complex research 
                     infrastructure ever built in Brazil. During the internship program I have developed prototypes of embbeded systems 
                     that would be used in the particle accelerator.
+                </Trans>
+            );
+        }
+        if (company === 'Wise') {
+            return <Trans i18nKey="JOB_MODAL_DESCRIPTION_WISE" />
+        }
+        if (company === 'CNPQ') {
+            return (
+                <Trans i18nKey="JOB_MODAL_DESCRIPTION_CNPQ">
+                    CNPQ, the National Council for Scientific and Technological Development, is a public foundation linked to the Ministry of Science,
+                    Technology, Innovations and Communications. Its main duties are to encourage scientific, technological and innovation research and
+                    promote the training of qualified human resources for research, in all areas of knowledge. It was through a partnership
+                    from CNPQ with my university, that I got a scientific initiation scholarship to do my first paid job
+                    in the programming area. The project was related to autonomous mobility: the challenge was to develop the software for a scale
+                    autonomous vehicle, so that it communicated with the sensors and could identify a parking space. After finding the vacancy,
+                    the vehicle should be able to park alone, without human interference. The scientific initiation project lasted one year, and the results
+                    were quite satisfactory. You can click <a href={cnpqPresentation} download="cnpq_final_presentation.pptx">here</a> 
+                    to check the final presentation (Portuguese only).
                 </Trans>
             );
         }

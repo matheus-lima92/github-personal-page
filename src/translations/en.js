@@ -86,19 +86,35 @@ const en = {
 		`,
 		JOB_MODAL_TECHS_CNPEM: 'Python, MATLAB.',
 
-		JOB_MODAL_COMPANY_WISE: 'BairesDev',
-		JOB_MODAL_WEBSITE_WISE: 'bairesdev.com',
-		JOB_MODAL_WEBSITE_ANCHOR_WISE: 'https://www.bairesdev.com',
-		JOB_MODAL_COMPANY_TIME_WISE: 'blabalba',
-		JOB_MODAL_DESCRIPTION_WISE: 'lorem ipsum dolor description',
-		JOB_MODAL_TECHS_WISE: 'lorem ipsum dolor techs',
+		JOB_MODAL_COMPANY_WISE: 'Wise',
+		JOB_MODAL_WEBSITE_WISE: 'wise.eco.br',
+		JOB_MODAL_WEBSITE_ANCHOR_WISE: 'http://wise.eco.br',
+		JOB_MODAL_COMPANY_TIME_WISE: 'Aug 2014 - Feb 2015',
+		JOB_MODAL_DESCRIPTION_WISE: `
+		Wise is a pioneer in the development and industrialization of
+		high performance plastic parts in Brazil, being a reference in the manufacture of recycled thermoplastic resin.
+		I started working at Wise through a university internship program, the goal was to have contact with a industrial 
+		production line, and study ways to optimize and automate processes. During the internship, I developed a
+		production controller with Arduino, which could be used to replace the company's spreadsheet system, and which
+		was also the topic of my undergraduate final project.
+		`,
+		JOB_MODAL_TECHS_WISE: 'C, Arduino, MATLAB.',
 
-		JOB_MODAL_COMPANY_CNPQ: 'BairesDev',
-		JOB_MODAL_WEBSITE_CNPQ: 'bairesdev.com',
-		JOB_MODAL_WEBSITE_ANCHOR_CNPQ: 'https://www.bairesdev.com',
-		JOB_MODAL_COMPANY_TIME_CNPQ: 'blabalba',
-		JOB_MODAL_DESCRIPTION_CNPQ: 'lorem ipsum dolor description',
-		JOB_MODAL_TECHS_CNPQ: 'lorem ipsum dolor techs',
+		JOB_MODAL_COMPANY_CNPQ: 'CNPQ',
+		JOB_MODAL_WEBSITE_CNPQ: 'cnpq.br',
+		JOB_MODAL_WEBSITE_ANCHOR_CNPQ: 'http://www.cnpq.br',
+		JOB_MODAL_COMPANY_TIME_CNPQ: 'Jul 2012 - Aug 2013',
+		JOB_MODAL_DESCRIPTION_CNPQ: `
+		CNPQ, the National Council for Scientific and Technological Development, is a public foundation linked to the Ministry of Science,
+		Technology, Innovations and Communications. Its main duties are to encourage scientific, technological and innovation research and
+		promote the training of qualified human resources for research, in all areas of knowledge. It was through a partnership
+		from CNPQ with my university, that I got a scientific initiation scholarship to do my first paid job
+		in the programming area. The project was related to autonomous mobility: the challenge was to develop the software for a scale
+		autonomous vehicle, so that it communicated with the sensors and could identify a parking space. After finding the vacancy,
+		the vehicle should be able to park alone, without human interference. The scientific initiation project lasted one year, and the results
+		were quite satisfactory. You can click <1>here</1> to check the final presentation (Portuguese only).
+		`,
+		JOB_MODAL_TECHS_CNPQ: 'C, Arduino, MATLAB.',
 		/*--- JOB COMPANY MODAL END ---*/
 
 		TRANSLATION_NOT_FOUND: '',

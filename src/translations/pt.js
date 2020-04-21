@@ -83,7 +83,8 @@ const pt = {
 		JOB_MODAL_WEBSITE_WISE: 'wise.eco.br',
 		JOB_MODAL_WEBSITE_ANCHOR_WISE: 'http://wise.eco.br',
 		JOB_MODAL_COMPANY_TIME_WISE: 'Ago 2014 - Fev 2015',
-		JOB_MODAL_DESCRIPTION_WISE: `A Wise é uma empresa pioneira no desenvolvimento e industrialização de
+		JOB_MODAL_DESCRIPTION_WISE: `
+		A Wise é uma empresa pioneira no desenvolvimento e industrialização de
 		peças plásticas de alta performance no Brasil, sendo referência na fabricação de resina termoplástica reciclada.
 		Comecei a trabalhar na Wise através de um programa de estágio da universidade, o objetivo era ter contato com uma linha 
 		de produção industrial, e estudar formas de otimizar e automatizar processos. Durante o estágio, elaborei um 
@@ -92,12 +93,21 @@ const pt = {
 		`,
 		JOB_MODAL_TECHS_WISE: 'C, Arduino, MATLAB.',
 
-		JOB_MODAL_COMPANY_CNPQ: 'BairesDev',
-		JOB_MODAL_WEBSITE_CNPQ: 'bairesdev.com',
-		JOB_MODAL_WEBSITE_ANCHOR_CNPQ: 'https://www.bairesdev.com',
-		JOB_MODAL_COMPANY_TIME_CNPQ: 'blabalba',
-		JOB_MODAL_DESCRIPTION_CNPQ: 'lorem ipsum dolor description',
-		JOB_MODAL_TECHS_CNPQ: 'lorem ipsum dolor techs',
+		JOB_MODAL_COMPANY_CNPQ: 'CNPQ',
+		JOB_MODAL_WEBSITE_CNPQ: 'cnpq.br',
+		JOB_MODAL_WEBSITE_ANCHOR_CNPQ: 'http://www.cnpq.br',
+		JOB_MODAL_COMPANY_TIME_CNPQ: 'Jul 2012 - Ago 2013',
+		JOB_MODAL_DESCRIPTION_CNPQ: `
+		O CNPQ, Conselho Nacional de Desenvolvimento Científico e Tecnológico, é uma fundação pública vinculada ao Ministério da Ciência,
+		Tecnologia, Inovações e Comunicações. Tem como principais atribuições fomentar a pesquisa científica, tecnológica e de inovação e 
+		promover a formação de recursos humanos qualificados para a pesquisa, em todas as áreas do conhecimento. Foi através de uma parceria
+		do CNPQ com a minha universidade, que consegui uma bolsa de iniciação científica para realizar o meu primeiro trabalho remunerado 
+		na área de programação. O projeto estava relacionado com mobilidade autônoma: o desafio era desenvolver o software de um veículo
+		autônomo em escala, para que se comunicasse com os sensores e pudesse identificar uma vaga de estacionamento. Após encontrar a vaga,
+		o veículo deveria ser capaz de estacionar sozinho, sem interferência humana. O projeto de iniciação científica durou um ano, e os resultados
+		foram bem satisfatórios. Você pode clicar <1>aqui</1> para conferir a apresentação final (somente português).
+		`,
+		JOB_MODAL_TECHS_CNPQ: 'C, Arduino, MATLAB.',
 		/*--- JOB COMPANY MODAL END ---*/
 
 		TRANSLATION_NOT_FOUND: '',
