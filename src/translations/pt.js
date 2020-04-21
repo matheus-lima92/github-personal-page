@@ -74,17 +74,23 @@ const pt = {
 		engenharia, através de um programa de estágio. A experiência foi bastante única, eles têm projetos incríveis
 		por lá, e recentemente inauguraram o <1>Sirius</1>, a nova fonte de luz síncrotron brasileira: um acelerador
 		de partículas que é a maior e mais complexa infraestrutura de pesquisa já construída no país. Durante o 
-		programa de estágio desenvolvi protótipos de sistemas embarcados que seriam utilizados nas linhas de luz do 
-		acelerador de partículas.
+		programa de estágio desenvolvi o software de protótipos de sistemas embarcados que seriam utilizados 
+		nas linhas de luz do acelerador de partículas.
 		`,
-		JOB_MODAL_TECHS_CNPEM: 'Python, MATLAB',
+		JOB_MODAL_TECHS_CNPEM: 'Python, MATLAB.',
 
-		JOB_MODAL_COMPANY_WISE: 'BairesDev',
-		JOB_MODAL_WEBSITE_WISE: 'bairesdev.com',
-		JOB_MODAL_WEBSITE_ANCHOR_WISE: 'https://www.bairesdev.com',
-		JOB_MODAL_COMPANY_TIME_WISE: 'blabalba',
-		JOB_MODAL_DESCRIPTION_WISE: 'lorem ipsum dolor description',
-		JOB_MODAL_TECHS_WISE: 'lorem ipsum dolor techs',
+		JOB_MODAL_COMPANY_WISE: 'Wise',
+		JOB_MODAL_WEBSITE_WISE: 'wise.eco.br',
+		JOB_MODAL_WEBSITE_ANCHOR_WISE: 'http://wise.eco.br',
+		JOB_MODAL_COMPANY_TIME_WISE: 'Ago 2014 - Fev 2015',
+		JOB_MODAL_DESCRIPTION_WISE: `A Wise é uma empresa pioneira no desenvolvimento e industrialização de
+		peças plásticas de alta performance no Brasil, sendo referência na fabricação de resina termoplástica reciclada.
+		Comecei a trabalhar na Wise através de um programa de estágio da universidade, o objetivo era ter contato com uma linha 
+		de produção industrial, e estudar formas de otimizar e automatizar processos. Durante o estágio, elaborei um 
+		controlador de produção com Arduino, que poderia ser utilizado para substituir o sistema de planilhas da empresa, e que
+		também foi o tema do meu TCC.
+		`,
+		JOB_MODAL_TECHS_WISE: 'C, Arduino, MATLAB.',
 
 		JOB_MODAL_COMPANY_CNPQ: 'BairesDev',
 		JOB_MODAL_WEBSITE_CNPQ: 'bairesdev.com',

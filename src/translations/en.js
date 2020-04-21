@@ -81,10 +81,10 @@ const en = {
 		finishing my engineering degree, through an internship program. The work experience has been very unique,
 		CNPEM has amazing projects and recently inaugurated <1>Sirius</1>, the new Brazilian synchrotron light source: 
 		a particle accelerator that is the largest and most complex research infrastructure ever built in Brazil.
-		During the internship program I have developed prototypes of embbeded systems that would be used in the 
-		particle accelerator.
+		During the internship program I have developed the software for prototypes of embbeded systems that would be 
+		used in the particle accelerator.
 		`,
-		JOB_MODAL_TECHS_CNPEM: 'Python, MATLAB',
+		JOB_MODAL_TECHS_CNPEM: 'Python, MATLAB.',
 
 		JOB_MODAL_COMPANY_WISE: 'BairesDev',
 		JOB_MODAL_WEBSITE_WISE: 'bairesdev.com',
