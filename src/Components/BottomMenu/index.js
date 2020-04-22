@@ -5,10 +5,10 @@ import MenuItem from './MenuItem';
 
 const Menu = () => (
   <MenuStyled>
-    <MenuItem icon="user" />
-    <MenuItem icon="briefcase" />
-    <MenuItem icon="folder-open" />
-    <MenuItem icon="phone" />
+    <MenuItem icon="user" screenId="about" />
+    <MenuItem icon="briefcase" screenId="experience" />
+    <MenuItem icon="folder-open" screenId="projects" />
+    <MenuItem icon="phone" screenId="contact" />
   </MenuStyled>
 );
 

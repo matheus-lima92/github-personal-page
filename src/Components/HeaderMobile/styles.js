@@ -20,6 +20,8 @@ export const HeaderMobileStyled = styled.div`
   display: flex;
   align-items: center;
   position: sticky;
+  top: 0;
+  z-index: 9;
   @media (min-width: ${definitions.DESKTOP_MIN_WIDTH}px) {
     display: none;
   }

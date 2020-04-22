@@ -10,7 +10,7 @@ const defineFlag = (language) => {
 export const LanguagesContainer = styled.div`
     width: 55px;
     height: 180px;
-    position: absolute;
+    position: fixed;
     z-index: 10;
     right: 30px;
     top: 15px;

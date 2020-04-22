@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import { animateIcon } from 'common/animations';
+import { changeScreen } from 'actions/menu';
 import { MenuItemStyled } from './styles';
 
 class MenuItem extends React.Component {
@@ -12,9 +15,12 @@ class MenuItem extends React.Component {
   }
 
   render() {
-    const { icon } = this.props;
+    const { icon, changeScreen, screenId } = this.props;
     return (
-      <MenuItemStyled onMouseEnter={() => animateIcon(this.icon)}>
+      <MenuItemStyled
+        onMouseEnter={() => animateIcon(this.icon)}
+        onClick={() => changeScreen(screenId)}
+      >
         <div className="icon-container" ref={(elem) => { this.icon = elem; }}>
           <i className={`fa fa-${icon}`} />
         </div>
@@ -24,7 +30,13 @@ class MenuItem extends React.Component {
 }
 
 MenuItem.propType = {
-  icon: PropTypes.string.isRequired,
+	icon: PropTypes.string.isRequired,
+	screenId: PropTypes.string.isRequired,
+	changeScreen: PropTypes.func.isRequired,
 };
 
-export default MenuItem;
+const mapDispatchToProps = dispatch => bindActionCreators({
+	changeScreen,
+}, dispatch);
+
+export default connect(null, mapDispatchToProps)(MenuItem);
