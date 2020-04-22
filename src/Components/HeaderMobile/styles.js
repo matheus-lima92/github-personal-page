@@ -16,7 +16,7 @@ export const HeaderMobileStyled = styled.div`
   background-color: #23252b;
   animation: 0.5s ${slideInFromTop} ease-out;
   height: 80px;
-  border-bottom: 1px solid ${colors.borders};
+  border-bottom: 1px solid ${colors.themeColor1};
   display: flex;
   align-items: center;
   position: sticky;

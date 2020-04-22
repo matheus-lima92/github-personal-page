@@ -16,7 +16,7 @@ export const SideMenuStyled = styled.div`
   	background-color: ${colors.sideMenu};
   	@media (min-width: ${definitions.DESKTOP_MIN_WIDTH}px) {
 		animation: 1s ${slideInFromLeft} ease-out;
-		border-right: 1px solid ${colors.borders};
+		border-right: 1px solid ${colors.themeColor1};
 		height: 100vh;
 		min-height: 700px;
 		width: 350px;

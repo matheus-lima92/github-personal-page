@@ -29,7 +29,7 @@ export const ModalBox = styled.div`
 
 export const ModalHeader = styled.div`
     height: 30px;
-    background-image: linear-gradient(90deg, ${colors.tinyBorders}, ${colors.borders});
+    background-image: linear-gradient(90deg, ${colors.tinyBorders}, ${colors.themeColor1});
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
     position: relative;

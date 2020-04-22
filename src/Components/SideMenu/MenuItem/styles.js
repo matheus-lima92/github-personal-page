@@ -22,6 +22,7 @@ export const MenuItemStyled = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
+      color: ${colors.themeColor1}
     }
     .option-container {
       height: 25px;

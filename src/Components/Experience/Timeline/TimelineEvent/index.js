@@ -146,7 +146,7 @@ class TimelineEvent extends React.Component {
                             cy="50"
                             r="49"
                             fill="none"
-                            stroke={colors.animatedLineColor2}
+                            stroke={colors.themeColor1}
                             strokeWidth="3"
                             strokeDasharray="400"
                             transform="rotate(-90 50 50)"
@@ -161,7 +161,7 @@ class TimelineEvent extends React.Component {
                             cy="50"
                             r="49"
                             fill="none"
-                            stroke={colors.animatedLineColor2}
+                            stroke={colors.themeColor1}
                             strokeWidth="3"
                             strokeDasharray="400"
                             transform="rotate(-270 50 50)"

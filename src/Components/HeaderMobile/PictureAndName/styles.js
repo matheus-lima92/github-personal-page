@@ -29,6 +29,7 @@ export const ProfileInfo = styled.div`
   .profile-name {
     font-size: 20px;
     margin-top: 10px;
+    color: ${colors.themeColor1};
   }
   .profile-title {
     font-size: 15px;

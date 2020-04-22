@@ -12,8 +12,8 @@ export const MenuItemStyled = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: ${colors.sideMenuText};
-    border: 1px solid ${colors.borders};
+    color: ${colors.themeColor1};
+    border: 1px solid ${colors.themeColor1};
     height: 50px;
     font-size: 20px;
     width: 25%;

@@ -7,7 +7,7 @@ export const TitleStyled = styled.div`
 	margin: auto;
 	width: 80%;
 	max-width: ${definitions.MAIN_SECTION_MAX_WIDTH}px;
-	color: ${colors.paragraphText};
+	color: ${colors.themeColor1};
 	text-align: justify;
 	font-size: 35px;
 	font-weight: 800;

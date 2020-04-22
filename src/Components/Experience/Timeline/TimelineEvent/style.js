@@ -88,10 +88,11 @@ export const TimelineEventStyled = styled.div`
     }
     .left-horizontal-line-animated {
         position: absolute;
-        background-image: linear-gradient(-90deg, ${colors.animatedLineColor1}, ${colors.animatedLineColor2});
+        background-image: linear-gradient(-90deg, ${colors.themeColor2}, ${colors.themeColor1});
         height: 3px;
         top: 50px;
         z-index: 2;
+        box-shadow: 0px 0px 4px ${colors.themeColor1};
         width: calc(50% - ${definitions.TIMELINE_EVENT_WIDTH}px);
         left: ${definitions.TIMELINE_EVENT_WIDTH}px;
         @media (max-width: ${definitions.SMALL_DEVICES_MIN_WIDTH - 1}px) {
@@ -113,10 +114,11 @@ export const TimelineEventStyled = styled.div`
     }
     .right-horizontal-line-animated {
         position: absolute;
-        background-image: linear-gradient(-90deg, ${colors.animatedLineColor2}, ${colors.animatedLineColor1});
+        background-image: linear-gradient(-90deg, ${colors.themeColor1}, ${colors.themeColor2});
         height: 3px;
         top: 50px;
         z-index: 2;
+        box-shadow: 0px 0px 4px ${colors.themeColor1};
         right: ${definitions.TIMELINE_EVENT_WIDTH}px;
         @media (max-width: ${definitions.SMALL_DEVICES_MIN_WIDTH - 1}px) {
             right: ${definitions.TIMELINE_EVENT_SIZE_MOBILE}px;
@@ -137,20 +139,22 @@ export const TimelineEventStyled = styled.div`
         transform: rotatex(180deg);
         transform-origin: top;
         position: absolute;
-        background-image: linear-gradient(0deg, ${colors.animatedLineColor2}, ${colors.animatedLineColor1});
+        background-image: linear-gradient(0deg, ${colors.themeColor1}, ${colors.themeColor2});
         width: 3px;
         top: 50px;
         left: 50%;
         z-index: 2;
+        box-shadow: 0px 0px 4px ${colors.themeColor1};
     }
     .bottom-vertical-line-animated {
         position: absolute;
-        background-image: linear-gradient(0deg, ${colors.animatedLineColor2}, ${colors.animatedLineColor1});
+        background-image: linear-gradient(0deg, ${colors.themeColor1}, ${colors.themeColor2});
         width: 3px;
         top: 50px;
         height: 40px;
         left: 50%;
         z-index: 2;
+        box-shadow: 0px 0px 4px ${colors.themeColor1};
     }
     .bottom-circle-animated {
         position: absolute;
@@ -165,5 +169,10 @@ export const TimelineEventStyled = styled.div`
         left: calc(50% - ${definitions.YEAR_MARK_SIZE / 2}px);
         top: -${props => props.distanceToTop + 50}px;
         z-index: 2;
+        svg {
+            circle {
+                box-shadow: 0px 0px 4px ${colors.themeColor1};
+            }
+        }
     }
 `

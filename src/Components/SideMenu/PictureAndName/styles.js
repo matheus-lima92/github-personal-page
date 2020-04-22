@@ -6,7 +6,7 @@ import profilePic from 'imgs/profile.jpeg';
 
 export const PictureAndNameWrapper = styled.div`
   @media (min-width: ${definitions.DESKTOP_MIN_WIDTH}px) {
-    border-bottom: 1px solid ${colors.borders};
+    border-bottom: 1px solid ${colors.themeColor1};
     width: 90%;
     margin: auto;
     height: 230px;
@@ -35,6 +35,7 @@ export const ProfileInfo = styled.div`
   .profile-name {
     font-size: 28px;
     margin-top: 10px;
+    color: ${colors.themeColor1}
   }
   .profile-title {
     font-size: 18px;
