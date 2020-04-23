@@ -14,7 +14,7 @@ const sliderSettings = {
     swipeToSlide: true,
     autoplay: true,
     autoplaySpeed: 4000,
-    speed: 1500,
+    speed: 800,
     slidesToShow: 3,
     slidesToScroll: 1,
     prevArrow: <SliderArrow direction="left" />,
@@ -27,9 +27,9 @@ const Projects = () => (
         <SliderWrapper>
             <Slider {...sliderSettings}>
                 <SliderItem project="99 Leads"/>
-                <SliderItem project="99 Leads"/>
-                <SliderItem project="99 Leads"/>
-                <SliderItem project="99 Leads"/>
+                <SliderItem project="Droz"/>
+                <SliderItem project="Onfo"/>
+                <SliderItem project="Tronwallet"/>
                 <SliderItem project="99 Leads"/>
                 <SliderItem project="99 Leads"/>
                 <SliderItem project="99 Leads"/>

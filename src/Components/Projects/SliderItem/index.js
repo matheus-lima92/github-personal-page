@@ -2,7 +2,7 @@ import React from 'react';
 
 import { ItemWrapper, Item, ItemPicture, ItemDescription, ItemPictureWrapper } from './styles';
 
-const SliderItem = ({ project = '99 Leads' }) => {
+const SliderItem = ({ project }) => {
     return (
         <ItemWrapper>
             <Item>
