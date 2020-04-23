@@ -4,23 +4,9 @@ import Slider from 'react-slick';
 import Paragraph from 'Components/common/Paragraph';
 import Title from 'Components/common/Title';
 import { ContentSection } from 'common/style';
-import { SliderLeftArrow, SliderRightArrow, SliderWrapper } from './styles';
+import { SliderWrapper } from './styles';
 import SliderItem from './SliderItem';
-
-const SliderArrow = ({ onClick, direction }) => {
-    if (direction === 'left') return (
-        <SliderLeftArrow onClick={onClick}>
-            <div className="icon-container">
-                <i className={`fa fa-chevron-left`} />
-            </div>
-        </SliderLeftArrow>
-    );
-    return (<SliderRightArrow onClick={onClick}>
-        <div className="icon-container">
-            <i className={`fa fa-chevron-right`} />
-        </div>
-    </SliderRightArrow>);
-}
+import SliderArrow from './SliderArrow';
 
 const sliderSettings = {
     dots: false,
@@ -40,14 +26,14 @@ const Projects = () => (
 		<Title title="Projetos" />
         <SliderWrapper>
             <Slider {...sliderSettings}>
-                <SliderItem>item 1</SliderItem>
-                <SliderItem>item 2</SliderItem>
-                <SliderItem>item 3</SliderItem>
-                <SliderItem>item 4</SliderItem>
-                <SliderItem>item 5</SliderItem>
-                <SliderItem>item 6</SliderItem>
-                <SliderItem>item 7</SliderItem>
-                <SliderItem>item 8</SliderItem>
+                <SliderItem project="99 Leads"/>
+                <SliderItem project="99 Leads"/>
+                <SliderItem project="99 Leads"/>
+                <SliderItem project="99 Leads"/>
+                <SliderItem project="99 Leads"/>
+                <SliderItem project="99 Leads"/>
+                <SliderItem project="99 Leads"/>
+                <SliderItem project="99 Leads"/>
             </Slider>
         </SliderWrapper>
     </ContentSection>
