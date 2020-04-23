@@ -1,4 +1,4 @@
-const INITIAL_STATE = 'experience';
+const INITIAL_STATE = 'projects';
 
 export default function (state = INITIAL_STATE, action) {
     switch (action.type) {

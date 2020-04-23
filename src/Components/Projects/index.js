@@ -1,27 +1,53 @@
 import React from 'react';
+import Slider from 'react-slick';
 
 import Paragraph from 'Components/common/Paragraph';
 import Title from 'Components/common/Title';
 import { ContentSection } from 'common/style';
+import { SliderLeftArrow, SliderRightArrow, SliderWrapper } from './styles';
+import SliderItem from './SliderItem';
+
+const SliderArrow = ({ onClick, direction }) => {
+    if (direction === 'left') return (
+        <SliderLeftArrow onClick={onClick}>
+            <div className="icon-container">
+                <i className={`fa fa-chevron-left`} />
+            </div>
+        </SliderLeftArrow>
+    );
+    return (<SliderRightArrow onClick={onClick}>
+        <div className="icon-container">
+            <i className={`fa fa-chevron-right`} />
+        </div>
+    </SliderRightArrow>);
+}
+
+const sliderSettings = {
+    dots: false,
+    infinite: true,
+    swipeToSlide: true,
+    speed: 200,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    prevArrow: <SliderArrow direction="left" />,
+    nextArrow: <SliderArrow  direction="right" />,
+};
 
 const Projects = () => (
     <ContentSection>
 		<Title title="Projetos" />
-        <Paragraph firstParagraph={true}>
-            Olá, meu nome é Matheus Gomes, sou brasileiro nascido no estado de São Paulo, e trabalho como engenheiro de software.
-        </Paragraph>
-        <Paragraph>
-            Sou formado em engenharia de controle e automação pela Universidade Estadual de Campinas (UNICAMP). Ao longo do curso de engenharia
-            tive contato com diversas áreas: conceitos de cálculo, física, computação, engenharia elétrica e mecânica eram parte da grade
-            curricular. De tudo que estudei, o que realmente fez meu olho brilhar foi o desenvolvimento de software.
-        </Paragraph>
-        <Paragraph lastParagraph={true}>
-            Meu primeiro trabalho remunerado relacionado à programação foi um projeto de iniciação científica que iniciei em 2012, ainda
-            cursando a faculdade, e de lá pra cá já fiz estágio, freelas, trabalhei em empresas dentro e fora do Brasil, e hoje atuo como
-            engenheiro de software na <a href="https://www.bairesdev.com/" target="_blank" rel="noopener noreferrer">BairesDev</a>, empresa que se encontra
-            entre as <a href="https://finance.yahoo.com/news/bairesdev-recognized-silicon-valley-top-150000742.html" target="_blank" rel="noopener noreferrer">top 10 companhias</a> de
-            mais rápido crescimento do Vale do Silicio, Estados Unidos.
-        </Paragraph>
+        <SliderWrapper>
+            <Slider {...sliderSettings}>
+                <SliderItem>item 1</SliderItem>
+                <SliderItem>item 2</SliderItem>
+                <SliderItem>item 3</SliderItem>
+                <SliderItem>item 4</SliderItem>
+                <SliderItem>item 5</SliderItem>
+                <SliderItem>item 6</SliderItem>
+                <SliderItem>item 7</SliderItem>
+                <SliderItem>item 8</SliderItem>
+            </Slider>
+        </SliderWrapper>
     </ContentSection>
 );
 
