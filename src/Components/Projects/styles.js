@@ -12,8 +12,10 @@ export const SliderLeftArrow = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  left: -30px;
-  top: 0;
+  left: -50px;
+  top: calc(50% - 40px);
+  border-radius: 100%;
+  color: ${colors.themeColor1};
 `;
 
 export const SliderRightArrow = styled.div`
@@ -25,13 +27,15 @@ export const SliderRightArrow = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  right: -30px;
-  top: 0;
+  right: -50px;
+  top: calc(50% - 40px);
+  border-radius: 100%;
+  color: ${colors.themeColor1};
 `;
 
 export const SliderWrapper = styled.div`
-    width: 80%;
+    width: 75%;
+    max-width: ${definitions.MAIN_SECTION_MAX_WIDTH - 100}px;
     height: 300px;
-    border: 1px solid red;
     margin: auto;
 `;

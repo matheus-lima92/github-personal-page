@@ -26,9 +26,11 @@ const sliderSettings = {
     dots: false,
     infinite: true,
     swipeToSlide: true,
-    speed: 200,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    speed: 1500,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     prevArrow: <SliderArrow direction="left" />,
     nextArrow: <SliderArrow  direction="right" />,
 };
