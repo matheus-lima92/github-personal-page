@@ -26,14 +26,14 @@ const Projects = () => (
 		<Title title="Projetos" />
         <SliderWrapper>
             <Slider {...sliderSettings}>
-                <SliderItem project="99 Leads"/>
-                <SliderItem project="Droz"/>
-                <SliderItem project="Onfo"/>
                 <SliderItem project="Tronwallet"/>
                 <SliderItem project="99 Leads"/>
-                <SliderItem project="99 Leads"/>
-                <SliderItem project="99 Leads"/>
-                <SliderItem project="99 Leads"/>
+                <SliderItem project="Droz"/>
+                <SliderItem project="CST - TOTVS"/>
+                <SliderItem project="Onfo"/>
+                <SliderItem project="Simon Game"/>
+                <SliderItem project="React Shapes"/>
+                <SliderItem project="Github Pages"/>
             </Slider>
         </SliderWrapper>
     </ContentSection>

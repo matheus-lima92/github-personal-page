@@ -2,19 +2,23 @@ import NLeads from 'imgs/99leads.png';
 import Droz from 'imgs/droz.jpg';
 import Onfo from 'imgs/onfo.png';
 import Tronwallet from 'imgs/tronwallet.png';
-import aktienowLogo from 'imgs/logo_aktienow.png';
-import cnpemLogo from 'imgs/logo_cnpem.jpg';
-import wiseLogo from 'imgs/logo_wisewood.png';
-import cnpqLogo from 'imgs/logo_cnpq.jpg';
+import SimonGame from 'imgs/simonGame.png';
+import Totvs from 'imgs/logo_totvs.png';
+import ReactShapes from 'imgs/react_shapes.png';
+import GithubLogo from 'imgs/logo_github.png';
 
 // https://my.onfocoin.com/home
 // https://www.youtube.com/watch?v=ADaGn9UWx7U
 
 const projectLogo = (project) => {
+    if (project === 'Tronwallet') return Tronwallet;
     if (project === '99 Leads') return NLeads;
     if (project === 'Droz') return Droz;
+    if (project === 'CST - TOTVS') return Totvs;
     if (project === 'Onfo') return Onfo;
-    if (project === 'Tronwallet') return Tronwallet;
+    if (project === 'Simon Game') return SimonGame;
+    if (project === 'React Shapes') return ReactShapes;
+    if (project === 'Github Pages') return GithubLogo;
     return NLeads;
 };
 
