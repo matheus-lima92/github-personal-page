@@ -7,18 +7,15 @@ import gsap from 'gsap';
 
 import i18n from 'i18n';
 import { hideProjectModal } from 'actions/projectModal';
+import ProjectMedia from './ProjectMedia';
 import {
     Modal,
     ModalBox,
     ModalHeader,
     ProjectLogo,
-    ProjectInformation
+    ProjectInformation,
+    ProjectImg
 } from './style';
-
-const getCompanyI18nKey = (prefix, company = '') => {
-    if (!company || !prefix) return 'TRANSLATION_NOT_FOUND';
-    return `${prefix}_${company.replace(/ +/g, '').toUpperCase()}`;
-}
 
 class ProjectModal extends React.Component {
 
@@ -56,6 +53,17 @@ class ProjectModal extends React.Component {
     renderProjectModalDescription(){
         const { projectModal: project } = this.props;
         const currentLanguage = i18n.language;
+        if (project === '99 Leads') return (
+            <Trans i18nKey="PROJECT_MODAL_NLEADS">
+                99 Leads is a tool that aims to reduce the cost and increase the efficiency of the
+                lead generation process (potential customers) for real estate agents. The application counts
+                with very interesting features, such as generating a Facebook campaign through an interface
+                intuitive and friendly, as well as automatic email triggering and activity management.
+        		<ProjectMedia src="nleads_pic_1" description="teste" />
+        		The development was done in Vue.js, using <a href="https://vuetifyjs.com/en" target="_blank" rel="noopener noreferrer">Vuetify</a>
+                for the design of the components.
+            </Trans>
+        )
         return null;
     }
 
@@ -69,7 +77,7 @@ class ProjectModal extends React.Component {
                     </ModalHeader>
                     <ProjectLogo project={project} />
                     <ProjectInformation>
-                        
+                        {this.renderProjectModalDescription()}
                     </ProjectInformation>
                 </ModalBox>
             </Modal>

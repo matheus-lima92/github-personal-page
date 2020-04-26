@@ -74,3 +74,9 @@ export const ProjectInformation = styled.div`
     padding-left: 10px;
     padding-right: 10px;
 `;
+
+export const ProjectImg = styled.div`
+    border: 1px solid red;
+    width: 90%;
+    height: 90px;
+`

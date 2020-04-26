@@ -6,7 +6,7 @@ const pt = {
 		SIDE_MENU_ITEM3: 'Projetos',
 		SIDE_MENU_ITEM4: 'Contato',
 
-		/*--- JOB COMPANY MODAL START ---*/
+		/*--- JOB MODAL START ---*/
 		JOB_MODAL_SUBTITLE_COMPANY: 'Empresa: ',
 		JOB_MODAL_SUBTITLE_WEBSITE: 'Website: ',
 		JOB_MODAL_SUBTITLE_COMPANY_TIME: 'Período: ',
@@ -108,7 +108,7 @@ const pt = {
 		foram bem satisfatórios. Você pode clicar <1>aqui</1> para conferir a apresentação final (somente português).
 		`,
 		JOB_MODAL_TECHS_CNPQ: 'C, Arduino, MATLAB.',
-		/*--- JOB COMPANY MODAL END ---*/
+		/*--- JOB MODAL END ---*/
 
 		/*--- PROJECTS SECTION START ---*/
 		SECTION_PROJECTS_PARAGRAPH1: `
@@ -122,6 +122,17 @@ const pt = {
         empresas onde trabalhei, eu também inclui alguns dos trabalhos open source que fiz.
 		`,
 		/*--- PROJECTS SECTION END ---*/
+
+		/*--- PROJECT MODAL START ---*/
+		PROJECT_MODAL_NLEADS: `
+		O 99 Leads é uma ferramenta que tem como objetivo reduzir o custo e aumentar a eficiência do 
+		processo de geração de leads (potenciais clientes) para corretores de imóveis. A aplicação conta 
+		com recursos bem interessantes, como criação de campanha no Facebook através de uma interface
+		intuitiva e amigável, além de disparo automático de emails e gerenciamento de atividades.
+		<1 />
+		O desenvolvimento foi feito em Vue.js, utilizando <3>Vuetify</3> para o design dos componentes.
+		`,
+		/*--- PROJECT MODAL END ---*/
 
 		TRANSLATION_NOT_FOUND: '',
 	}

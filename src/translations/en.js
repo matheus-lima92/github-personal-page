@@ -15,7 +15,7 @@ const en = {
 			subjects in the university program.
 		`,
 
-		/*--- JOB COMPANY MODAL START ---*/
+		/*--- JOB MODAL START ---*/
 		JOB_MODAL_SUBTITLE_COMPANY: 'Company: ',
 		JOB_MODAL_SUBTITLE_WEBSITE: 'Website: ',
 		JOB_MODAL_SUBTITLE_COMPANY_TIME: 'Company Time: ',
@@ -115,7 +115,7 @@ const en = {
 		were quite satisfactory. You can click <1>here</1> to check the final presentation (Portuguese only).
 		`,
 		JOB_MODAL_TECHS_CNPQ: 'C, Arduino, MATLAB.',
-		/*--- JOB COMPANY MODAL END ---*/
+		/*--- JOB MODAL END ---*/
 
 		/*--- PROJECTS SECTION START ---*/
 		SECTION_PROJECTS_PARAGRAPH1: `
@@ -129,6 +129,17 @@ const en = {
 		projects of the companies where I worked, I've also included some of the open source work I did.
 		`,
 		/*--- PROJECTS SECTION END ---*/
+
+		/*--- PROJECT MODAL START ---*/
+		PROJECT_MODAL_NLEADS: `
+		99 Leads is a tool that aims to reduce the cost and increase the efficiency of the
+		lead generation process (potential customers) for real estate agents. The application counts
+		with very interesting features, such as creating a Facebook campaign through an interface
+		intuitive and friendly, as well as automatic email triggering and activity management.
+		<1 />	
+		The development was done in Vue.js, using <3> Vuetify </3> for the design of the components.
+		`,
+		/*--- PROJECT MODAL END ---*/
 
 		TRANSLATION_NOT_FOUND: '',
 	}
