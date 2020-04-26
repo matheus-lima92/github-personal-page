@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { withTranslation } from 'react-i18next';
 
 import Paragraph from 'Components/common/Paragraph';
 import Title from 'Components/common/Title';
@@ -21,9 +22,15 @@ const sliderSettings = {
     nextArrow: <SliderArrow  direction="right" />,
 };
 
-const Projects = () => (
+const Projects = ({ t }) => (
     <ContentSection>
 		<Title title="Projetos" />
+        <Paragraph firstParagraph={true}>
+            {t('SECTION_PROJECTS_PARAGRAPH1')}
+        </Paragraph>
+        <Paragraph>
+            {t('SECTION_PROJECTS_PARAGRAPH2')}
+        </Paragraph>
         <SliderWrapper>
             <Slider {...sliderSettings}>
                 <SliderItem project="Tronwallet"/>
@@ -39,4 +46,4 @@ const Projects = () => (
     </ContentSection>
 );
 
-export default Projects;
+export default withTranslation()(Projects);

@@ -7,4 +7,5 @@ export const SliderWrapper = styled.div`
     max-width: ${definitions.MAIN_SECTION_MAX_WIDTH - 100}px;
     height: 300px;
     margin: auto;
+    margin-top: 50px;
 `;

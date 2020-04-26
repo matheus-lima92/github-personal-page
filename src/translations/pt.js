@@ -110,6 +110,19 @@ const pt = {
 		JOB_MODAL_TECHS_CNPQ: 'C, Arduino, MATLAB.',
 		/*--- JOB COMPANY MODAL END ---*/
 
+		/*--- PROJECTS SECTION START ---*/
+		SECTION_PROJECTS_PARAGRAPH1: `
+		Durante minha carreira profissional como engenheiro de software, tive a oportunidade 
+		de atuar em diversos projetos legais. Em alguns eu pude acompanhar desde a fase inicial de 
+		desenvolvimento até o lançamento como produto. Em outros minha participação não foi muito grande,
+		fui responsável pelo desenvolvimento de apenas algumas funcionalidades.
+		`,
+		SECTION_PROJECTS_PARAGRAPH2: `
+		Clicando nos cards abaixo você encontra maiores detalhes de alguns deles. Além dos projetos das
+        empresas onde trabalhei, eu também inclui alguns dos trabalhos open source que fiz.
+		`,
+		/*--- PROJECTS SECTION END ---*/
+
 		TRANSLATION_NOT_FOUND: '',
 	}
 };
