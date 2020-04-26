@@ -114,8 +114,8 @@ const pt = {
 		SECTION_PROJECTS_PARAGRAPH1: `
 		Durante minha carreira profissional como engenheiro de software, tive a oportunidade 
 		de atuar em diversos projetos legais. Em alguns eu pude acompanhar desde a fase inicial de 
-		desenvolvimento até o lançamento como produto. Em outros minha participação não foi muito grande,
-		fui responsável pelo desenvolvimento de apenas algumas funcionalidades.
+		desenvolvimento até o lançamento como produto. Em outros minha participação se limitou ao desenvolvimento
+		de algumas funcionalidades.
 		`,
 		SECTION_PROJECTS_PARAGRAPH2: `
 		Clicando nos cards abaixo você encontra maiores detalhes de alguns deles. Além dos projetos das

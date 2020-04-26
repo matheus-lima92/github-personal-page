@@ -1,11 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import { ItemWrapper, Item, ItemPicture, ItemDescription, ItemPictureWrapper } from './styles';
+import { showProjectModal } from 'actions/projectModal';
 
-const SliderItem = ({ project }) => {
+const SliderItem = ({ project, showProjectModal }) => {
     return (
         <ItemWrapper>
-            <Item>
+            <Item onClick={() => showProjectModal(project)}>
                 <ItemPictureWrapper>
                     <ItemPicture project={project} />
                 </ItemPictureWrapper>
@@ -19,4 +22,8 @@ const SliderItem = ({ project }) => {
     );
 };
 
-export default SliderItem;
+const mapDispatchToProps = dispatch => bindActionCreators({
+	showProjectModal,
+}, dispatch);
+
+export default connect(null, mapDispatchToProps)(SliderItem);

@@ -121,8 +121,8 @@ const en = {
 		SECTION_PROJECTS_PARAGRAPH1: `
 		During my professional career as a software engineer, I had the opportunity
 		to work on several cool projects. In some I was able to follow from the initial stage of
-		development to launch of the product. In others my participation was not very expressive,
-		I was responsible for developing just a few features.
+		development to launch of the product. In others my participation was limited to the development
+		of some features.
 		`,
 		SECTION_PROJECTS_PARAGRAPH2: `
 		Clicking on the cards below you will find more details on some of them. In addition to the
