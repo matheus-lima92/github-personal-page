@@ -15,7 +15,7 @@ export const FullScreenMediaWrapper = styled.div`
     opacity: 0;
 `;
 
-export const ResponsiveImage = styled.img`
+export const ResponsiveMedia = styled.img`
     max-width: 100%;
 `;
 
