@@ -19,6 +19,9 @@ export const Item = styled.div`
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 black;
     cursor: pointer;
+    @media (max-width: ${definitions.SMALL_DEVICES_MIN_WIDTH - 1}px) {
+        height: 150px;
+    }
 `;
 
 export const ItemPictureWrapper = styled.div`
@@ -31,6 +34,10 @@ export const ItemPictureWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: ${definitions.SMALL_DEVICES_MIN_WIDTH - 1}px) {
+        top: 10px;
+        border: none;
+    }
 `;
 
 export const ItemPicture = styled.div`
@@ -48,4 +55,7 @@ export const ItemDescription = styled.div`
     margin: auto;
     margin-top: 45px;
     font-size: 16px;
+    @media (max-width: ${definitions.SMALL_DEVICES_MIN_WIDTH - 1}px) {
+        display: none;
+    }
 `;

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+import definitions from 'common/definitions';
 import colors from 'common/colors';
 
 export const SliderLeftArrow = styled.div`
@@ -15,6 +16,13 @@ export const SliderLeftArrow = styled.div`
   top: calc(50% - 40px);
   border-radius: 100%;
   color: ${colors.themeColor1};
+  color: ${colors.themeColor1};
+  @media (max-width: ${definitions.SMALL_DEVICES_MIN_WIDTH - 1}px) {
+    width: 25px;
+    height: 25px;
+    left: -30px;
+    top: 60px;
+  }
 `;
 
 export const SliderRightArrow = styled.div`
@@ -30,4 +38,10 @@ export const SliderRightArrow = styled.div`
   top: calc(50% - 40px);
   border-radius: 100%;
   color: ${colors.themeColor1};
+  @media (max-width: ${definitions.SMALL_DEVICES_MIN_WIDTH - 1}px) {
+    width: 25px;
+    height: 25px;
+    right: -30px;
+    top: 60px;
+  }
 `;
