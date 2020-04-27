@@ -119,11 +119,21 @@ const pt = {
 		`,
 		SECTION_PROJECTS_PARAGRAPH2: `
 		Clicando nos cards abaixo você encontra maiores detalhes de alguns deles. Além dos projetos das
-        empresas onde trabalhei, eu também inclui alguns dos trabalhos open source que fiz.
+    empresas onde trabalhei, eu também inclui alguns dos trabalhos open source que fiz.
 		`,
 		/*--- PROJECTS SECTION END ---*/
 
 		/*--- PROJECT MODAL START ---*/
+		PROJECT_MODAL_TRONWALLET: `
+		O Tronwallet é uma carteira criptográfica para troca e transações de criptomoedas. Trata-se
+		de um aplicativo mobile feito com React Native, que se conecta com uma API de blockchain. 
+		Conta com funcionalidades bem interessantes e inovadoras, como possibilitar a transferência 
+		de criptomoedas através de um QR code. Clique <1>aqui</1> para ver a demonstração de algumas funcionalidades.
+		<3 />
+		Tive a oportunidade de desenvolver algumas features do tronwallet no período em que trabalhei 
+		na empresa <5>Getty IO</5>. Desde então muitas funcionalidades novas foram adicionadas, se você
+		opera com criptomoedas vale dar uma conferida!
+		`,
 		PROJECT_MODAL_NLEADS: `
 		O 99 Leads é uma ferramenta que tem como objetivo reduzir o custo e aumentar a eficiência do 
 		processo de geração de leads (potenciais clientes) para corretores de imóveis. A aplicação conta 

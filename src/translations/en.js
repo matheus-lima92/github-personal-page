@@ -131,6 +131,16 @@ const en = {
 		/*--- PROJECTS SECTION END ---*/
 
 		/*--- PROJECT MODAL START ---*/
+		PROJECT_MODAL_TRONWALLET: `
+		Tronwallet is a crypto wallet for cryptocurrency exchange and transactions. It is
+		a mobile app built with React Native, which connects to a blockchain API.
+		It has very interesting and innovative features, such as enabling the transfer of
+		cryptocurrencies through a QR code. Click <1> here </1> to see a demonstration of Tronwallet.
+		<3 />
+		I had the opportunity to develop some Tronwallet's features in the period I worked
+		at <5> Getty IO </5>. Since then many new features have been added, if you
+		operate with cryptocurrencies it is worth taking a look!
+		`,
 		PROJECT_MODAL_NLEADS: `
 		99 Leads is a tool that aims to reduce the cost and increase the efficiency of the
 		lead generation process (potential customers) for real estate agents. The application counts

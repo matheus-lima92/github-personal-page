@@ -63,6 +63,19 @@ class ProjectModal extends React.Component {
         		The development was done in Vue.js, using <a href="https://vuetifyjs.com/en" target="_blank" rel="noopener noreferrer">Vuetify</a>
                 for the design of the components.
             </Trans>
+        );
+        if (project === 'Tronwallet') return (
+            <Trans i18nKey="PROJECT_MODAL_TRONWALLET">
+                Tronwallet is a crypto wallet for cryptocurrency exchange and transactions. It is
+                a mobile app built with React Native, which connects to a blockchain API.
+                It has very interesting and innovative features, such as enabling the transfer of
+                cryptocurrencies through a QR code. Click <a href="https://www.youtube.com/watch?v=R-5vSKH0B3g" target="_blank" rel="noopener noreferrer">here</a>
+                to see a demonstration of Tronwallet.
+                <ProjectMedia src="tronwallet_media_1" description="teste" onClick={() => showFullScreenMedia('tronwallet_media_1')}/>
+                I had the opportunity to develop some Tronwallet's features in the period I worked
+                at <a href="https://getty.io/" target="_blank" rel="noopener noreferrer">Getty</a>.
+                Since then many new features have been added, if you operate with cryptocurrencies it is worth taking a look!
+            </Trans>
         )
         return null;
     }
