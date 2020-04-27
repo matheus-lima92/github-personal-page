@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import { ProjectMediaWrapper, Media, Description } from './style';
 
-const ProjectMedia = ({ mediaSrc, description }) => (
+const ProjectMedia = ({ mediaSrc, description, onClick }) => (
     <ProjectMediaWrapper>
-        <Media src={mediaSrc} />
+        <Media src={mediaSrc} onClick={onClick} />
         <Description>
             {description}
         </Description>
@@ -14,7 +14,8 @@ const ProjectMedia = ({ mediaSrc, description }) => (
 
 ProjectMedia.propType = {
     mediaSrc: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired
+    description: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
 };
 
 

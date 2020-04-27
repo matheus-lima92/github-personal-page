@@ -20,6 +20,10 @@ class Languages extends React.Component {
         document.addEventListener('mousedown', this.handleClickOutside);
     }
 
+    componentWillUnmount(){
+        document.removeEventListener('mousedown', this.handleClickOutside);
+    }
+
     toggleSelector() {
         const { selectorVisible } = this.state;
         if (!selectorVisible) {

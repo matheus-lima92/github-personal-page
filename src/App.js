@@ -7,10 +7,12 @@ import SideMenu from './Components/SideMenu';
 import MainContainer from './Components/MainContainer';
 import BottomMenu from './Components/BottomMenu';
 import Languages from './Components/Languages';
+import FullScreenMedia from './Components/FullScreenMedia';
 import './App.css';
 
 const App = () => (
 	<div className="App">
+		<FullScreenMedia />
 		<ProjectModal />
 		<JobModal />
 		<Languages />

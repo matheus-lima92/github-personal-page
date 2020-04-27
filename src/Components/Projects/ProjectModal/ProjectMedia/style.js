@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import colors from 'common/colors';
 import projectMedia from 'common/projectMedia';
-import definitions from 'common/definitions';
 
 export const ProjectMediaWrapper = styled.div`
     margin: auto;
@@ -19,6 +18,7 @@ export const Media = styled.div`
     background: ${props => `url(${projectMedia(props.src)}) no-repeat center`};
     background-size: cover;
     border: 1px solid ${colors.tinyBorders};
+    cursor: pointer;
 `;
 
 export const Description = styled.div`

@@ -7,6 +7,7 @@ import gsap from 'gsap';
 
 import i18n from 'i18n';
 import { hideProjectModal } from 'actions/projectModal';
+import { showFullScreenMedia } from 'actions/fullScreenMedia';
 import ProjectMedia from './ProjectMedia';
 import {
     Modal,
@@ -14,7 +15,6 @@ import {
     ModalHeader,
     ProjectLogo,
     ProjectInformation,
-    ProjectImg
 } from './style';
 
 class ProjectModal extends React.Component {
@@ -51,7 +51,7 @@ class ProjectModal extends React.Component {
     }
 
     renderProjectModalDescription(){
-        const { projectModal: project } = this.props;
+        const { projectModal: project, showFullScreenMedia } = this.props;
         const currentLanguage = i18n.language;
         if (project === '99 Leads') return (
             <Trans i18nKey="PROJECT_MODAL_NLEADS">
@@ -59,7 +59,7 @@ class ProjectModal extends React.Component {
                 lead generation process (potential customers) for real estate agents. The application counts
                 with very interesting features, such as generating a Facebook campaign through an interface
                 intuitive and friendly, as well as automatic email triggering and activity management.
-        		<ProjectMedia src="nleads_pic_1" description="teste" />
+        		<ProjectMedia src="nleads_pic_1" description="teste" onClick={() => showFullScreenMedia('nleads_pic_1')}/>
         		The development was done in Vue.js, using <a href="https://vuetifyjs.com/en" target="_blank" rel="noopener noreferrer">Vuetify</a>
                 for the design of the components.
             </Trans>
@@ -88,6 +88,7 @@ class ProjectModal extends React.Component {
 
 ProjectModal.propType = {
     hideProjectModal: PropTypes.func.isRequired,
+    showFullScreenMedia: PropTypes.func.isRequired,
     projectModal: PropTypes.string.isRequired
 };
 
@@ -96,7 +97,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-	hideProjectModal,
+    hideProjectModal,
+    showFullScreenMedia,
 }, dispatch);
   
 export default connect(mapStateToProps, mapDispatchToProps)(withTranslation()(ProjectModal));
