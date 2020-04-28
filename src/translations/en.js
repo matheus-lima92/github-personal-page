@@ -141,6 +141,8 @@ const en = {
 		at <5> Getty IO </5>. Since then many new features have been added, if you
 		operate with cryptocurrencies it is worth taking a look!
 		`,
+		PROJECT_MODAL_TRONWALLET_MEDIA_SUBTITLE_1: 'Promotional image of Tronwallet',
+		
 		PROJECT_MODAL_NLEADS: `
 		99 Leads is a tool that aims to reduce the cost and increase the efficiency of the
 		lead generation process (potential customers) for real estate agents. The application counts
@@ -149,6 +151,7 @@ const en = {
 		<1 />	
 		The development was done in Vue.js, using <3> Vuetify </3> for the design of the components.
 		`,
+		PROJECT_MODAL_NLEADS_MEDIA_SUBTITLE_1: 'Facebook campaign creation screen',
 		/*--- PROJECT MODAL END ---*/
 
 		TRANSLATION_NOT_FOUND: '',

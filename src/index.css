@@ -17,3 +17,7 @@ code {
 a {
   color:#00b3b3;
 }
+
+.slick-slide:focus {
+  outline: none;
+}

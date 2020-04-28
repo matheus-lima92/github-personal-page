@@ -134,6 +134,8 @@ const pt = {
 		na empresa <5>Getty IO</5>. Desde então muitas funcionalidades novas foram adicionadas, se você
 		opera com criptomoedas vale dar uma conferida!
 		`,
+		PROJECT_MODAL_TRONWALLET_MEDIA_SUBTITLE_1: 'Imagem promocional do Tronwallet',
+
 		PROJECT_MODAL_NLEADS: `
 		O 99 Leads é uma ferramenta que tem como objetivo reduzir o custo e aumentar a eficiência do 
 		processo de geração de leads (potenciais clientes) para corretores de imóveis. A aplicação conta 
@@ -142,6 +144,7 @@ const pt = {
 		<1 />
 		O desenvolvimento foi feito em Vue.js, utilizando <3>Vuetify</3> para o design dos componentes.
 		`,
+		PROJECT_MODAL_NLEADS_MEDIA_SUBTITLE_1: 'Página de criação de campanha no Facebook',
 		/*--- PROJECT MODAL END ---*/
 
 		TRANSLATION_NOT_FOUND: '',

@@ -51,7 +51,7 @@ class ProjectModal extends React.Component {
     }
 
     renderProjectModalDescription(){
-        const { projectModal: project, showFullScreenMedia } = this.props;
+        const { projectModal: project, showFullScreenMedia, t } = this.props;
         const currentLanguage = i18n.language;
         if (project === '99 Leads') return (
             <Trans i18nKey="PROJECT_MODAL_NLEADS">
@@ -59,7 +59,11 @@ class ProjectModal extends React.Component {
                 lead generation process (potential customers) for real estate agents. The application counts
                 with very interesting features, such as generating a Facebook campaign through an interface
                 intuitive and friendly, as well as automatic email triggering and activity management.
-        		<ProjectMedia src="nleads_pic_1" description="teste" onClick={() => showFullScreenMedia('nleads_pic_1')}/>
+        		<ProjectMedia
+                    src="nleads_pic_1"
+                    description={t('PROJECT_MODAL_NLEADS_MEDIA_SUBTITLE_1')}
+                    onClick={() => showFullScreenMedia('nleads_pic_1')}
+                />
         		The development was done in Vue.js, using <a href="https://vuetifyjs.com/en" target="_blank" rel="noopener noreferrer">Vuetify</a>
                 for the design of the components.
             </Trans>
@@ -71,7 +75,12 @@ class ProjectModal extends React.Component {
                 It has very interesting and innovative features, such as enabling the transfer of
                 cryptocurrencies through a QR code. Click <a href="https://www.youtube.com/watch?v=R-5vSKH0B3g" target="_blank" rel="noopener noreferrer">here</a>
                 to see a demonstration of Tronwallet.
-                <ProjectMedia src="tronwallet_media_1" description="teste" onClick={() => showFullScreenMedia('tronwallet_media_1')}/>
+                <ProjectMedia
+                    src="tronwallet_media_1"
+                    description={t('PROJECT_MODAL_TRONWALLET_MEDIA_SUBTITLE_1')}
+                    height={200}
+                    onClick={() => showFullScreenMedia('tronwallet_media_1')}
+                />
                 I had the opportunity to develop some Tronwallet's features in the period I worked
                 at <a href="https://getty.io/" target="_blank" rel="noopener noreferrer">Getty</a>.
                 Since then many new features have been added, if you operate with cryptocurrencies it is worth taking a look!
