@@ -169,6 +169,16 @@ const en = {
 		together with Aktienow's development team, in addition to structuring new integrations with TOTVS' API.
 		At the end of the project, <1>a very cool video</1> was released with the new features.
 		`,
+
+		PROJECT_MODAL_ONFO: `
+		<0>Onfo</0> is a cryptocurrency designed to facilitate exchange and transaction operations. The Onfo platform consists of
+		basically a <2>PWA</2> developed in React, integrated with an AWS microservice architecture. I developed
+		some of the features of the application during the period I worked at <4>Getty IO</4>, in particular the registration
+		of users, which has authentication via social networks, and several security verification steps.
+		<6 />
+		Click <8>here</8> to see Onfo's promotional video.
+		`,
+		PROJECT_MODAL_ONFO_MEDIA_SUBTITLE_1: `Onfo's authentication screen`,
 		/*--- PROJECT MODAL END ---*/
 
 		TRANSLATION_NOT_FOUND: '',

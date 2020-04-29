@@ -53,7 +53,10 @@ class ProjectModal extends React.Component {
     renderProjectModalDescription(){
         const { projectModal: project, showFullScreenMedia, t } = this.props;
         const currentLanguage = i18n.language;
-        const drozURL = currentLanguage === 'pt' ? 'https://meudroz.com.br/' : 'https://meudroz.com.br/en/'
+        const drozURL = currentLanguage === 'pt' ? 'https://meudroz.com.br/' : 'https://meudroz.com.br/en/';
+        const pwaURL = currentLanguage === 'pt'
+            ? 'https://pt.wikipedia.org/wiki/Progressive_web_app'
+            : 'https://en.wikipedia.org/wiki/Progressive_web_application';
         if (project === '99 Leads') return (
             <Trans i18nKey="PROJECT_MODAL_NLEADS">
                 99 Leads is a tool that aims to reduce the cost and increase the efficiency of the
@@ -114,11 +117,29 @@ class ProjectModal extends React.Component {
                 was released with the new features.
             </Trans>
         )
+
+        if (project === 'Onfo') return (
+            <Trans i18nKey="PROJECT_MODAL_ONFO">
+                <a href='https://onfocoin.com/' target="_blank" rel="noopener noreferrer">Onfo</a> is a cryptocurrency designed 
+                to facilitate exchange and transaction operations. The Onfo platform consists of basically a 
+                <a href={pwaURL} target="_blank" rel="noopener noreferrer">PWA</a> developed in React, integrated 
+                with an AWS microservice architecture. I developed some of the features of the application during the period I worked 
+                at <a href='https://getty.io/' target="_blank" rel="noopener noreferrer">Getty IO</a>, in particular the registration 
+                of users, which has authentication via social networks, and several security verification steps.
+                <ProjectMedia
+                    src="onfo_screen"
+                    description={t('PROJECT_MODAL_ONFO_MEDIA_SUBTITLE_1')}
+                    onClick={() => showFullScreenMedia('onfo_screen')}
+                />
+                Click <a href='https://www.youtube.com/watch?v=F2AkkGbrx2g' target="_blank" rel="noopener noreferrer">here</a> to see 
+                Onfo's promotional video.
+            </Trans>
+        )
         return null;
     }
 
     render() {
-        const { projectModal: project, t } = this.props;
+        const { projectModal: project } = this.props;
         return (
             <Modal ref={(elem) => { this.modal = elem; }}>
                 <ModalBox ref={(elem) => { this.modalBox = elem; }}>
