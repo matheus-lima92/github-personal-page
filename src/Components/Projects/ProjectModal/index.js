@@ -53,6 +53,7 @@ class ProjectModal extends React.Component {
     renderProjectModalDescription(){
         const { projectModal: project, showFullScreenMedia, t } = this.props;
         const currentLanguage = i18n.language;
+        const drozURL = currentLanguage === 'pt' ? 'https://meudroz.com.br/' : 'https://meudroz.com.br/en/'
         if (project === '99 Leads') return (
             <Trans i18nKey="PROJECT_MODAL_NLEADS">
                 99 Leads is a tool that aims to reduce the cost and increase the efficiency of the
@@ -84,6 +85,16 @@ class ProjectModal extends React.Component {
                 I had the opportunity to develop some Tronwallet's features in the period I worked
                 at <a href="https://getty.io/" target="_blank" rel="noopener noreferrer">Getty</a>.
                 Since then many new features have been added, if you operate with cryptocurrencies it is worth taking a look!
+            </Trans>
+        )
+
+        if (project === 'Droz') return (
+            <Trans i18nKey="PROJECT_MODAL_DROZ">
+                <a href={drozURL} target="_blank" rel="noopener noreferrer">Droz</a> is a hybrid chatbot platform based
+                on decision tree and natural language processing. It is able to retain customer service and save the need for
+                human attendants, enriching the customer experience. The tool has an administrator panel where it is possible 
+                to generate reports and graphs of the services performed. I had the opportunity to develop some of Droz's features 
+                during the period I worked at <a href='https://www.aktienow.com/' target="_blank" rel="noopener noreferrer">Aktienow</a>.
             </Trans>
         )
         return null;

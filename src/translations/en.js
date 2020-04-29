@@ -142,7 +142,7 @@ const en = {
 		operate with cryptocurrencies it is worth taking a look!
 		`,
 		PROJECT_MODAL_TRONWALLET_MEDIA_SUBTITLE_1: 'Promotional image of Tronwallet',
-		
+
 		PROJECT_MODAL_NLEADS: `
 		99 Leads is a tool that aims to reduce the cost and increase the efficiency of the
 		lead generation process (potential customers) for real estate agents. The application counts
@@ -152,6 +152,13 @@ const en = {
 		The development was done in Vue.js, using <3> Vuetify </3> for the design of the components.
 		`,
 		PROJECT_MODAL_NLEADS_MEDIA_SUBTITLE_1: 'Facebook campaign creation screen',
+
+		PROJECT_MODAL_DROZ: `
+		<0>Droz</0> is a hybrid chatbot platform based on decision tree and natural language processing.
+		It is able to retain customer service and save the need for human attendants, enriching the customer experience.
+		The tool has an administrator panel where it is possible to generate reports and graphs of the services performed.
+		I had the opportunity to develop some of Droz's features during the period I worked at <2>Aktienow</2>.
+		`,
 		/*--- PROJECT MODAL END ---*/
 
 		TRANSLATION_NOT_FOUND: '',

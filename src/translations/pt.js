@@ -145,6 +145,13 @@ const pt = {
 		O desenvolvimento foi feito em Vue.js, utilizando <3>Vuetify</3> para o design dos componentes.
 		`,
 		PROJECT_MODAL_NLEADS_MEDIA_SUBTITLE_1: 'Página de criação de campanha no Facebook',
+
+		PROJECT_MODAL_DROZ: `
+		<0>Droz</0> é uma plataforma híbrida de chatbots baseado em árvore de decisão e processamento de linguagem natural.
+		É capaz de reter atendimentos e poupar a necessidade de atendentes humanos, enriquecendo a experiência do cliente.
+		A ferramenta conta com um painel de administrador onde é possível gerar relatórios e gráficos dos atendimentos realizados.
+		Tive a oportunidade de desenvolver algumas das funcionalidades do Droz no período em que trabalhei na <2>Aktienow</2>.
+		`,
 		/*--- PROJECT MODAL END ---*/
 
 		TRANSLATION_NOT_FOUND: '',
