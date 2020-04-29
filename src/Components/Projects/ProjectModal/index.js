@@ -103,6 +103,17 @@ class ProjectModal extends React.Component {
                 at <a href='https://www.aktienow.com/' target="_blank" rel="noopener noreferrer">Aktienow</a>.
             </Trans>
         )
+
+        if (project === 'CST - TOTVS') return (
+            <Trans i18nKey="PROJECT_MODAL_TOTVS">
+                CST is short for TOTVS Service Center. The company TOTVS has a central implemented in a Zendesk environment,
+                where your customers can consult information, generate payment slips and receipts, in addition to several
+                other features. I was responsible for implementing an update to the CST layout (that was provided by a designer) together with Aktienow's
+                development team, in addition to structuring new integrations with TOTVS' API. At the end of the project,
+                <a href='https://www.youtube.com/watch?v=ADaGn9UWx7U' target="_blank" rel="noopener noreferrer">a very cool video </a> 
+                was released with the new features.
+            </Trans>
+        )
         return null;
     }
 

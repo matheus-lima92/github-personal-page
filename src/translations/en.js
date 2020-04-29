@@ -161,6 +161,14 @@ const en = {
 		I had the opportunity to develop some of Droz's features during the period I worked at <4>Aktienow</4>.
 		`,
 		PROJECT_MODAL_DROZ_MEDIA_SUBTITLE_1: `First version of Droz's admin panel`,
+
+		PROJECT_MODAL_TOTVS: `
+		CST is short for TOTVS Service Center. The company TOTVS has a central implemented in a Zendesk environment,
+		where your customers can consult information, generate payment slips and receipts, in addition to several
+		other features. I was responsible for implementing an update to the CST layout (that was provided by a designer) 
+		together with Aktienow's development team, in addition to structuring new integrations with TOTVS' API.
+		At the end of the project, <1>a very cool video</1> was released with the new features.
+		`,
 		/*--- PROJECT MODAL END ---*/
 
 		TRANSLATION_NOT_FOUND: '',
