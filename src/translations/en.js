@@ -157,8 +157,10 @@ const en = {
 		<0>Droz</0> is a hybrid chatbot platform based on decision tree and natural language processing.
 		It is able to retain customer service and save the need for human attendants, enriching the customer experience.
 		The tool has an administrator panel where it is possible to generate reports and graphs of the services performed.
-		I had the opportunity to develop some of Droz's features during the period I worked at <2>Aktienow</2>.
+		<2 />
+		I had the opportunity to develop some of Droz's features during the period I worked at <4>Aktienow</4>.
 		`,
+		PROJECT_MODAL_DROZ_MEDIA_SUBTITLE_1: `First version of Droz's admin panel`,
 		/*--- PROJECT MODAL END ---*/
 
 		TRANSLATION_NOT_FOUND: '',

@@ -93,8 +93,14 @@ class ProjectModal extends React.Component {
                 <a href={drozURL} target="_blank" rel="noopener noreferrer">Droz</a> is a hybrid chatbot platform based
                 on decision tree and natural language processing. It is able to retain customer service and save the need for
                 human attendants, enriching the customer experience. The tool has an administrator panel where it is possible 
-                to generate reports and graphs of the services performed. I had the opportunity to develop some of Droz's features 
-                during the period I worked at <a href='https://www.aktienow.com/' target="_blank" rel="noopener noreferrer">Aktienow</a>.
+                to generate reports and graphs of the services performed.
+                <ProjectMedia
+                    src="droz"
+                    description={t('PROJECT_MODAL_DROZ_MEDIA_SUBTITLE_1')}
+                    onClick={() => showFullScreenMedia('droz')}
+                />
+                I developed some of Droz's features during the period I worked 
+                at <a href='https://www.aktienow.com/' target="_blank" rel="noopener noreferrer">Aktienow</a>.
             </Trans>
         )
         return null;
