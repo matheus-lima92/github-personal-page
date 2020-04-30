@@ -72,4 +72,5 @@ export const ProjectInformation = styled.div`
     overflow-y: auto;
     text-align: left;
     padding: 18px;
+    font-size: 16px;
 `;
