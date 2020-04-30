@@ -172,6 +172,27 @@ const pt = {
 		Clique <8>aqui</8> para ver o vídeo promocional da Onfo.
 		`,
 		PROJECT_MODAL_ONFO_MEDIA_SUBTITLE_1: 'Tela de autenticação Onfo',
+
+		PROJECT_MODAL_GENIUS: `
+		Uma réplica do jogo Genius (Simon Game) foi um dos primeiros projetos legais que fiz após começar a estudar HTML, CSS
+		e Javascript, utilizando AngularJS como framework para o desenvolvimento. O Projeto surgiu como um desafio proposto pela 
+		comunidade do <1>freeCodeCamp</1>.
+		<3 />
+		Revisando o código, hoje eu faria muitas coisas diferentes e acrescentaria algumas melhorias, mas achei legal deixar
+		a versão original como registro. Clique <5>aqui</5> para jogar.
+		`,
+		PROJECT_MODAL_GENIUS_MEDIA_SUBTITLE_1: 'Simon Game (Genius)',
+
+		PROJECT_MODAL_REACT_SHAPES: `
+		Você poderia dizer quantos paralelogramos podem ser formados a partir de 3 pontos aleatórios? Onde o 4º ponto pode ser posicionado
+		para formar um quadrilátero com dois pares de lados paralelos? Para responder às perguntas, provavelmente você teria que se
+		aprofundar em alguns conceitos de geometria analítica. Ou, se você não é um grande fã de matemática, pode apenas brincar com o
+		React Shapes! Ele fará todo o trabalho sujo para você! Você só precisa definir 3 pontos, e o React Shapes definirá automaticamente
+		o quarto ponto, mostrando todas as propriedades do quadrilátero.
+		<1 />
+		React Shapes é um projeto open source que criei, clique <3>aqui</3> para ver o repositório no Github.
+		`,
+		PROJECT_MODAL_REACT_SHAPES_MEDIA_SUBTITLE_1: 'Demo do React Shapes',
 		/*--- PROJECT MODAL END ---*/
 
 		TRANSLATION_NOT_FOUND: '',

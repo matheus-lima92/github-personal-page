@@ -16,7 +16,7 @@ const sliderSettings = {
     swipeToSlide: true,
     autoplay: true,
     autoplaySpeed: 4000,
-    speed: 800,
+    speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     prevArrow: <SliderArrow direction="left" />,

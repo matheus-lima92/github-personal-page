@@ -179,6 +179,28 @@ const en = {
 		Click <8>here</8> to see Onfo's promotional video.
 		`,
 		PROJECT_MODAL_ONFO_MEDIA_SUBTITLE_1: `Onfo's authentication screen`,
+
+		PROJECT_MODAL_GENIUS: `
+		A replica of Simon Game was one of the first cool projects that I did after starting to study HTML, CSS
+		and Javascript, using AngularJS as a framework for development. The Project emerged as a challenge proposed by
+		<1> freeCodeCamp </1> community.
+		<3 />
+		Reviewing the code, today I would do many different things and add some improvements, but I like to keep
+		the original version as a record. Click <5> here </5> to play.
+		`,
+		PROJECT_MODAL_GENIUS_MEDIA_SUBTITLE_1: 'Simon Game',
+
+		PROJECT_MODAL_REACT_SHAPES: `
+		Could you say how many parallelograms can be formed from 3 random points? Where can the 4th point be positioned 
+		to form a quadrilateral with two pairs of parallel sides? To answer the questions, probably you would have to go 
+		deep into a few concepts of analytic geometry. Or, if you are not a big fan of Math, you can just play with
+		React Shapes! It will do all the dirty job for you! You just need to define 3 points, and React Shapes will automatically 
+		define the 4th point and show you all the properties of the quadrilateral.
+		<1 />
+		React Shapes is an open source project that I created, click <3>here</3> to see the repository on Github.
+		`,
+		PROJECT_MODAL_REACT_SHAPES_MEDIA_SUBTITLE_1: 'React Shapes demo',
+
 		/*--- PROJECT MODAL END ---*/
 
 		TRANSLATION_NOT_FOUND: '',

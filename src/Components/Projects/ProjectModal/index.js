@@ -135,6 +135,42 @@ class ProjectModal extends React.Component {
                 Onfo's promotional video.
             </Trans>
         )
+
+        if (project === 'Simon Game') return (
+            <Trans i18nKey="PROJECT_MODAL_GENIUS">
+                A replica of Simon Game was one of the first cool projects that I did after starting to study HTML, CSS
+                and Javascript, using AngularJS as a framework for development. The Project emerged as a challenge proposed by
+                <a href='https://www.freecodecamp.org/' target="_blank" rel="noopener noreferrer">freeCodeCamp</a> community.
+                <ProjectMedia
+                    src="demo_genius"
+                    description={t('PROJECT_MODAL_GENIUS_MEDIA_SUBTITLE_1')}
+                    onClick={() => showFullScreenMedia('demo_genius')}
+                />
+                Reviewing the code, today I would do many different things and add some improvements, but I like to keep
+                the original version as a record. Click 
+                <a href='https://codepen.io/MatheusLima92/full/dpaYyq' target="_blank" rel="noopener noreferrer">here</a> to play.
+            </Trans>
+        )
+
+        if (project === 'React Shapes') return (
+            <Trans i18nKey="PROJECT_MODAL_REACT_SHAPES">
+                Could you say how many parallelograms can be formed from 3 random points? Where can the 4th point be positioned 
+                to form a quadrilateral with two pairs of parallel sides? To answer the questions, probably you would have to go 
+                deep into a few concepts of analytic geometry. Or, if you are not a big fan of Math, you can just play with
+                React Shapes! It will do all the dirty job for you! You just need to define 3 points, and React Shapes will automatically 
+                define the 4th point and show you all the properties of the quadrilateral.
+                <ProjectMedia
+                    src="react_shapes"
+                    description={t('PROJECT_MODAL_REACT_SHAPES_MEDIA_SUBTITLE_1')}
+                    onClick={() => showFullScreenMedia('react_shapes')}
+                    height={350}
+                />
+                React Shapes is an open source project that I created, click 
+                <a href='https://github.com/matheus-gomes-dev/react-shapes/' target="_blank" rel="noopener noreferrer">here</a> to see the repository
+                on Github.
+            </Trans>
+        )
+
         return null;
     }
 
