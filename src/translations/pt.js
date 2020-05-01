@@ -151,6 +151,13 @@ const pt = {
 		`,
 		/*--- PROJECTS SECTION END ---*/
 
+		/*--- CONTACT SECTION START ---*/
+		SECTION_CONTACT_TITLE: 'Contato',
+		SECTION_CONTACT_PARAGRAPH1: `
+		Lorem ipsum dolor
+		`,
+		/*--- CONTACT SECTION END ---*/
+
 		/*--- PROJECT MODAL START ---*/
 		PROJECT_MODAL_TRONWALLET: `
 		O Tronwallet é uma carteira criptográfica para troca e transações de criptomoedas. Trata-se

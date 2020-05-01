@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 import About from 'Components/About';
 import Experience from 'Components/Experience';
-import Skills from 'Components/Skills';
 import Projects from 'Components/Projects';
+import Contact from 'Components/Contact';
 
 import { MainContainerStyled } from './style';
 
@@ -13,8 +13,8 @@ const MainContainer = ({ screen }) => (
   	<MainContainerStyled>
     	{screen === 'about' && <About />}
 		{screen === 'experience' && <Experience />}
-		{screen === 'skills' && <Skills />}
 		{screen === 'projects' && <Projects />}
+		{screen === 'contact' && <Contact />}
 	</MainContainerStyled>
 );
 

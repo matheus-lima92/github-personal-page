@@ -144,9 +144,16 @@ const en = {
 		`,
 		SECTION_PROJECTS_PARAGRAPH2: `
 		Clicking on the cards below you will find more details on some of them. In addition to the
-		projects of the companies where I worked, I've also included some of the open source work I did.
+		projects of the companies where I worked, I've also included some of my open source projects.
 		`,
 		/*--- PROJECTS SECTION END ---*/
+
+		/*--- CONTACT SECTION START ---*/
+		SECTION_CONTACT_TITLE: 'Contact',
+		SECTION_CONTACT_PARAGRAPH1: `
+		Lorem ipsum dolor
+		`,
+		/*--- CONTACT SECTION END ---*/
 
 		/*--- PROJECT MODAL START ---*/
 		PROJECT_MODAL_TRONWALLET: `
