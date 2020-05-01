@@ -6,6 +6,33 @@ const pt = {
 		SIDE_MENU_ITEM3: 'Projetos',
 		SIDE_MENU_ITEM4: 'Contato',
 
+		/*--- ABOUT SECTION START ---*/
+		SECTION_ABOUT_TITLE: 'Sobre',
+		SECTION_ABOUT_PARAGRAPH1: `
+		Olá, meu nome é Matheus Gomes, sou brasileiro nascido no estado de São Paulo, e trabalho como engenheiro de software.
+		`,
+		SECTION_ABOUT_PARAGRAPH2: `
+		Sou formado em engenharia de controle e automação pela Universidade Estadual de Campinas (UNICAMP). Ao longo do curso de engenharia
+		tive contato com diversas áreas: conceitos de cálculo, física, computação, engenharia elétrica e mecânica eram parte da grade
+		curricular. De tudo que estudei, foi no desenvolvimento de software que encontrei maior aptidão.
+		`,
+		SECTION_ABOUT_PARAGRAPH3: `
+		Meu primeiro trabalho remunerado relacionado à programação foi um projeto de iniciação científica que iniciei em 2012, ainda
+		cursando a faculdade, e de lá pra cá já fiz estágio, freelas, trabalhei em empresas dentro e fora do Brasil, e hoje atuo como
+		engenheiro de software na <1>BairesDev</1>, empresa que se encontra entre as <3>top 10 companhias</3> de mais rápido crescimento 
+		do Vale do Silicio, Estados Unidos.
+		`,
+		/*--- ABOUT SECTION END ---*/
+
+		/*--- EXPERIENCE SECTION START ---*/
+		SECTION_EXPERIENCE_TITLE: 'Experiência',
+		SECTION_EXPERIENCE_PARAGRAPH1: `
+		Fiquei algum tempo pensando em uma forma, que não fosse um texto chato e cansativo, de resumir minha 
+		experiência profissional com desenvolvimento de software. Uma alternativa legal que encontrei foi organizar
+		em uma timeline as experiências mais relevantes. Clique em cada evento para ver os detalhes.
+		`,
+		/*--- EXPERIENCE SECTION END ---*/
+
 		/*--- JOB MODAL START ---*/
 		JOB_MODAL_SUBTITLE_COMPANY: 'Empresa: ',
 		JOB_MODAL_SUBTITLE_WEBSITE: 'Website: ',
@@ -111,6 +138,7 @@ const pt = {
 		/*--- JOB MODAL END ---*/
 
 		/*--- PROJECTS SECTION START ---*/
+		SECTION_PROJECTS_TITLE: 'Projetos',
 		SECTION_PROJECTS_PARAGRAPH1: `
 		Durante minha carreira profissional como engenheiro de software, tive a oportunidade 
 		de atuar em diversos projetos legais. Em alguns eu pude acompanhar desde a fase inicial de 
@@ -119,7 +147,7 @@ const pt = {
 		`,
 		SECTION_PROJECTS_PARAGRAPH2: `
 		Clicando nos cards abaixo você encontra maiores detalhes de alguns deles. Além dos projetos das
-    empresas onde trabalhei, eu também inclui alguns dos trabalhos open source que fiz.
+    	empresas onde trabalhei, eu também inclui alguns dos trabalhos open source que fiz.
 		`,
 		/*--- PROJECTS SECTION END ---*/
 

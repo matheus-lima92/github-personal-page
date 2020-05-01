@@ -1,4 +1,5 @@
 import React from 'react';
+import { withTranslation } from 'react-i18next';
 
 import Paragraph from 'Components/common/Paragraph';
 import Title from 'Components/common/Title';
@@ -6,16 +7,14 @@ import Timeline from './Timeline/index';
 import { ContentSection } from 'common/style';
 
 
-const Experience = () => (
+const Experience = ({ t }) => (
     <ContentSection>
-		<Title title="Experiência" />
+		<Title title={t('SECTION_EXPERIENCE_TITLE')} />
         <Paragraph firstParagraph={true}>
-            Fiquei algum tempo pensando em uma forma, que não fosse um texto enorme e cansativo, para resumir meus anos
-            de experiência profissional com desenvolvimento de software. Uma alternativa legal que encontrei foi organizar
-            em uma timeline as experiências mais relevantes.
+            {t('SECTION_EXPERIENCE_PARAGRAPH1')}
         </Paragraph>
         <Timeline />
     </ContentSection>
 );
   
-export default Experience;
+export default withTranslation()(Experience);

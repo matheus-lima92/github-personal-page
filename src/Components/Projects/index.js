@@ -36,7 +36,7 @@ const sliderSettings = {
 
 const Projects = ({ t }) => (
     <ContentSection>
-        <Title title="Projetos" />
+        <Title title={t('SECTION_PROJECTS_TITLE')} />
         <Paragraph firstParagraph={true}>
             {t('SECTION_PROJECTS_PARAGRAPH1')}
         </Paragraph>

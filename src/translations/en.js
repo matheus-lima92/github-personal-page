@@ -5,15 +5,32 @@ const en = {
 		SIDE_MENU_ITEM2: 'Experience',
 		SIDE_MENU_ITEM3: 'Projects',
 		SIDE_MENU_ITEM4: 'Contact',
+
+		/*--- ABOUT SECTION START ---*/
 		SECTION_ABOUT_TITLE: 'About',
 		SECTION_ABOUT_PARAGRAPH1: `
-			Hello, my name is Matheus Gomes. I was born in the state of São Paulo, Brazil, and I work as a software engineer.
+		Hello, my name is Matheus Gomes. I was born in the state of São Paulo, Brazil, and I work as a software engineer.
 		`,
 		SECTION_ABOUT_PARAGRAPH2: `
-			I have a degree in mechatronics engineering from the State University of Campinas. During the engineering course I 
-			had contact with many concepts: calculus, physics, computing, electrical engineering and mechanical engineering were 
-			subjects in the university program.
+		I have a degree in mechatronics engineering from the State University of Campinas. Throughout the engineering course I 
+		had contact with several areas: concepts of calculation, physics, computing, electrical engineering and mechanical engineering
+		were part of the grid curriculum. From everything I studied, it was in software development that I found the greatest aptitude.
 		`,
+		SECTION_ABOUT_PARAGRAPH3: `
+		My first paid work related to programming was a scientific initiation project that I started in 2012, still
+		attending college, and since then I've done internships, freelancing, worked in companies inside and outside Brazil, and today I work as
+		a software engineer at <1> BairesDev </1>, which is among the fastest growing <3> top 10 companies </3> from Silicon Valley, United States.
+		`,
+		/*--- ABOUT SECTION END ---*/
+
+		/*--- EXPERIENCE SECTION START ---*/
+		SECTION_EXPERIENCE_TITLE: 'Experience',
+		SECTION_EXPERIENCE_PARAGRAPH1: `
+		I spent some time thinking about a way, other than a boring and tiring text, to summarize my
+		professional experience with software development. A nice alternative I found was to organize
+		in a timeline the most relevant experiences. Click on each event to see the details.
+		`,
+		/*--- EXPERIENCE SECTION END ---*/
 
 		/*--- JOB MODAL START ---*/
 		JOB_MODAL_SUBTITLE_COMPANY: 'Company: ',
@@ -118,6 +135,7 @@ const en = {
 		/*--- JOB MODAL END ---*/
 
 		/*--- PROJECTS SECTION START ---*/
+		SECTION_PROJECTS_TITLE: 'Projects',
 		SECTION_PROJECTS_PARAGRAPH1: `
 		During my professional career as a software engineer, I had the opportunity
 		to work on several cool projects. In some I was able to follow from the initial stage of
