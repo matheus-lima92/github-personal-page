@@ -9,12 +9,15 @@ import i18n from 'i18n';
 import { hideProjectModal } from 'actions/projectModal';
 import { showFullScreenMedia } from 'actions/fullScreenMedia';
 import ProjectMedia from './ProjectMedia';
+import Button from 'Components/common/Button';
 import {
     Modal,
     ModalBox,
     ModalHeader,
     ProjectLogo,
     ProjectInformation,
+    ProjectTitle,
+    ActionButton,
 } from './style';
 
 class ProjectModal extends React.Component {
@@ -163,7 +166,7 @@ class ProjectModal extends React.Component {
                     src="react_shapes"
                     description={t('PROJECT_MODAL_REACT_SHAPES_MEDIA_SUBTITLE_1')}
                     onClick={() => showFullScreenMedia('react_shapes')}
-                    height={350}
+                    height={360}
                 />
                 React Shapes is an open source project that I created, click 
                 <a href='https://github.com/matheus-gomes-dev/react-shapes/' target="_blank" rel="noopener noreferrer">here</a> to see the repository
@@ -197,10 +200,16 @@ class ProjectModal extends React.Component {
                     <ModalHeader>
                         <div onClick={() => this.closeModal()}>&times;</div>
                     </ModalHeader>
+                    <ProjectTitle>
+                        {project}
+                    </ProjectTitle>
                     <ProjectLogo project={project} />
                     <ProjectInformation>
                         {this.renderProjectModalDescription()}
                     </ProjectInformation>
+                    <ActionButton>
+                        <Button label={'OK'} onClick={() => this.closeModal()}/>
+                    </ActionButton>
                 </ModalBox>
             </Modal>
         )

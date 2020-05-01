@@ -50,6 +50,15 @@ export const ModalHeader = styled.div`
     }
 `;
 
+export const ProjectTitle = styled.div`
+    font-weight: 800;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+`;
+
 export const ProjectLogo = styled.div`
     width: 140px;
     height: 100px;
@@ -73,4 +82,12 @@ export const ProjectInformation = styled.div`
     text-align: left;
     padding: 18px;
     font-size: 16px;
+`;
+
+export const ActionButton = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: -10px;
 `;

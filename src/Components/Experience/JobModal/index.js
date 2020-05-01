@@ -7,12 +7,14 @@ import gsap from 'gsap';
 
 import i18n from 'i18n';
 import { hideJobModal } from 'actions/jobModal';
+import Button from 'Components/common/Button';
 import {
     Modal,
     ModalBox,
     ModalHeader,
     CompanyLogo,
-    CompanyInformation
+    CompanyInformation,
+    ActionButton,
 } from './styles';
 import cnpqPresentation from 'files/Painel.pptx';
 
@@ -163,6 +165,9 @@ class JobModal extends React.Component {
                             <span>{t(getCompanyI18nKey('JOB_MODAL_TECHS', company))}</span>
                         </div>
                     </CompanyInformation>
+                    <ActionButton>
+                        <Button label="OK" onClick={() => this.closeModal()}/>
+                    </ActionButton>
                 </ModalBox>
             </Modal>
         )

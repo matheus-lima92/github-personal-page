@@ -74,3 +74,11 @@ export const CompanyInformation = styled.div`
     padding-left: 10px;
     padding-right: 10px;
 `;
+
+export const ActionButton = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: -10px;
+`;
