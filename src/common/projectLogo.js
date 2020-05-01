@@ -18,7 +18,7 @@ const projectLogo = (project) => {
     if (project === 'Onfo') return Onfo;
     if (project === 'Simon Game') return SimonGame;
     if (project === 'React Shapes') return ReactShapes;
-    if (project === 'Github Pages') return GithubLogo;
+    if (project === 'Github Search') return GithubLogo;
     return NLeads;
 };
 

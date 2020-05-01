@@ -190,9 +190,18 @@ const pt = {
 		React Shapes! Ele fará todo o trabalho sujo para você! Você só precisa definir 3 pontos, e o React Shapes definirá automaticamente
 		o quarto ponto, mostrando todas as propriedades do quadrilátero.
 		<1 />
-		React Shapes é um projeto open source que criei, clique <3>aqui</3> para ver o repositório no Github.
+		React Shapes é um projeto open source, clique <3>aqui</3> para ver o repositório no Github.
 		`,
 		PROJECT_MODAL_REACT_SHAPES_MEDIA_SUBTITLE_1: 'Demo do React Shapes',
+
+		PROJECT_MODAL_GITHUB_SEARCH: `
+		Github Search é um projeto open source feito em React, com uma finalidade simples: interagir com a API do Github para 
+		buscar por usuários e repositórios.
+		<1 />
+		É possível conferir a <3>aplicação funcionando na AWS</3>, e clicar <5>aqui</5> para ver o código no Github
+		<7>(Melhoria futura: ajustar responsividade).</7>
+		`,
+		PROJECT_MODAL_REACT_GITHUB_SEARCH_MEDIA_SUBTITLE_1: 'Exemplo de funcionamento do Github Search',
 		/*--- PROJECT MODAL END ---*/
 
 		TRANSLATION_NOT_FOUND: '',

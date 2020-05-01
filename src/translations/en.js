@@ -197,9 +197,18 @@ const en = {
 		React Shapes! It will do all the dirty job for you! You just need to define 3 points, and React Shapes will automatically 
 		define the 4th point and show you all the properties of the quadrilateral.
 		<1 />
-		React Shapes is an open source project that I created, click <3>here</3> to see the repository on Github.
+		React Shapes is an open source project, click <3>here</3> to see the repository on Github.
 		`,
 		PROJECT_MODAL_REACT_SHAPES_MEDIA_SUBTITLE_1: 'React Shapes demo',
+
+		PROJECT_MODAL_GITHUB_SEARCH: `
+		Github Search is an open source project made in React, with a simple purpose: interact with Github's API to
+		search for users and repositories.
+		<1 />		
+		You can check the <3> application running on AWS </3>, and click <5> here </5> to see the code on Github
+		<7> (Future improvement: adjust responsiveness). </7>
+		`,
+		PROJECT_MODAL_REACT_GITHUB_SEARCH_MEDIA_SUBTITLE_1: 'Example of how Github Search works',
 
 		/*--- PROJECT MODAL END ---*/
 

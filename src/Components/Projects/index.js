@@ -52,7 +52,7 @@ const Projects = ({ t }) => (
                 <SliderItem project="Onfo" />
                 <SliderItem project="Simon Game" />
                 <SliderItem project="React Shapes" />
-                <SliderItem project="Github Pages" />
+                <SliderItem project="Github Search" />
             </Slider>
         </SliderWrapper>
     </ContentSection>

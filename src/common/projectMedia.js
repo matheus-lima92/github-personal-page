@@ -4,6 +4,7 @@ import droz from 'imgs/droz.gif';
 import onfoScreen from 'imgs/onfo_screen.png';
 import Genius from 'imgs/demo_genius.gif';
 import ReactShapes from 'imgs/react_shapes_demo.gif';
+import GithubSearch from 'imgs/github-search.gif';
 
 // https://my.onfocoin.com/home
 
@@ -14,6 +15,7 @@ const projectMedia = (media) => {
     if (media === 'onfo_screen') return onfoScreen;
     if (media === 'demo_genius') return Genius;
     if (media === 'react_shapes') return ReactShapes;
+    if (media === 'github_search') return GithubSearch;
     return nleads_pic_1;
 };
 

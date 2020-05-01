@@ -171,6 +171,21 @@ class ProjectModal extends React.Component {
             </Trans>
         )
 
+        if (project === 'Github Search') return (
+            <Trans i18nKey="PROJECT_MODAL_GITHUB_SEARCH">
+                Github Search is an open source project made in React, with a simple purpose: interact with Github's API to
+                search for users and repositories.
+                <ProjectMedia
+                    src="github_search"
+                    description={t('PROJECT_MODAL_REACT_GITHUB_SEARCH_MEDIA_SUBTITLE_1')}
+                    onClick={() => showFullScreenMedia('github_search')}
+                />		
+                You can check the <a href='http://github-spa-react.s3-website-sa-east-1.amazonaws.com/' target="_blank" rel="noopener noreferrer">application running on AWS</a>, 
+                and click <a href='https://github.com/matheus-gomes-dev/github-spa-react' target="_blank" rel="noopener noreferrer">here</a> to see the code on Github.
+                <i>(Future improvement: adjust responsiveness)</i>
+            </Trans>
+        )
+
         return null;
     }
 
