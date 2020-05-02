@@ -34,28 +34,37 @@ const sliderSettings = {
     ]
 };
 
-const Projects = ({ t }) => (
-    <ContentSection>
-        <Title title={t('SECTION_PROJECTS_TITLE')} />
-        <Paragraph firstParagraph={true}>
-            {t('SECTION_PROJECTS_PARAGRAPH1')}
-        </Paragraph>
-        <Paragraph>
-            {t('SECTION_PROJECTS_PARAGRAPH2')}
-        </Paragraph>
-        <SliderWrapper>
-            <Slider {...sliderSettings}>
-                <SliderItem project="Tronwallet" />
-                <SliderItem project="99 Leads" />
-                <SliderItem project="Droz" />
-                <SliderItem project="CST - TOTVS" />
-                <SliderItem project="Onfo" />
-                <SliderItem project="Simon Game" />
-                <SliderItem project="React Shapes" />
-                <SliderItem project="Github Search" />
-            </Slider>
-        </SliderWrapper>
-    </ContentSection>
-);
+class Projects extends React.Component {
+    componentWillMount() {
+        window.scrollTo(0, 0);
+    }
+
+    render() {
+        const { t } = this.props;
+        return (
+            <ContentSection>
+                <Title title={t('SECTION_PROJECTS_TITLE')} />
+                <Paragraph firstParagraph={true}>
+                    {t('SECTION_PROJECTS_PARAGRAPH1')}
+                </Paragraph>
+                <Paragraph>
+                    {t('SECTION_PROJECTS_PARAGRAPH2')}
+                </Paragraph>
+                <SliderWrapper>
+                    <Slider {...sliderSettings}>
+                        <SliderItem project="Tronwallet" />
+                        <SliderItem project="99 Leads" />
+                        <SliderItem project="Droz" />
+                        <SliderItem project="CST - TOTVS" />
+                        <SliderItem project="Onfo" />
+                        <SliderItem project="Simon Game" />
+                        <SliderItem project="React Shapes" />
+                        <SliderItem project="Github Search" />
+                    </Slider>
+                </SliderWrapper>
+            </ContentSection>
+        )
+    }
+}
 
 export default withTranslation()(Projects);

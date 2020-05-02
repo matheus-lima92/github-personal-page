@@ -7,14 +7,24 @@ import Timeline from './Timeline/index';
 import { ContentSection } from 'common/style';
 
 
-const Experience = ({ t }) => (
-    <ContentSection>
-		<Title title={t('SECTION_EXPERIENCE_TITLE')} />
-        <Paragraph firstParagraph={true}>
-            {t('SECTION_EXPERIENCE_PARAGRAPH1')}
-        </Paragraph>
-        <Timeline />
-    </ContentSection>
-);
+class Experience extends React.Component {
+
+    componentWillMount() {
+        window.scrollTo(0, 0);
+    }
+
+    render() {
+        const { t } = this.props;
+        return (
+            <ContentSection>
+                <Title title={t('SECTION_EXPERIENCE_TITLE')} />
+                <Paragraph firstParagraph={true}>
+                    {t('SECTION_EXPERIENCE_PARAGRAPH1')}
+                </Paragraph>
+                <Timeline />
+            </ContentSection>
+        );
+    }
+};
   
 export default withTranslation()(Experience);
