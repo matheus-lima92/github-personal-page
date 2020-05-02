@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import flag_en from 'imgs/flag_en.svg';
 import flag_pt from 'imgs/flag_pt.svg';
+import definitions from 'common/definitions';
 
 const defineFlag = (language) => {
     if (language === 'pt') return flag_pt;
@@ -14,6 +15,11 @@ export const LanguagesContainer = styled.div`
     z-index: 10;
     right: 30px;
     top: 15px;
+    @media (max-width: ${definitions.DESKTOP_MIN_WIDTH - 1}px) {
+        transform: scale(0.8);
+        right: 15px;
+        top: 0;
+    }
 `;
 
 export const CurrentLanguage = styled.div`
@@ -30,6 +36,9 @@ export const CurrentLanguage = styled.div`
     :hover {
         box-shadow: 0 6px 12px 0 black;
     }
+    @media (max-width: ${definitions.DESKTOP_MIN_WIDTH - 1}px) {
+        transform: scale(0.8);
+    }
 `;
 
 export const LanguagesSelector = styled.div`
@@ -44,6 +53,9 @@ export const LanguagesSelector = styled.div`
     flex-direction: column;
     background-color: white;
     box-shadow: 0 4px 8px 0 black;
+    @media (max-width: ${definitions.DESKTOP_MIN_WIDTH - 1}px) {
+        transform: scale(0.8);
+    }
 `;
 
 export const LanguageOption = styled.div`
@@ -56,4 +68,7 @@ export const LanguageOption = styled.div`
     cursor: pointer;
     filter: ${props => props.isSelected ? 'grayscale(100%)' : 'grayscale(0%)'};
     opacity: ${props => props.isSelected ? '0.3' : '1'};
+    @media (max-width: ${definitions.DESKTOP_MIN_WIDTH - 1}px) {
+        transform: scale(0.8);
+    }
 `;
