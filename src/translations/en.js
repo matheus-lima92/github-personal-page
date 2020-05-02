@@ -151,8 +151,14 @@ const en = {
 		/*--- CONTACT SECTION START ---*/
 		SECTION_CONTACT_TITLE: 'Contact',
 		SECTION_CONTACT_PARAGRAPH1: `
-		Lorem ipsum dolor
+		Do you want to tell me about an interesting project? Have any questions, criticisms or suggestions
+		for the content of my page? Please get in touch with me! :)
 		`,
+		SECTION_CONTACT_PARAGRAPH2: `
+		You can find my profile on Linkedin and Github by clicking on the icons below.
+		My complete curriculum is also available for download with more information.
+		`,
+		SECTION_CONTACT_BUTTON_LABEL: 'DOWNLOAD RESUME',
 		/*--- CONTACT SECTION END ---*/
 
 		/*--- PROJECT MODAL START ---*/

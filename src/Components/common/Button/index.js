@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import { ButtonStytled } from './styles';
 
-const Button = ({ label, onClick }) => (
-	<ButtonStytled onClick={onClick}>
+const Button = ({ label, onClick, width = 120 }) => (
+	<ButtonStytled onClick={onClick} width={width}>
 		{label}
 	</ButtonStytled>
 );
@@ -12,6 +12,7 @@ const Button = ({ label, onClick }) => (
 Button.propType = {
 	label: PropTypes.string.isRequired,
 	onClick: PropTypes.func.isRequired,
+	width: PropTypes.number
 };
 
 export default Button;

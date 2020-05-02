@@ -154,8 +154,14 @@ const pt = {
 		/*--- CONTACT SECTION START ---*/
 		SECTION_CONTACT_TITLE: 'Contato',
 		SECTION_CONTACT_PARAGRAPH1: `
-		Lorem ipsum dolor
+		Você quer me contar sobre algum projeto interessante? Tem alguma dúvida, crítica ou sugestão 
+		para o conteúdo dessa página? Entre em contato comigo! :) 
 		`,
+		SECTION_CONTACT_PARAGRAPH2: `
+		Você pode encontrar meu perfil no Linkedin e no Github clicando nos ícones abaixo. 
+		Meu curriculum completo também está disponível para download com mais informações.
+		`,
+		SECTION_CONTACT_BUTTON_LABEL: 'DOWNLOAD CV',
 		/*--- CONTACT SECTION END ---*/
 
 		/*--- PROJECT MODAL START ---*/
