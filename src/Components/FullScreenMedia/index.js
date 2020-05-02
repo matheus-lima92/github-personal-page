@@ -6,7 +6,7 @@ import gsap from 'gsap';
 
 import projectMedia from 'common/projectMedia';
 import { hideFullScreenMedia } from 'actions/fullScreenMedia';
-import { FullScreenMediaWrapper, ResponsiveMedia, CloseButton } from './style';
+import { FullScreenMediaWrapper, ResponsiveMedia, CloseButton } from './styles';
 
 class FullScreenMedia extends React.Component {
 

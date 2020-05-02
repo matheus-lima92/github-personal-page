@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { TimelineEventStyled } from './style';
+import { TimelineEventStyled } from './styles';
 import definitions from 'common/definitions';
 import colors from 'common/colors';
 import { showJobModal } from 'actions/jobModal';

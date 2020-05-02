@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ProjectMediaWrapper, Media, Description } from './style';
+import { ProjectMediaWrapper, Media, Description } from './styles';
 
 const ProjectMedia = ({ src, description, height, onClick }) => (
     <ProjectMediaWrapper height={height}>

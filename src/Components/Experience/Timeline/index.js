@@ -1,7 +1,7 @@
 import React from 'react';
 
 import TimelineEvent from './TimelineEvent';
-import { TimelineStyled, YearMark } from './style';
+import { TimelineStyled, YearMark } from './styles';
 
 class Timeline extends React.Component {
 

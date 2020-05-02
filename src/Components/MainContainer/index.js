@@ -7,7 +7,7 @@ import Experience from 'Components/Experience';
 import Projects from 'Components/Projects';
 import Contact from 'Components/Contact';
 
-import { MainContainerStyled } from './style';
+import { MainContainerStyled } from './styles';
 
 const MainContainer = ({ screen }) => (
   	<MainContainerStyled>

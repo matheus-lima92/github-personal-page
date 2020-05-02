@@ -18,7 +18,7 @@ import {
     ProjectInformation,
     ProjectTitle,
     ActionButton,
-} from './style';
+} from './styles';
 
 class ProjectModal extends React.Component {
 
