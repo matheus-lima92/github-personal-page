@@ -15,14 +15,22 @@ class MenuItem extends React.Component {
   }
 
   render() {
-    const { icon, changeScreen, screenId } = this.props;
+    const { icon, changeScreen, screenId, option, currentScreen } = this.props;
+    const isActive = currentScreen === screenId;
     return (
       <MenuItemStyled
         onMouseEnter={() => animateIcon(this.icon)}
         onClick={() => changeScreen(screenId)}
+        isActive={isActive}
       >
-        <div className="icon-container" ref={(elem) => { this.icon = elem; }}>
-          <i className={`fa fa-${icon}`} />
+        {isActive && <div className="item-marker" />}
+        <div className="item-container">
+          <div className="icon-container" ref={(elem) => { this.icon = elem; }}>
+            <i className={`fa fa-${icon}`} />
+          </div>
+          <div className="text-container">
+            <span>{option}</span>
+          </div>
         </div>
       </MenuItemStyled>
     );
@@ -31,12 +39,18 @@ class MenuItem extends React.Component {
 
 MenuItem.propType = {
 	icon: PropTypes.string.isRequired,
-	screenId: PropTypes.string.isRequired,
-	changeScreen: PropTypes.func.isRequired,
+  screenId: PropTypes.string.isRequired,
+  option: PropTypes.string.isRequired,
+  changeScreen: PropTypes.func.isRequired,
+  currentScreen: PropTypes.string.isRequired
 };
+
+const mapStateToProps = state => ({
+  currentScreen: state.mainContainer,
+});
 
 const mapDispatchToProps = dispatch => bindActionCreators({
 	changeScreen,
 }, dispatch);
 
-export default connect(null, mapDispatchToProps)(MenuItem);
+export default connect(mapStateToProps, mapDispatchToProps)(MenuItem);

@@ -8,7 +8,7 @@ export const MenuItemStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${colors.sideMenuText};
+  color: ${props => props.isActive ? colors.themeColor1 : colors.menuItem};
   position: relative;
   @media (min-width: ${definitions.DESKTOP_MIN_WIDTH}px) {
     font-size: 18px;

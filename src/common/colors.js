@@ -6,6 +6,7 @@ const colors = {
   sideMenu: '#23252b',
   sideMenuText: '#f2f2f2',
   paragraphText: '#f2f2f2',
+  menuItem: '#bfbfbf'
 };
 
 export default colors;

@@ -15,11 +15,12 @@ class MenuItem extends React.Component {
 	}
 
 	render() {
-		const { icon, option, changeScreen, screenId } = this.props;
+		const { icon, option, changeScreen, screenId, currentScreen } = this.props;
 		return (
 			<MenuItemStyled
 				onMouseEnter={() => animateIcon(this.icon)}
 				onClick={() => changeScreen(screenId)}
+				isActive={currentScreen === screenId}
 			>
 				<div className="icon-container" ref={(elem) => { this.icon = elem; }}>
 					<i className={`fa fa-${icon}`} />
@@ -37,10 +38,15 @@ MenuItem.propType = {
 	option: PropTypes.string.isRequired,
 	screenId: PropTypes.string.isRequired,
 	changeScreen: PropTypes.func.isRequired,
+	currentScreen: PropTypes.string.isRequired
 };
+
+const mapStateToProps = state => ({
+  currentScreen: state.mainContainer,
+});
 
 const mapDispatchToProps = dispatch => bindActionCreators({
 	changeScreen,
 }, dispatch);
 
-export default connect(null, mapDispatchToProps)(MenuItem);
+export default connect(mapStateToProps, mapDispatchToProps)(MenuItem);
