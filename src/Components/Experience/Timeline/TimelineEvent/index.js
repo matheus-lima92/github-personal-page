@@ -114,9 +114,11 @@ class TimelineEvent extends React.Component {
                 <div
                     className={`timeline-event ${orientation}-event`}
                     onMouseEnter={() => {
+                        if(exhibitionMode === 'mobile') return;
                         this.tl.play();
                     }}
                     onMouseLeave={() => {
+                        if(exhibitionMode === 'mobile') return;
                         this.tl.reverse();
                     }}
                     onClick={() => showJobModal(company)}
