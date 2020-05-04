@@ -4,6 +4,13 @@ import i18n from 'i18n';
 
 import { LanguagesContainer, CurrentLanguage, LanguagesSelector, LanguageOption } from './styles';
 
+const autoDetectLanguage = () => {
+    if (!navigator || !navigator.language) return 'en';
+    const navigatorLanguage = navigator.language;
+    if (navigatorLanguage.includes('pt')) return 'pt';
+    return 'en';
+};
+
 class Languages extends React.Component {
     constructor(props) {
         super(props);
@@ -18,6 +25,11 @@ class Languages extends React.Component {
     componentDidMount() {
         gsap.set(this.languagesSelector, { scale: 0 });
         document.addEventListener('mousedown', this.handleClickOutside);
+        const lang = autoDetectLanguage();
+        setTimeout(() => {
+            i18n.changeLanguage(lang);
+            this.setState(prevState => ({ ...prevState, currentLanguage: lang }));
+        }, 50);
     }
 
     componentWillUnmount(){
